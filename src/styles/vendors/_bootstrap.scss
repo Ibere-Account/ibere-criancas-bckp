@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@import
+    'bootstrap/functions',
+    'bootstrap/variables',
+    'bootstrap/mixins',
+    'bootstrap/reboot',
+    'bootstrap/grid',
+    'bootstrap/utilities/display',
+    'bootstrap/utilities/flex',
+    'bootstrap/utilities/spacing';
