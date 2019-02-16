@@ -1,0 +1,194 @@
+.page {
+    align-items: center;
+    background-color: #691E20;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.section--home {
+    background: url('./../img/home/sala.png') no-repeat center center transparent;
+    background-size: contain;
+    display: block;
+    height: calc(100vw / 256 * 175);
+    max-height: 875px;
+    max-width: 1280px;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.section__link {
+    background: no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 2.1875vw;
+}
+
+.section__link--retratos {
+    background-image: url('./../img/home/retratos.png');
+    height: calc(250 / 875 * 100%);
+    left: calc(655 / 1280 * 100%);
+    top: calc(146 / 875 * 100%);
+    width: calc(174 / 1280 * 100%);
+}
+
+.section__link--idiotas {
+    background-image: url('./../img/home/idiotas.png');
+    height: calc(571 / 875 * 100%);
+    left: calc(269 / 1280 * 100%);
+    top: calc(75 / 875 * 100%);
+    width: calc(244 / 1280 * 100%);
+}
+
+.section__link--manequins {
+    background-image: url('./../img/home/manequins.png');
+    height: calc(386 / 875 * 100%);
+    left: calc(885 / 1280 * 100%);
+    top: calc(265 / 875 * 100%);
+    width: calc(118 / 1280 * 100%);
+}
+
+.section__link--acervo {
+    background-image: url('./../img/home/acervo.png');
+    height: calc(194 / 875 * 100%);
+    left: calc(47 / 1280 * 100%);
+    top: calc(161 / 875 * 100%);
+    width: calc(154 / 1280 * 100%);
+}
+
+.section__link--ibere {
+    background-image: url('./../img/home/ibere.png');
+    height: calc(547 / 875 * 100%);
+    left: calc(377 / 1280 * 100%);
+    top: calc(328 / 875 * 100%);
+    width: calc(371 / 1280 * 100%);
+}
+
+.section__link--ciclistas {
+    background-image: url('./../img/home/ciclistas.png');
+    bottom: calc(17 / 875 * 100%);
+    height: calc(360 / 875 * 100%);
+    right: calc(40 / 1280 * 100%);
+    width: calc(321 / 1280 * 100%);
+}
+
+.section__link--paisagem {
+    background-image: url('./../img/home/paisagem.png');
+    height: calc(626 / 875 * 100%);
+    right: calc(16 / 1280 * 100% * -1);
+    top: calc(51 / 875 * 100%);
+    width: calc(256 / 1280 * 100%);
+}
+
+.section__link--natureza-morta {
+    background-image: url('./../img/home/natureza-morta.png');
+    height: calc(187 / 875 * 100%);
+    right: calc(404 / 1280 * 100%);
+    top: calc(625 / 875 * 100%);
+    width: calc(160 / 1280 * 100%);
+}
+
+.section__link--carreteis {
+    background-image: url('./../img/home/carreteis.png');
+    bottom: calc(54 / 875 * 100%);
+    height: calc(190 / 875 * 100%);
+    left: calc(390 / 1280 * 100%);
+    width: calc(185 / 1280 * 100%);
+}
+
+.mesa {
+    background: url('./../img/home/mesa.png') no-repeat center center transparent;
+    background-size: 100% auto;
+    bottom: 0;
+    height: calc(330 / 875 * 100%);
+    left: 0;
+    position: absolute;
+    width: calc(676 / 1280 * 100%);
+}
+
+.section__link:hover { background-position: 0 bottom; }
+
+.section__link--ibere:hover { background-position: 0 0; }
+
+.section__link:hover,
+.section__link:active,
+.section__link:focus {
+    outline: 0;
+}
+
+.section__link__label {
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.section__link__label > span { display: block; }
+
+.section__link--retratos .section__link__label {
+    background-color: #F7DD58;
+    left: calc(94 / 174 * 100%);
+    top: calc(118 / 250 * 100%);
+}
+
+.section__link--idiotas .section__link__label {
+    background-color: #9470A2;
+    left: calc(161 / 244 * 100%);
+    top: calc(188 / 571 * 100%);
+}
+
+.section__link--manequins .section__link__label {
+    background-color: #89B3DD;
+    left: calc(16 / 118 * 100% * -1);
+    top: calc(95 / 386 * 100%);
+}
+
+.section__link--acervo .section__link__label {
+    background-color: #D8CFAD;
+    left: calc(50 / 154 * 100%);
+    top: calc(137 / 194 * 100%);
+}
+
+.section__link--ibere .section__link__label {
+    background-color: #9C7D7D;
+    left: calc(277 / 371 * 100%);
+    top: calc(126 / 547 * 100%);
+}
+
+.section__link--ciclistas .section__link__label {
+    background-color: #EC602E;
+    left: calc(37 / 321 * 100%);
+    top: calc(174 / 360 * 100%);
+}
+
+.section__link--paisagem .section__link__label {
+    background-color: #bbdd89;
+    left: calc(18 / 256 * 100% * -1);
+    top: calc(244 / 626 * 100%);
+}
+
+.section__link--natureza-morta .section__link__label {
+    background-color: #f08469;
+    left: calc(54 / 160 * 100%);
+    top: calc(149 / 187 * 100%);
+}
+
+.section__link--carreteis .section__link__label {
+    background-color: #f8941d;
+    left: calc(178 / 185 * 100%);
+    top: calc(92 / 190 * 100%);
+}
+
+@media only screen and (min-width: 1280px) {
+    .section__link { font-size: 28px; }
+}
