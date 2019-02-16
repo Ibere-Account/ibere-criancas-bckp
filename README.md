@@ -1,2 +1,2 @@
 # ibere-criancas
-Site da fundação Iberê Camargo para crianças
+Site da Fundação Iberê Camargo para crianças
