@@ -1,22 +1,13 @@
 $homeHeight: 875;
 $homeWidth: 1280;
 
-.page {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    overflow: hidden;
-    width: 100vw;
-}
-
 .section--home {
     background: url('./../img/home/sala.png') no-repeat center center transparent;
     background-size: contain;
     display: block;
     height: 100vw / 256 * 175;
-    max-height: $homeHeight;
-    max-width: $homeWidth;
+    max-height: $homeHeight * 1px;
+    max-width: $homeWidth * 1px;
     overflow: hidden;
     position: relative;
     width: 100vw;
@@ -28,7 +19,8 @@ $homeWidth: 1280;
     border: 0;
     padding: 0;
     position: absolute;
-    font-size: 2.1875vw;
+
+    @include viewport-font(2.1875vw, 16px, 28px);
 
     &:hover {
         background-position: 0 bottom;
@@ -44,10 +36,6 @@ $homeWidth: 1280;
     &:focus,
     &:hover {
         outline: 0;
-    }
-
-    @media only screen and (min-width: $homeWidth) {
-        font-size: 28px;
     }
 }
 

@@ -1,8 +1,12 @@
 @import
-    'abstracts/variables';
+    'abstracts/variables',
+    'abstracts/mixins';
 
 @import
     'vendors/bootstrap';
+
+@import
+    'base/base';
 
 @import
     'pages/home';
