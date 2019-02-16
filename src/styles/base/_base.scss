@@ -5,3 +5,17 @@
     justify-content: center;
     width: 100vw;
 }
+
+.logo {
+    background: url('./../img/fundacao-ibere-camargo.png') no-repeat 0 0 transparent;
+    background-size: contain;
+    font-size: 0;
+    height: 29 / $canvasHeight * 100%;
+    left: 24 / $canvasWidth * 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 17 / $canvasHeight * 100%;
+    width: 300 / $canvasWidth * 100%;
+}
