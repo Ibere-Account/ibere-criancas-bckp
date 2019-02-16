@@ -187,3 +187,33 @@
     position: absolute;
     width: 676 / $canvasWidth * 100%;
 }
+
+.datasheet-link {
+    background: url('./../img/home/flecha.png') no-repeat 0 0 $white;
+    background-position: right 10px center;
+    background-size: 19px auto;
+    border: 0;
+    position: absolute;
+    bottom: 10 / $canvasHeight * 100%;
+    left: 15 / $canvasWidth * 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary;
+    padding: 10px 36px 10px 10px;
+    line-height: 1;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}
+
+.datasheet {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background-color: $white;
+}
