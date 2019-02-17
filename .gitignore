@@ -484,3 +484,4 @@ healthchecksdb
 temp/
 dist/
 prod/
+package-lock.json
