@@ -57,7 +57,11 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    width: 100% - ((170 / $canvasWidth * 100%) * 2) ;
+    width: 100% - ((170 / $canvasWidth * 100%) * 2);
+
+    .section--gallery & {
+        width: 100% - ((120 / $canvasWidth * 100%) * 2);
+    }
 
     & > .row + .row {
         margin-top: 5px;
@@ -75,6 +79,10 @@
 
     & > figcaption {
         margin-top: 5px;
+    }
+
+    .gallery & {
+        box-shadow: 0 0 10px 2px rgba($black, .2);
     }
 }
 
