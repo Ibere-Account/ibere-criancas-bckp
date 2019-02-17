@@ -50,6 +50,20 @@
     line-height: 1;
     margin-bottom: 0;
     position: absolute;
+
+    &.slide__title--curiosidades {
+        align-items: flex-start;
+        background-image: url('./../img/idiotas/bg-curiosidades.png') !important;
+        height: 74 / $canvasHeight * 100% !important;
+        justify-content: flex-start;
+        top: 94 / $canvasHeight * 100% !important;
+        width: 232 / $canvasWidth * 100% !important;
+
+        & > span {
+            margin-left: 6%;
+            margin-top: 7%;
+        }
+    }
 }
 
 .slide__container {
