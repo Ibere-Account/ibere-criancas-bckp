@@ -1,0 +1,69 @@
+.modal {
+    align-items: center;
+    background: rgba($black, .5);
+    bottom: 0;
+    display: none;
+    flex-flow: column nowrap;
+    left: 0;
+    justify-content: center;
+    overflow: hidden;
+    outline: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1050;
+
+    &.show {
+        display: flex;
+    }
+}
+
+.modal-dialog {
+    max-width: 580 / $canvasWidth * 100%;
+    pointer-events: none;
+    position: relative;
+    width: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
+}
+
+.modal-body {
+    flex: 1 1 auto;
+    padding: 15px;
+    position: relative;
+
+    figcaption {
+        font-size: 14px;
+    }
+}
+
+.modal__close {
+    background: url('./../img/btn-fechar.png') no-repeat 0 0 transparent;
+    background-size: contain;
+    border: 0;
+    display: block;
+    font-size: 0;
+    height: 43px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: -55px;
+    text-indent: -9999px;
+    top: -25px;
+    width: 44px;
+    z-index: 1051;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}

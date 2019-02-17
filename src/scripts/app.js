@@ -94,6 +94,16 @@ FIC.Slides = {
         }
     },
 
+    modalsHandler: function () {
+        $(document).on('touchend click', '.slide__figure[data-modal]', function () {
+            var target = $(this).data('modal');
+
+            $(target).addClass('show');
+        }).on('touchend click', '.modal__close', function () {
+            $(this).parents('.modal').removeClass('show');
+        });
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -103,6 +113,7 @@ FIC.Slides = {
         }
 
         FIC.Slides.swapInteractionHandler();
+        FIC.Slides.modalsHandler();
     }
 
 };
