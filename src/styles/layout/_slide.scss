@@ -50,6 +50,10 @@
     line-height: 1;
     margin-bottom: 0;
     position: absolute;
+
+    .break {
+        display: block;
+    }
 }
 
 .slide__container {
@@ -61,6 +65,11 @@
 
     & > .row + .row {
         margin-top: 5px;
+    }
+
+    .section--acervo & {
+        // width: 100% - ((200 / $canvasWidth * 100%) * 2);
+        margin-left: 240 / $canvasWidth * 100%;
     }
 }
 
