@@ -1,0 +1,203 @@
+.section--home {
+    background: url('./../img/home/sala.png') no-repeat center center transparent;
+    background-size: contain;
+}
+
+.section__link {
+    background: no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    border: 0;
+    padding: 0;
+    position: absolute;
+
+    @include viewport-font(2.1875vw, 16px, 28px);
+
+    &:hover {
+        background-position: 0 bottom;
+    }
+
+    &.section__link--ibere {
+        &:hover {
+            background-position: 0 0;
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}
+
+.section__link__label {
+    color: $black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: left;
+    white-space: nowrap;
+
+    & > span {
+        display: block;
+    }
+}
+
+.section__link--retratos {
+    background-image: url('./../img/home/retratos.png');
+    height: 250 / $canvasHeight * 100%;
+    left: 655 / $canvasWidth * 100%;
+    top: 146 / $canvasHeight * 100%;
+    width: 174 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $retratos;
+        left: 94 / 174 * 100%;
+        top: 118 / 250 * 100%;
+    }
+}
+
+.section__link--idiotas {
+    background-image: url('./../img/home/idiotas.png');
+    height: 571 / $canvasHeight * 100%;
+    left: 269 / $canvasWidth * 100%;
+    top: 75 / $canvasHeight * 100%;
+    width: 244 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $idiotas;
+        left: 161 / 244 * 100%;
+        top: 188 / 571 * 100%;
+    }
+}
+
+.section__link--manequins {
+    background-image: url('./../img/home/manequins.png');
+    height: 386 / $canvasHeight * 100%;
+    left: 885 / $canvasWidth * 100%;
+    top: 265 / $canvasHeight * 100%;
+    width: 118 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $manequins;
+        left: 16 / 118 * 100% * -1;
+        top: 95 / 386 * 100%;
+    }
+}
+
+.section__link--acervo {
+    background-image: url('./../img/home/acervo.png');
+    height: 194 / $canvasHeight * 100%;
+    left: 47 / $canvasWidth * 100%;
+    top: 161 / $canvasHeight * 100%;
+    width: 154 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $acervo;
+        left: 50 / 154 * 100%;
+        top: 137 / 194 * 100%;
+    }
+}
+
+.section__link--ibere {
+    background-image: url('./../img/home/ibere.png');
+    height: 547 / $canvasHeight * 100%;
+    left: 377 / $canvasWidth * 100%;
+    top: 328 / $canvasHeight * 100%;
+    width: 371 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $ibere;
+        left: 277 / 371 * 100%;
+        top: 126 / 547 * 100%;
+    }
+}
+
+.section__link--ciclistas {
+    background-image: url('./../img/home/ciclistas.png');
+    bottom: 17 / $canvasHeight * 100%;
+    height: 360 / $canvasHeight * 100%;
+    right: 40 / $canvasWidth * 100%;
+    width: 321 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $ciclistas;
+        left: 37 / 321 * 100%;
+        top: 174 / 360 * 100%;
+    }
+}
+
+.section__link--paisagem {
+    background-image: url('./../img/home/paisagem.png');
+    height: 626 / $canvasHeight * 100%;
+    right: 16 / $canvasWidth * 100% * -1;
+    top: 51 / $canvasHeight * 100%;
+    width: 256 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $paisagem;
+        left: 18 / 256 * 100% * -1;
+        top: 244 / 626 * 100%;
+    }
+}
+
+.section__link--natureza-morta {
+    background-image: url('./../img/home/natureza-morta.png');
+    height: 187 / $canvasHeight * 100%;
+    right: 404 / $canvasWidth * 100%;
+    top: 625 / $canvasHeight * 100%;
+    width: 160 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $natureza-morta;
+        left: 54 / 160 * 100%;
+        top: 149 / 187 * 100%;
+    }
+}
+
+.section__link--carreteis {
+    background-image: url('./../img/home/carreteis.png');
+    bottom: 54 / $canvasHeight * 100%;
+    height: 190 / $canvasHeight * 100%;
+    left: 390 / $canvasWidth * 100%;
+    width: 185 / $canvasWidth * 100%;
+
+    & > .section__link__label {
+        background-color: $carreteis;
+        left: 178 / 185 * 100%;
+        top: 92 / 190 * 100%;
+    }
+}
+
+.mesa {
+    background: url('./../img/home/mesa.png') no-repeat center center transparent;
+    background-size: 100% auto;
+    bottom: 0;
+    height: 330 / $canvasHeight * 100%;
+    left: 0;
+    position: absolute;
+    width: 676 / $canvasWidth * 100%;
+}
+
+.datasheet-link {
+    background: url('./../img/home/flecha.png') no-repeat 0 0 $white;
+    background-position: right 10px center;
+    background-size: 19px auto;
+    border: 0;
+    position: absolute;
+    bottom: 10 / $canvasHeight * 100%;
+    left: 15 / $canvasWidth * 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary;
+    padding: 5px 36px 5px 10px;
+    line-height: 1;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}
