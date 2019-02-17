@@ -1,13 +1,6 @@
 .section--home {
     background: url('./../img/home/sala.png') no-repeat center center transparent;
     background-size: contain;
-    display: block;
-    height: 100vw / 256 * 175;
-    max-height: $canvasHeight * 1px;
-    max-width: $canvasWidth * 1px;
-    overflow: hidden;
-    position: relative;
-    width: 100vw;
 }
 
 .section__link {

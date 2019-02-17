@@ -6,6 +6,16 @@
     width: 100vw;
 }
 
+.section {
+    display: block;
+    height: 100vw / 256 * 175;
+    max-height: $canvasHeight * 1px;
+    max-width: $canvasWidth * 1px;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
 .logo {
     background: url('./../img/fundacao-ibere-camargo.png') no-repeat 0 0 transparent;
     background-size: contain;
