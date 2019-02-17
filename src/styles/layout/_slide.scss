@@ -52,10 +52,10 @@
     position: absolute;
 
     &.slide__title--curiosidades {
-        align-items: flex-start;
+        align-items: flex-start !important;
         background-image: url('./../img/idiotas/bg-curiosidades.png') !important;
         height: 74 / $canvasHeight * 100% !important;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
         top: 94 / $canvasHeight * 100% !important;
         width: 232 / $canvasWidth * 100% !important;
 

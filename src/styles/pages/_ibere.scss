@@ -1,0 +1,29 @@
+.section--ibere {
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
+    background-size: contain;
+
+    .slide__title {
+        align-items: flex-end;
+        background-image: url('./../img/ibere/bg-secao.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 118 / $canvasHeight * 100%;
+        top: 143 / $canvasHeight * 100%;
+        width: 167 / $canvasWidth * 100%;
+
+        @include viewport-font(2.1875vw, 20px, 28px);
+
+        & > span {
+            margin-bottom: 35px; 
+        }
+
+        &.slide__title--curiosidades {
+            & > span {
+                margin-bottom: 0px; 
+            }
+        }
+
+
+
+    }
+}
