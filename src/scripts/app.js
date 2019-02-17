@@ -64,6 +64,26 @@ FIC.Slides = {
         });
     },
 
+    swapInteractionHandler: function () {
+        var $wrapper = $('.slide__interaction--swap');
+
+        if ($wrapper.length) {
+            var $buttons = $wrapper.find('.swap__btn');
+
+            $buttons.on('click', function () {
+                var $this = $(this),
+                    swap = $this.data('swap'),
+                    $figure = $this.parents('.swap__actions').prev().find('.swap__figure'),
+                    figureSrc = $figure.data('src');
+
+                $buttons.removeClass('active');
+                $this.addClass('active');
+
+                $figure.attr('src', figureSrc + swap + '.jpg');
+            });
+        }
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -71,5 +91,7 @@ FIC.Slides = {
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
         }
+
+        FIC.Slides.swapInteractionHandler();
     }
 };
