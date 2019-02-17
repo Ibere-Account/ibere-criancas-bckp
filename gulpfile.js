@@ -3,6 +3,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync');
 const cache = require('gulp-cache');
+const concat = require('gulp-concat');
 const del = require('del');
 const htmlCompressor = require('gulp-htmlmin');
 const htmlValidator = require('gulp-html');
@@ -60,13 +61,14 @@ let compileCSSForProd = () => {
 };
 
 let transpileJSForDev = () => {
-    return src('src/scripts/*.js')
+    return src('src/scripts/**/*.js')
         .pipe(babel())
+        .pipe(concat('main.js'))
         .pipe(dest('temp/scripts'));
 };
 
 let transpileJSForProd = () => {
-    return src('src/scripts/*.js')
+    return src('src/scripts/**/*.js')
         .pipe(babel())
         .pipe(jsCompressor())
         .pipe(dest('dist/scripts'));
@@ -81,7 +83,7 @@ let lintJS = () => {
             },
             rules: {
                 indent: [2, 4, { SwitchCase: 1 }],
-                quotes: [1, 'backtick'],
+                quotes: [1, 'single'],
                 semi: [2, 'always'],
                 'linebreak-style': [2, 'unix'],
                 'max-len': [0]
