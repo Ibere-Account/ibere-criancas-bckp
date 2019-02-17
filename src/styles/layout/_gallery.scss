@@ -1,0 +1,22 @@
+.gallery__title {
+    color: $black;
+    display: block;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 5px 20px;
+    position: absolute;
+    transform: rotate(5deg);
+
+    @include viewport-font(2.1875vw, 20px, 28px);
+
+    & > strong {
+        font-weight: bold;
+    }
+
+    .section--idiotas & {
+        background-color: $idiotas;
+        right: 120 / $canvasWidth * 100%;
+        top: 175 / $canvasHeight * 100%;
+    }
+}
