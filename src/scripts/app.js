@@ -10,6 +10,7 @@ $(document).ready(function ()  {
     }
 });
 
+
 FIC.Home = {
 
     datasheetHandler: function ()  {
@@ -27,7 +28,9 @@ FIC.Home = {
     init: function () {
         FIC.Home.datasheetHandler();
     }
+
 };
+
 
 FIC.Slides = {
     currentSlide: 1,
@@ -94,4 +97,5 @@ FIC.Slides = {
 
         FIC.Slides.swapInteractionHandler();
     }
+
 };
