@@ -14,16 +14,13 @@
         @include viewport-font(2.1875vw, 20px, 28px);
 
         & > span {
-            margin-bottom: 35px; 
+            margin-bottom: 35px;
         }
 
         &.slide__title--curiosidades {
             & > span {
-                margin-bottom: 0px; 
+                margin-bottom: 0;
             }
         }
-
-
-
     }
 }
