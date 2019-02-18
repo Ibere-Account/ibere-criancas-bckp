@@ -6,7 +6,6 @@ const cache = require('gulp-cache');
 const concat = require('gulp-concat');
 const del = require('del');
 const htmlCompressor = require('gulp-htmlmin');
-const htmlValidator = require('gulp-html');
 const imageCompressor = require('gulp-imagemin');
 const jsCompressor = require('gulp-uglify');
 const jsLinter = require('gulp-eslint');
@@ -14,14 +13,6 @@ const sass = require('gulp-sass');
 const sourceMaps = require('gulp-sourcemaps');
 
 const reload = browserSync.reload;
-
-let validateHTML = () => {
-    return src([
-        'src/html/*.html',
-        'src/html/**/*.html'
-    ])
-    .pipe(htmlValidator());
-};
 
 let compressHTML = () => {
     return src([
@@ -132,7 +123,7 @@ let serve = () => {
         notify: true,
         port: 9000,
         reloadDelay: 250,
-        browser: 'google chrome',
+        browser: 'chrome',
         server: {
             baseDir: [
                 'temp',
@@ -150,9 +141,7 @@ let serve = () => {
         series(compileCSSForDev)
     ).on('change', reload);
 
-    watch('src/html/**/*.html',
-        series(validateHTML)
-    ).on('change', reload);
+    watch('src/html/**/*.html').on('change', reload);
 
     watch('src/img/**/*').on('change', reload);
 };
@@ -192,7 +181,6 @@ async function listTasks() {
     });
 }
 
-exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.compileCSSForDev = compileCSSForDev;
 exports.compileCSSForProd = compileCSSForProd;
@@ -201,7 +189,6 @@ exports.transpileJSForProd = transpileJSForProd;
 exports.lintJS = lintJS;
 exports.copyUnprocessedAssetsForProd = copyUnprocessedAssetsForProd;
 exports.build = series(
-    validateHTML,
     compressHTML,
     compileCSSForProd,
     lintJS,
@@ -210,6 +197,6 @@ exports.build = series(
     copyUnprocessedAssetsForProd
 );
 exports.compressImages = compressImages;
-exports.serve = series(compileCSSForDev, lintJS, transpileJSForDev, validateHTML, serve);
+exports.serve = series(compileCSSForDev, lintJS, transpileJSForDev, serve);
 exports.clean = clean;
 exports.default = listTasks;
