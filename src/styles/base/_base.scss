@@ -4,6 +4,10 @@
     height: 100vh;
     justify-content: center;
     width: 100vw;
+
+    @media (min-width: 1200px) and (max-height: 875px) {
+        align-items: flex-start;
+    }
 }
 
 .section {
