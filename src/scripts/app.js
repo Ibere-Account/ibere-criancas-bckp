@@ -104,6 +104,12 @@ FIC.Slides = {
         });
     },
 
+    backPageHandler: function () {
+        $(document).on('click', '.logo', function () {
+            history.back();
+        });
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -114,6 +120,7 @@ FIC.Slides = {
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.modalsHandler();
+        FIC.Slides.backPageHandler();
     }
 
 };
