@@ -105,7 +105,7 @@
     background-image: url('./../img/home/ibere.png');
     height: 547 / $canvasHeight * 100%;
     left: 377 / $canvasWidth * 100%;
-    top: 328 / $canvasHeight * 100%;
+    bottom: 25 / $canvasHeight * 100% * -1;
     width: 371 / $canvasWidth * 100%;
 
     & > .section__link__label {
@@ -171,14 +171,26 @@
     }
 }
 
-.mesa {
-    background: url('./../img/home/mesa.png') no-repeat center center transparent;
+.mesa-1,
+.mesa-2 {
+    background: no-repeat center center transparent;
     background-size: 100% auto;
     bottom: 0;
+    position: absolute;
+}
+
+.mesa-1 {
+    background-image: url('./../img/home/mesa-1.png');
     height: 330 / $canvasHeight * 100%;
     left: 0;
-    position: absolute;
-    width: 676 / $canvasWidth * 100%;
+    width: 345 / $canvasWidth * 100%;
+}
+
+.mesa-2 {
+    background-image: url('./../img/home/mesa-2.png');
+    height: 215 / $canvasHeight * 100%;
+    left: 345 / $canvasWidth * 100%;
+    width: 332 / $canvasWidth * 100%;
 }
 
 .cavalete {
