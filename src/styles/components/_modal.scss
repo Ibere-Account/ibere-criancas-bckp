@@ -4,8 +4,8 @@
     bottom: 0;
     display: none;
     flex-flow: column nowrap;
-    left: 0;
     justify-content: center;
+    left: 0;
     overflow: hidden;
     outline: 0;
     position: fixed;
@@ -39,6 +39,12 @@
     flex: 1 1 auto;
     padding: 15px;
     position: relative;
+
+    & > .slide__figure {
+        & > img {
+            max-height: 450px;
+        }
+    }
 
     figcaption {
         font-size: 14px;

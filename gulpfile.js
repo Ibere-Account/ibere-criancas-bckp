@@ -123,7 +123,7 @@ let serve = () => {
         notify: true,
         port: 9000,
         reloadDelay: 250,
-        browser: 'chrome',
+        browser: 'google chrome',
         server: {
             baseDir: [
                 'temp',

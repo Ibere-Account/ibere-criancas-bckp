@@ -19,4 +19,11 @@
         right: 120 / $canvasWidth * 100%;
         top: 175 / $canvasHeight * 100%;
     }
+
+    .section--ciclistas & {
+        background-color: $ciclistas;
+        left: 175 / $canvasWidth * 100%;
+        top: 130 / $canvasHeight * 100%;
+        transform: rotate(-5deg);
+    }
 }
