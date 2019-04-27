@@ -37,3 +37,11 @@
     top: 17 / $canvasHeight * 100%;
     width: 300 / $canvasWidth * 100%;
 }
+
+.row + .row {
+    margin-top: 15px;
+}
+
+.text-right {
+    text-align: right;
+}

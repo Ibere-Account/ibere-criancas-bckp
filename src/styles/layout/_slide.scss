@@ -5,6 +5,16 @@
     &.hide {
         display: none;
     }
+
+    &.floor-base {
+        .slide__container {
+            justify-content: flex-end;
+
+            & > .row {
+                margin-bottom: 150 / $canvasHeight * 100%;
+            }
+        }
+    }
 }
 
 .slide__control {

@@ -1,0 +1,19 @@
+.section--ciclistas {
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
+    background-size: contain;
+
+    .slide__title {
+        background-image: url('./../img/ciclistas/bg-secao.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 84 / $canvasHeight * 100%;
+        top: 109 / $canvasHeight * 100%;
+        width: 150 / $canvasWidth * 100%;
+
+        @include viewport-font(2.1875vw, 20px, 28px);
+    }
+
+    .slide--5 .row + .row {
+        margin-top: 50 / $canvasHeight * 100%;
+    }
+}
