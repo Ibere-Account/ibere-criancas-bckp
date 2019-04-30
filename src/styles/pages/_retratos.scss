@@ -21,14 +21,9 @@
     }
 }
 
-.slide__interaction--swap {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.swap__actions {
+.painting-tops {
     list-style: none;
-    margin: 0 0 0 20px;
+    margin: 0;
     padding: 0;
 
     & > li {
@@ -36,7 +31,7 @@
     }
 }
 
-.swap__btn {
+.painting-tops__btn {
     background: no-repeat 0 0 transparent;
     background-size: 100% auto;
     border: 0;
@@ -51,6 +46,30 @@
     &:focus,
     &:hover {
         outline: 0;
+    }
+
+    &--cabelo {
+        background-image: url('./../img/retratos/btn_cabelo.png');
+        height: 51px;
+        width: 69px;
+    }
+
+    &--oculos {
+        background-image: url('./../img/retratos/btn_oculos.png');
+        height: 24px;
+        width: 83px;
+    }
+
+    &--bigode {
+        background-image: url('./../img/retratos/btn_bigode.png');
+        height: 28px;
+        width: 39px;
+    }
+
+    &--olhos {
+        background-image: url('./../img/retratos/btn_olhos.png');
+        height: 14px;
+        width: 63px;
     }
 
     &:active,
