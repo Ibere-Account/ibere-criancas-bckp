@@ -26,4 +26,12 @@
         top: 130 / $canvasHeight * 100%;
         transform: rotate(-5deg);
     }
+
+    .section--retratos & {
+        background-color: $retratos;
+        left: 512 / $canvasWidth * 100%;
+        top: 135 / $canvasHeight * 100%;
+        transform: rotate(-8deg);
+    }
+
 }
