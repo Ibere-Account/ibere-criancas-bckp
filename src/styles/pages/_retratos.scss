@@ -26,7 +26,7 @@
     }
 }
 
-.painting-tops {
+.portrait-tops {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -36,7 +36,7 @@
     }
 }
 
-.painting-tops__btn {
+.portrait-tops__btn {
     background: no-repeat 0 0 transparent;
     background-size: 100% auto;
     border: 0;
@@ -78,7 +78,6 @@
     }
 
     &:active,
-    &:focus,
     &:hover,
     &.active {
         background-position: 0 100%;
