@@ -94,6 +94,35 @@ FIC.Slides = {
         }
     },
 
+    setPortraitTops: function ($tops, $portrait) {
+        var portraitTops = [];
+
+        $tops.filter('.active').each(function () {
+            portraitTops.push(this.getAttribute('data-swap'));
+        });
+
+        if (portraitTops.indexOf('olhos') !== -1 && portraitTops.indexOf('oculos') !== -1) {
+            portraitTops.pop();
+        }
+
+        $portrait.attr('src', portraitTops.length === 0 ? './../img/retratos/autorretrato.jpg' : './../img/retratos/retrato/' + portraitTops.join('_') + '.jpg');
+    },
+
+    portraitTopsHandler: function () {
+        var $wrapper = $('.slide__interaction--portrait');
+
+        if ($wrapper.length) {
+            var $buttons = $wrapper.find('.portrait-tops__btn'),
+                $figure = $wrapper.find('.portrait-figure');
+
+            $buttons.on('click', function () {
+                $(this).toggleClass('active');
+
+                FIC.Slides.setPortraitTops($buttons, $figure);
+            });
+        }
+    },
+
     modalsHandler: function () {
         $(document).on('touchend click', '.slide__figure[data-modal]', function () {
             var target = $(this).data('modal');
@@ -119,6 +148,7 @@ FIC.Slides = {
         }
 
         FIC.Slides.swapInteractionHandler();
+        FIC.Slides.portraitTopsHandler();
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
     }

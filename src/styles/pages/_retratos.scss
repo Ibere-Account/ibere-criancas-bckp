@@ -1,0 +1,85 @@
+.section--retratos {
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
+    background-size: contain;
+
+    .slide__title {
+        align-items: flex-end;
+        background-image: url('./../img/retratos/bg-secao.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 70 / $canvasHeight * 100%;
+        top: 88 / $canvasHeight * 100%;
+        width: 138 / $canvasWidth * 100%;
+
+        @include viewport-font(2.1875vw, 20px, 24px);
+
+        & > span {
+            margin-bottom: 10px;
+        }
+    }
+
+    .slide--4 .slide__figure > figcaption,
+    .slide--6 .slide__figure > figcaption,
+    .slide--7 .slide__figure > figcaption,
+    .slide--8 .slide__figure > figcaption {
+        text-align: right;
+    }
+}
+
+.portrait-tops {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+        margin-top: 20px;
+    }
+}
+
+.portrait-tops__btn {
+    background: no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    border: 0;
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+
+    &--cabelo {
+        background-image: url('./../img/retratos/btn-cabelo.png');
+        height: 51px;
+        width: 69px;
+    }
+
+    &--oculos {
+        background-image: url('./../img/retratos/btn-oculos.png');
+        height: 24px;
+        width: 83px;
+    }
+
+    &--bigode {
+        background-image: url('./../img/retratos/btn-bigode.png');
+        height: 28px;
+        width: 39px;
+    }
+
+    &--olhos {
+        background-image: url('./../img/retratos/btn-olhos.png');
+        height: 14px;
+        width: 63px;
+    }
+
+    &:active,
+    &:hover,
+    &.active {
+        background-position: 0 100%;
+    }
+}
