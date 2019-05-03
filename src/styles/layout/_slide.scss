@@ -94,10 +94,6 @@
     & > .row + .row {
         margin-top: 5px;
     }
-
-    .section--acervo & {
-        margin-left: 240 / $canvasWidth * 100%;
-    }
 }
 
 .slide__figure {
