@@ -38,4 +38,72 @@
         right: 91 / $canvasWidth * 100%;
         width: 476 / $canvasWidth * 100%;
     }
+
+    .section--retratos > .slide--1 > & {
+        background-image: url('./../img/retratos/gato-slide-1.png');
+        bottom: 34 / $canvasHeight * 100%;
+        height: 357 / $canvasHeight * 100%;
+        left: auto;
+        right: 140 / $canvasWidth * 100%;
+        width: 214 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--2 > & {
+        background-image: url('./../img/retratos/gato-slide-2.png');
+        bottom: 32 / $canvasHeight * 100%;
+        height: 360 / $canvasHeight * 100%;
+        left: 127 / $canvasWidth * 100%;
+        width: 282 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--3 > & {
+        background-image: url('./../img/retratos/gato-slide-3.png');
+        bottom: 50 / $canvasHeight * 100%;
+        height: 448 / $canvasHeight * 100%;
+        left: 155 / $canvasWidth * 100%;
+        width: 252 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--4 > & {
+        background-image: url('./../img/retratos/gato-slide-4.png');
+        bottom: 41 / $canvasHeight * 100%;
+        height: 444 / $canvasHeight * 100%;
+        left: auto;
+        right: 100 / $canvasWidth * 100%;
+        width: 280 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--5 > &,
+    .section--retratos > .slide--6 > & {
+        background-image: url('./../img/retratos/gato-slide-5.png');
+        bottom: 56 / $canvasHeight * 100%;
+        height: 196 / $canvasHeight * 100%;
+        left: 199 / $canvasWidth * 100%;
+        width: 206 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--7 > & {
+        background-image: url('./../img/retratos/gato-slide-7.png');
+        bottom: 56 / $canvasHeight * 100%;
+        height: 539 / $canvasHeight * 100%;
+        left: 139 / $canvasWidth * 100%;
+        width: 335 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--8 > & {
+        background-image: url('./../img/retratos/gato-slide-8.png');
+        bottom: 69 / $canvasHeight * 100%;
+        height: 129 / $canvasHeight * 100%;
+        left: auto;
+        right: 49 / $canvasWidth * 100%;
+        width: 139 / $canvasWidth * 100%;
+    }
+
+    .section--retratos > .slide--9 > & {
+        background-image: url('./../img/retratos/gato-slide-9.png');
+        bottom: 24 / $canvasHeight * 100%;
+        height: 356 / $canvasHeight * 100%;
+        left: 74 / $canvasWidth * 100%;
+        width: 261 / $canvasWidth * 100%;
+    }
 }
