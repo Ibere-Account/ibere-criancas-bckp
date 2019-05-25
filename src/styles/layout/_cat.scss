@@ -199,4 +199,55 @@
         width: 424 / $canvasWidth * 100%;
     }
 
+    .section--ciclistas > .slide--1 > & {
+        background-image: url('./../img/ciclistas/gato-slide-1.png');
+        bottom: 17 / $canvasHeight * 100%;
+        height: 261 / $canvasHeight * 100%;
+        left: 102 / $canvasWidth * 100%;
+        width: 426 / $canvasWidth * 100%;
+    }
+
+    .section--ciclistas > .slide--2 > & {
+        background-image: url('./../img/ciclistas/gato-slide-2.png');
+        bottom: 43 / $canvasHeight * 100%;
+        height: 169 / $canvasHeight * 100%;
+        left: auto;
+        right: 82 / $canvasWidth * 100%;
+        width: 257 / $canvasWidth * 100%;
+    }
+
+    .section--ciclistas > .slide--4 > & {
+        background-image: url('./../img/ciclistas/gato-slide-4.png');
+        bottom: 37 / $canvasHeight * 100%;
+        height: 370 / $canvasHeight * 100%;
+        left: 90 / $canvasWidth * 100%;
+        width: 255 / $canvasWidth * 100%;
+    }
+
+    .section--ciclistas > .slide--5 > & {
+        background-image: url('./../img/ciclistas/gato-slide-5.png');
+        bottom: 51 / $canvasHeight * 100%;
+        height: 196 / $canvasHeight * 100%;
+        left: auto;
+        right: 171 / $canvasWidth * 100%;
+        width: 206 / $canvasWidth * 100%;
+    }
+
+    .section--ciclistas > .slide--6 > & {
+        background-image: url('./../img/ciclistas/gato-slide-6.png');
+        bottom: 69 / $canvasHeight * 100%;
+        height: 129 / $canvasHeight * 100%;
+        left: auto;
+        right: 49 / $canvasWidth * 100%;
+        width: 139 / $canvasWidth * 100%;
+    }
+
+    .section--ciclistas > .slide--7 > & {
+        background-image: url('./../img/ciclistas/gato-slide-7.png');
+        bottom: 14 / $canvasHeight * 100%;
+        height: 552 / $canvasHeight * 100%;
+        left: 64 / $canvasWidth * 100%;
+        width: 349 / $canvasWidth * 100%;
+    }
+
 }

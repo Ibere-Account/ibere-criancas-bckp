@@ -139,6 +139,15 @@ FIC.Slides = {
         });
     },
 
+    showAnimation: function () {
+        $(document).on('touchend click', 'img[data-animation]', function () {
+            var $this = $(this),
+                src = $this.data('animation');
+
+            $this.attr('src', src);
+        });
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -151,6 +160,7 @@ FIC.Slides = {
         FIC.Slides.portraitTopsHandler();
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
+        FIC.Slides.showAnimation();
     }
 
 };
