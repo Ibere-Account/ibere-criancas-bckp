@@ -106,4 +106,97 @@
         left: 74 / $canvasWidth * 100%;
         width: 261 / $canvasWidth * 100%;
     }
+
+    .section--idiotas > .slide--1 > & {
+        background-image: url('./../img/idiotas/gato-slide-1.png');
+        bottom: 52 / $canvasHeight * 100%;
+        height: 331 / $canvasHeight * 100%;
+        left: auto;
+        right: 220 / $canvasWidth * 100%;
+        width: 277 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--2 > & {
+        background-image: url('./../img/idiotas/gato-slide-2.png');
+        bottom: 10 / $canvasHeight * 100%;
+        height: 364 / $canvasHeight * 100%;
+        left: 195 / $canvasWidth * 100%;
+        width: 377 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--3 > & {
+        background-image: url('./../img/idiotas/gato-slide-3.png');
+        bottom: 36 / $canvasHeight * 100%;
+        height: 169 / $canvasHeight * 100%;
+        left: 132 / $canvasWidth * 100%;
+        width: 257 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--4 > & {
+        background-image: url('./../img/idiotas/gato-slide-4.png');
+        bottom: 5 / $canvasHeight * 100%;
+        height: 225 / $canvasHeight * 100%;
+        left: 362 / $canvasWidth * 100%;
+        width: 534 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--5 > & {
+        background-image: url('./../img/idiotas/gato-slide-5.png');
+        bottom: 61 / $canvasHeight * 100%;
+        height: 182 / $canvasHeight * 100%;
+        left: auto;
+        right: 33 / $canvasWidth * 100%;
+        width: 354 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--6 > & {
+        background-image: url('./../img/idiotas/gato-slide-6.png');
+        bottom: 20 / $canvasHeight * 100%;
+        height: 212 / $canvasHeight * 100%;
+        left: 15 / $canvasWidth * 100%;
+        width: 383 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--7 > & {
+        background-image: url('./../img/idiotas/gato-slide-7.png');
+        bottom: 20 / $canvasHeight * 100%;
+        height: 206 / $canvasHeight * 100%;
+        left: 15 / $canvasWidth * 100%;
+        width: 390 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--8 > & {
+        background-image: url('./../img/idiotas/gato-slide-8.png');
+        bottom: 20 / $canvasHeight * 100%;
+        height: 206 / $canvasHeight * 100%;
+        left: 15 / $canvasWidth * 100%;
+        width: 390 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--9 > & {
+        background-image: url('./../img/idiotas/gato-slide-9.png');
+        bottom: 46 / $canvasHeight * 100%;
+        height: 196 / $canvasHeight * 100%;
+        left: 43 / $canvasWidth * 100%;
+        width: 206 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--10 > & {
+        background-image: url('./../img/idiotas/gato-slide-10.png');
+        bottom: 69 / $canvasHeight * 100%;
+        height: 129 / $canvasHeight * 100%;
+        left: auto;
+        right: 49 / $canvasWidth * 100%;
+        width: 139 / $canvasWidth * 100%;
+    }
+
+    .section--idiotas > .slide--11 > & {
+        background-image: url('./../img/idiotas/gato-slide-11.png');
+        bottom: 51 / $canvasHeight * 100%;
+        height: 247 / $canvasHeight * 100%;
+        left: auto;
+        right: 49 / $canvasWidth * 100%;
+        width: 424 / $canvasWidth * 100%;
+    }
+
 }
