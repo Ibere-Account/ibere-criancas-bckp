@@ -15,6 +15,16 @@
             }
         }
     }
+
+    &.header-base {
+        .slide__container {
+            justify-content: flex-start;
+
+            & > .row:first-child {
+                margin-top: 70 / $canvasHeight * 100%;
+            }
+        }
+    }
 }
 
 .slide__control {
