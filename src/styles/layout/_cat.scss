@@ -1,11 +1,25 @@
 .gato {
+    background: url('./../img/gato.png') no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    height: 182 / $canvasHeight * 100%;
+    position: absolute;
+    width: 197 / $canvasWidth * 100%;
+
     .section--home & {
-        background: url('./../img/home/gato.png') no-repeat 0 0 transparent;
-        background-size: 100% auto;
-        position: absolute;
-        height: 182 / $canvasHeight * 100%;
         left: 147 / $canvasWidth * 100%;
         bottom: 70 / $canvasHeight * 100%;
-        width: 197 / $canvasWidth * 100%;
+    }
+
+    .slide > & {
+        left: 276 / $canvasWidth * 100%;
+        bottom: 26 / $canvasHeight * 100%;
+    }
+
+    .section--ibere > .slide--3 > & {
+        background: url('./../img/ibere/gato-slide-3.png') no-repeat 0 0 transparent;
+        background-size: 100% auto;
+        height: 235 / $canvasHeight * 100%;
+        left: 50 / $canvasWidth * 100%;
+        width: 504 / $canvasWidth * 100%;
     }
 }
