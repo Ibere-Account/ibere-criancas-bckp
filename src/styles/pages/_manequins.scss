@@ -1,0 +1,27 @@
+.section--manequins {
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
+    background-size: contain;
+
+    .slide__title {
+        align-items: flex-end;
+        background-image: url('./../img/manequins/slide_manequins.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 100 / $canvasHeight * 100%;
+        top: 88 / $canvasHeight * 100%;
+        width: 170 / $canvasWidth * 100%;
+
+        @include viewport-font(2.1875vw, 20px, 24px);
+
+        & > span {
+            margin-bottom: 32px;
+        }
+    }
+
+    .slide--1 .slide__figure > figcaption {
+        text-align: right;
+        font-size: 75%;
+        margin-bottom: 5%;
+    }
+
+}

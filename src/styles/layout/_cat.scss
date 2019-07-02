@@ -142,4 +142,8 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--manequins > .slide--1 > & {
+        @include cat(349, 552, 64, -120, 'manequins', 1, true);
+    }
+
 }
