@@ -34,4 +34,11 @@
         transform: rotate(-8deg);
     }
 
+    .section--manequins & {
+        background-color: $manequins;
+        left: 512 / $canvasWidth * 100%;
+        top: 135 / $canvasHeight * 100%;
+        transform: rotate(8deg);
+    }
+
 }

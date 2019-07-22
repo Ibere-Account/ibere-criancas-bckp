@@ -49,14 +49,14 @@
 
                 <div class="container-fluid slide__container">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-sm-5">
                             <figure class="slide__figure">
                                 <img src="./../img/manequins/fantasmagoria.jpg"
                                     alt="Estudo para a pintura Fantasmagoria IV, 1987">
                                 <figcaption>Estudo para a pintura Fantasmagoria IV, 1987</figcaption>
                             </figure>
                         </div>
-                        <div class="col-8">
+                        <div class="col-sm-7">
                             <figure class="slide__figure">
                                 <img src="./../img/manequins/fantamasgoria_2.jpg" alt="Fantasmagoria IV, 1987">
                                 <figcaption>Fantasmagoria IV, 1987</figcaption>
@@ -64,9 +64,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 offset-6">
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-6">
                             <p class="slide__text">Os manequins das vitrines da Rua da Praia, no centro de Porto Alegre,
                                 foram a inspiração para a série Fantasmagoria.</p>
+                        </div>
+                        <div class="col-sm-3">
                         </div>
                     </div>
                 </div>
@@ -75,6 +79,7 @@
 
             </div>
 
+            <!-- TODO: adicionar acabamento no alinhamento das fotos c/ o gato -->
             <div class="slide slide--3 hide">
                 <h2 class="slide__title"><span>Manequins</span></h2>
 
@@ -104,9 +109,214 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="gato"></div>
             </div>
+
+            <!-- TODO: adicionar animação da lupa e acabamento no tamanho da foto -->
+            <div class="slide slide--4 hide">
+                <h2 class="slide__title"><span>Manequins</span></h2>
+
+                <div class="container-fluid slide__container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <p class="slide__text">Iberê usava muita tinta para pintar seus quadros, faezndo várias
+                                camadas grossas que às vezes dão
+                                a impressão de saltar para fora da tela.</p>
+                        </div>
+                        <div class="col-lg-8">
+                            <figure class="slide__figure">
+                                <img src="./../img/manequins/fantamasgoria_2.jpg" alt="Fantasmagoria IV, 1987">
+                                <figcaption class="text-right">Fantasmagoria IV, 1987</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="slide__text">Iberê fazia e refazia sua pintura muitas vezes, colocando e raspando
+                                a tinta. Por causa disso,
+                                para ver todas as cores que ele usava, precisamos olhar seus quadros de perto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gato"></div>
+            </div>
+
+            <!-- Adicionar gato e alinhar foto corretamente -->
+            <div class="slide slide--5 hide">
+                <h2 class="slide__title"><span>Manequins</span></h2>
+
+                <div class="container-fluid slide__container">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-auto">
+                            <figure class="slide__figure">
+                                <img src="./../img/manequins/manequim.jpg" alt="Manequim, 1986">
+                                <figcaption class="text-right">Manequim, 1986</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="slide__text">Um dos professores de Iberê dizia que uma pintura está pronta
+                                quando ela faz "PLIM"!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gato"></div>
+            </div>
+
+            <div class="slide slide--6 gallery hide" data-gallery="true">
+                <h2 class="gallery__title">Galeria de obras: <strong>Manequins</strong></h2>
+
+                <div class="container-fluid slide__container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <figure class="slide__figure" data-modal="#gallery-modal-1">
+                                <img src="./../img/manequins/galeria/sem-titulo.jpg" alt="sem título, 1986">
+                            </figure>
+                        </div>
+                        <div class="col-sm">
+                            <figure class="slide__figure" data-modal="#gallery-modal-2">
+                                <img src="./../img/manequins/galeria/manequim.jpg" alt="Manequim, 1986">
+                            </figure>
+                        </div>
+                        <div class="col-sm">
+                            <figure class="slide__figure" data-modal="#gallery-modal-3">
+                                <img src="./../img/manequins/galeria/estudo-fantagoria-ii.jpg"
+                                    alt="Estudo para a pintura Fantasmagoria II, 1986">
+                            </figure>
+                        </div>
+                        <div class="col-sm">
+                            <figure class="slide__figure" data-modal="#gallery-modal-4">
+                                <img src="./../img/manequins/galeria/estudo-fantasmagoria-i.jpg"
+                                    alt="Estudo para a pintura Fantasmagoria I, 1986">
+                            </figure>
+                        </div>
+                        <div class="col-sm">
+                            <figure class="slide__figure" data-modal="#gallery-modal-5">
+                                <img src="./../img/manequins/galeria/manequim-e-modelo.jpg"
+                                    alt="Manequim e modelo, 1992">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gato"></div>
+    </div>
+
+    <div class="modal" role="dialog" id="gallery-modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal__close">Fechar</button>
+
+                <div class="modal-body">
+                    <figure class="slide__figure">
+                        <img src="./../img/manequins/galeria/sem-titulo.jpg" alt="sem título, 1986">
+                        <figcaption>
+                            sem título, 1986<br>
+                            grafite e lápis de cor sobre papel<br>
+                            33 x 22,4 cm<br>
+                            col. Maria Coussirat Camargo<br>
+                            Fundação Iberê Camargo, Porto Alegre<br>
+                            Foto: &copy; Fábio Del Re_VivaFoto
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" role="dialog" id="gallery-modal-2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal__close">Fechar</button>
+
+                <div class="modal-body">
+                    <figure class="slide__figure">
+                        <img src="./../img/manequins/galeria/manequim.jpg" alt="Manequim, 1986">
+                        <figcaption>
+                            <strong>Manequim</strong>, 1986<br>
+                            óleo sobre madeira<br>
+                            42,30 cm<br>
+                            col. Maria Coussirat Camargo<br>
+                            Fundação Iberê Camargo, Porto Alegre<br>
+                            Foto: &copy; Fábio Del Re_VivaFoto
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" role="dialog" id="gallery-modal-3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal__close">Fechar</button>
+
+                <div class="modal-body">
+                    <figure class="slide__figure">
+                        <img src="./../img/manequins/galeria/estudo-fantagoria-ii.jpg"
+                            alt="Estudo para a pintura Fantasmagoria II, 1986">
+                        <figcaption>
+                            Estudo para a pintura<strong>Fantasmagoria II</strong>, 1986<br>
+                            nanquim sobre papel<br>
+                            33,2 x 23 cm<br>
+                            col. Maria Coussirat Camargo<br>
+                            Fundação Iberê Camargo, Porto Alegre<br>
+                            Foto: &copy; Fábio Del Re_VivaFoto
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" role="dialog" id="gallery-modal-4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal__close">Fechar</button>
+
+                <div class="modal-body">
+                    <figure class="slide__figure">
+                        <img src="./../img/manequins/galeria/estudo-fantasmagoria-i.jpg"
+                            alt="Estudo para a pintura Fantasmagoria I, 1986">
+                        <figcaption>
+                            Estudo para a pintura <strong>Fantasmagoria I</strong>, 1986<br>
+                            tinta de esferográfica sobre papel<br>
+                            16 x 27 cm<br>
+                            col. Maria Coussirat Camargo<br>
+                            Fundação Iberê Camargo, Porto Alegre<br>
+                            Foto: &copy; Fábio Del Re_VivaFoto
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" role="dialog" id="gallery-modal-5">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal__close">Fechar</button>
+
+                <div class="modal-body">
+                    <figure class="slide__figure">
+                        <img src="./../img/manequins/galeria/manequim-e-modelo.jpg" alt="Manequim e modelo, 1992">
+                        <figcaption>
+                            <strong>Manequim e modelo</strong>, 1992<br>
+                            gravura em água-forte<br>
+                            29,5 x 24,7 cm<br>
+                            col. Maria Coussirat Camargo<br>
+                            Fundação Iberê Camargo, Porto Alegre<br>
+                            Foto: &copy; Fábio Del Re_VivaFoto
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
 
     </section>

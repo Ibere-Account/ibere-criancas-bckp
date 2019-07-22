@@ -153,4 +153,9 @@
     .section--manequins > .slide--3 > & {
         @include cat(522, 260, 64, 14, 'manequins', 3, false);
     }
+
+    .section--manequins > .slide--4 > & {
+        @include cat(223, 359, 64, -25, 'manequins', 4, true);
+    }
+
 }
