@@ -142,4 +142,32 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--natureza > .slide--1 > & {
+        @include cat(299, 248, 67, 48, 'natureza', 1, false);
+    }
+
+    .section--natureza > .slide--2 > & {
+        @include cat(319, 333, 71, 48, 'natureza', 2, true);
+    }
+
+    .section--natureza > .slide--3 > & {
+        @include cat(218, 423, 110, 20, 'natureza', 3, false);
+    }
+
+    .section--natureza > .slide--4 > & {
+        @include cat(206, 196, 110, 60, 'natureza', 4, false);
+    }
+
+    .section--natureza > .slide--5 > & {
+        @include cat(304, 322, 112, 36, 'natureza', 5, true);
+    }
+
+    .section--natureza > .slide--6 > & {
+        @include cat(230, 299, 40, 30, 'natureza', 6, false);
+    }
+
+    .section--natureza > .slide--7 > & {
+        @include cat(306, 357, 40, 30, 'natureza', 7, true);
+    }
+
 }

@@ -4,17 +4,17 @@
 
     .slide__title {
         align-items: flex-end;
-        background-image: url('./../img/acervo/bg-secao.png');
+        background-image: url('./../img/natureza/bg-secao.png');
         background-size: contain;
         font-weight: bold;
-        height: 124 / $canvasHeight * 100%;
-        top: 148 / $canvasHeight * 100%;
-        width: 210 / $canvasWidth * 100%;
+        height: 78 / $canvasHeight * 100%;
+        top: 72 / $canvasHeight * 100%;
+        width: 242 / $canvasWidth * 100%;
 
         @include viewport-font(2.1875vw, 20px, 28px);
 
         & > span {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
     }
 
