@@ -142,4 +142,20 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--carreteis > .slide--1 > & {
+        @include cat(347, 462, 40, 45, 'carreteis', 1, false);
+    }
+
+    .section--carreteis > .slide--2 > & {
+        @include cat(452, 230, 60, 45, 'carreteis', 2, true);
+    }
+
+    .section--carreteis > .slide--3 > & {
+        @include cat(452, 230, 60, 45, 'carreteis', 2, true);
+    }
+
+    .section--carreteis > .slide--4 > & {
+        @include cat(322, 470, 95, 45, 'carreteis', 4, true);
+    }
+
 }
