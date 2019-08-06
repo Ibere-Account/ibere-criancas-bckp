@@ -142,4 +142,33 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--paisagem > .slide--1 > & {
+        @include cat(340, 391, 412, 57, 'paisagem', 1, false);
+    }
+
+    .section--paisagem > .slide--2 > & {
+        @include cat(265, 315, 64, 49, 'paisagem', 2, true);
+    }
+
+    .section--paisagem > .slide--3 > & {
+        @include cat(494, 256, 153, 44, 'paisagem', 3, false);
+    }
+
+    .section--paisagem > .slide--4 > & {
+        @include cat(369, 435, 25, 50, 'paisagem', 4, true);
+    }
+
+    .section--paisagem > .slide--5 > &,
+    .section--paisagem > .slide--6 > &{
+        @include cat(413, 266, 32, 19, 'paisagem', 5, true);
+    }
+
+    .section--paisagem > .slide--7 > & {
+        @include cat(139, 129, 49, 71, 'paisagem', 7, false);
+    }
+
+    .section--paisagem > .slide--8 > & {
+        @include cat(635, 239, 43, 50, 'paisagem', 8, true);
+    }
+
 }
