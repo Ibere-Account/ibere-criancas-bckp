@@ -152,7 +152,7 @@
     }
 
     .section--carreteis > .slide--4 > & {
-        @include cat(322, 470, 95, 45, 'carreteis', 4, true);
+        @include cat(322, 470, 135, 25, 'carreteis', 4, true);
     }
 
     .section--carreteis > .slide--5 > & {
@@ -168,7 +168,7 @@
     }
 
     .section--carreteis > .slide--8 > & {
-        @include cat(482, 350, 47, 44, 'carreteis', 8, false);
+        @include cat(482, 350, 47, 14, 'carreteis', 8, false);
     }
 
 }
