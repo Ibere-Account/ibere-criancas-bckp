@@ -83,7 +83,7 @@ FIC.Slides = {
             $buttons.on('click', function () {
                 var $this = $(this),
                     swap = $this.data('swap'),
-                    $figure = $this.parents('.swap__actions').prev().find('.swap__figure'),
+                    $figure = $this.parents('.slide__interaction--swap').find('.swap__figure'),
                     figureSrc = $figure.data('src');
 
                 $buttons.removeClass('active');

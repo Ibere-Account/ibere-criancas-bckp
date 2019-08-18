@@ -151,7 +151,7 @@
     }
 
     .section--paisagem > .slide--3 > & {
-        @include cat(494, 256, 153, 44, 'paisagem', 3, false);
+        @include cat(494, 256, 53, 44, 'paisagem', 3, false);
     }
 
     .section--paisagem > .slide--4 > & {
@@ -160,7 +160,8 @@
 
     .section--paisagem > .slide--5 > &,
     .section--paisagem > .slide--6 > &{
-        @include cat(413, 266, 32, 19, 'paisagem', 5, true);
+        @include cat(415, 272, 32, 5, 'paisagem', 5, true);
+        background-image: url("./../img/paisagem/gato-slide-5.gif");
     }
 
     .section--paisagem > .slide--7 > & {
