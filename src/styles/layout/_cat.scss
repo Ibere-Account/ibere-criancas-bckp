@@ -155,7 +155,15 @@
     }
 
     .section--manequins > .slide--4 > & {
-        @include cat(223, 359, 64, -25, 'manequins', 4, true);
+        @include cat(230, 360, 75, -15, 'manequins', 4, true);
+    }
+
+    .section--manequins > .slide--5 > & {
+        @include cat(366, 353, 100, 35, 'manequins', 5, true);
+    }
+
+    .section--manequins > .slide--7 > & {
+        @include cat(500, 313, 100, 10, 'manequins', 7, false);
     }
 
 }

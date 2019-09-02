@@ -104,6 +104,11 @@
     & > .row + .row {
         margin-top: 5px;
     }
+
+    &.slide__container--top-aligned {
+        justify-content: flex-start;
+        margin-top: 50 / $canvasHeight * 100% !important;
+    }
 }
 
 .slide__figure {

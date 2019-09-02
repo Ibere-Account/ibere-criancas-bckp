@@ -8,6 +8,7 @@
     <title>Iberê para Crianças | Manequins</title>
 
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -79,11 +80,10 @@
 
             </div>
 
-            <!-- TODO: adicionar acabamento no alinhamento das fotos c/ o gato -->
             <div class="slide slide--3 hide">
                 <h2 class="slide__title"><span>Manequins</span></h2>
 
-                <div class="container-fluid slide__container">
+                <div class="container-fluid slide__container slide__container--top-aligned">
                     <div class="row">
                         <div class="col align-self-end">
                             <figure class="slide__figure">
@@ -113,24 +113,26 @@
                 <div class="gato"></div>
             </div>
 
-            <!-- TODO: adicionar animação da lupa e acabamento no tamanho da foto -->
             <div class="slide slide--4 hide">
                 <h2 class="slide__title"><span>Manequins</span></h2>
 
                 <div class="container-fluid slide__container">
                     <div class="row">
-                        <div class="col-lg-2">
+                        <div class="col-2">
                             <p class="slide__text">Iberê usava muita tinta para pintar seus quadros, faezndo várias
                                 camadas grossas que às vezes dão
                                 a impressão de saltar para fora da tela.</p>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-8">
                             <figure class="slide__figure">
-                                <img src="./../img/manequins/fantamasgoria_2.jpg" alt="Fantasmagoria IV, 1987">
+                                <img src="./../img/manequins/fantamasgoria_2.jpg"
+                                class="zoom"
+                                data-magnify-src="./../img/manequins/fantamasgoria_2.jpg"
+                                alt="Fantasmagoria IV, 1987">
                                 <figcaption class="text-right">Fantasmagoria IV, 1987</figcaption>
                             </figure>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-2">
                             <p class="slide__text">Iberê fazia e refazia sua pintura muitas vezes, colocando e raspando
                                 a tinta. Por causa disso,
                                 para ver todas as cores que ele usava, precisamos olhar seus quadros de perto.</p>
@@ -141,14 +143,12 @@
                 <div class="gato"></div>
             </div>
 
-            <!-- Adicionar gato e alinhar foto corretamente -->
             <div class="slide slide--5 hide">
                 <h2 class="slide__title"><span>Manequins</span></h2>
 
                 <div class="container-fluid slide__container">
                     <div class="row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-auto">
+                        <div class="col-sm-6 offset-sm-4">
                             <figure class="slide__figure">
                                 <img src="./../img/manequins/manequim.jpg" alt="Manequim, 1986">
                                 <figcaption class="text-right">Manequim, 1986</figcaption>
@@ -165,34 +165,62 @@
                 <div class="gato"></div>
             </div>
 
+            <div class="slide slide--7 hide">
+                <h2 class="slide__title slide__title--curiosidades"><span>Curiosidades</span></h2>
+
+                <div class="container-fluid slide__container">
+                    <div class="row">
+                        <div class="col-5 offset-1">
+                            <figure class="slide__figure">
+                                <img src="./../img/manequins/site-infantil-76manequinsz-fecha.jpg">
+                                <figcaption class="text-right">A amiga Gislaine posando para Iberê e, ao fundo, o manequim, 
+                                    em 1993
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-5 offset-1" style="transform: rotate(10deg);">
+                            <figure class="slide__figure">
+                                <img src="./../img/manequins/site-infantil-76manequinsz-fecha (1).png"
+                                    style="width: 70%">
+                                <figcaption class="text-right" style="margin-bottom: 60%; width: 70%;">
+                                        O manequim refletido em um espelho e Iberê ao fundo, em 1993
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gato"></div>
+            </div>
+
             <div class="slide slide--6 gallery hide" data-gallery="true">
                 <h2 class="gallery__title">Galeria de obras: <strong>Manequins</strong></h2>
 
                 <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-sm">
+                    <div class="row" style="justify-content: center;align-items: center">
+                        <div class="col-sm-2">
                             <figure class="slide__figure" data-modal="#gallery-modal-1">
                                 <img src="./../img/manequins/galeria/sem-titulo.jpg" alt="sem título, 1986">
                             </figure>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm-3">
                             <figure class="slide__figure" data-modal="#gallery-modal-2">
                                 <img src="./../img/manequins/galeria/manequim.jpg" alt="Manequim, 1986">
                             </figure>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm-2">
                             <figure class="slide__figure" data-modal="#gallery-modal-3">
                                 <img src="./../img/manequins/galeria/estudo-fantagoria-ii.jpg"
                                     alt="Estudo para a pintura Fantasmagoria II, 1986">
                             </figure>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm-3">
                             <figure class="slide__figure" data-modal="#gallery-modal-4">
                                 <img src="./../img/manequins/galeria/estudo-fantasmagoria-i.jpg"
                                     alt="Estudo para a pintura Fantasmagoria I, 1986">
                             </figure>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm-2">
                             <figure class="slide__figure" data-modal="#gallery-modal-5">
                                 <img src="./../img/manequins/galeria/manequim-e-modelo.jpg"
                                     alt="Manequim e modelo, 1992">
@@ -324,6 +352,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/app.js" defer></script>
+    <link rel="stylesheet" href="styles/vendors/magnify/magnify.css">
+    <script src="scripts/jquery.magnify.js"></script>
+    <script src="scripts/jquery.magnify-mobile.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('.zoom').magnify({
+            speed: 200,
+            src: './../img/manequins/fantamasgoria_2.jpg'
+          });
+        });
+    </script>
 </body>
 
 </html>
