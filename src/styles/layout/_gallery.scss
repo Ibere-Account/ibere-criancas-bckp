@@ -41,4 +41,11 @@
         transform: rotate(8deg);
     }
 
+    .section--carreteis & {
+        background-color: $carreteis;
+        left: 284 / $canvasWidth * 100%;
+        top: 142 / $canvasHeight * 100%;
+        transform: rotate(-8deg);
+    }
+
 }

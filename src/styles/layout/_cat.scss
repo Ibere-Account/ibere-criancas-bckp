@@ -166,4 +166,33 @@
         @include cat(500, 313, 100, 10, 'manequins', 7, false);
     }
 
+    .section--carreteis > .slide--1 > & {
+        @include cat(347, 462, 40, 45, 'carreteis', 1, false);
+    }
+
+    .section--carreteis > .slide--2 > &,
+    .section--carreteis > .slide--3 > &  {
+        @include cat(452, 230, 60, 45, 'carreteis', 2, true);
+    }
+
+    .section--carreteis > .slide--4 > & {
+        @include cat(322, 470, 135, 25, 'carreteis', 4, true);
+    }
+
+    .section--carreteis > .slide--5 > & {
+        @include cat(206, 196, 95, 45, 'carreteis', 5, true);
+    }
+
+    .section--carreteis > .slide--6 > & {
+        @include cat(197, 182, 95, 45, 'carreteis', 6, true);
+    }
+
+    .section--carreteis > .slide--7 > & {
+        @include cat(139, 129, 95, 45, 'carreteis', 7, false);
+    }
+
+    .section--carreteis > .slide--8 > & {
+        @include cat(482, 350, 47, 14, 'carreteis', 8, false);
+    }
+
 }
