@@ -142,6 +142,30 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--manequins > .slide--1 > & {
+        @include cat(349, 552, 64, -120, 'manequins', 1, true);
+    }
+
+    .section--manequins > .slide--2 > & {
+        @include cat(206, 196, 64, 35, 'manequins', 2, true);
+    }
+
+    .section--manequins > .slide--3 > & {
+        @include cat(522, 260, 64, 14, 'manequins', 3, false);
+    }
+
+    .section--manequins > .slide--4 > & {
+        @include cat(230, 360, 75, -15, 'manequins', 4, true);
+    }
+
+    .section--manequins > .slide--5 > & {
+        @include cat(366, 353, 100, 35, 'manequins', 5, true);
+    }
+
+    .section--manequins > .slide--7 > & {
+        @include cat(500, 313, 100, 10, 'manequins', 7, false);
+    }
+
     .section--carreteis > .slide--1 > & {
         @include cat(347, 462, 40, 45, 'carreteis', 1, false);
     }
