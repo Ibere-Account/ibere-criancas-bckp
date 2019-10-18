@@ -3,6 +3,16 @@
 var FIC = FIC || [];
 
 $(document).ready(function ()  {
+
+    if(!sessionStorage.getItem('viewState')){
+        const viewState = {
+            displayGuide:true,
+            visitedLinks:[]
+        };
+    
+        sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+    }
+
     for (var i in FIC) {
         if ('function' === typeof FIC[i].init) {
             FIC[i].init();
@@ -23,10 +33,69 @@ FIC.Home = {
                     $(this).removeClass('open');
                 });
         });
+
+        $('#help-button').hover(function(){
+            $('#help-text').removeClass('gato__help__ballon--hide');
+            $('#help-text').addClass('gato__help__ballon--show');
+        },
+        function(){
+            $('#help-text').addClass('gato__help__ballon--hide');
+            $('#help-text').removeClass('gato__help__ballon--show');
+        })
     },
 
     init: function () {
         FIC.Home.datasheetHandler();
+
+        $('.section__link').on('click', function(){
+            const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
+            const clickedLink = $(this).attr('href').replace('.html', '');
+            const hasAlreadyVisited = viewState.visitedLinks.find( link => link === clickedLink );
+
+            if(!hasAlreadyVisited){
+                viewState.visitedLinks.push(clickedLink);
+            }
+            sessionStorage.removeItem('viewState');
+            sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+        });
+        this.setVisitedLinks();
+        this.startFirstGuideTalk();
+    },
+
+    setVisitedLinks: function(){
+        const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
+
+        viewState.visitedLinks.map( link => $(`[href="${link}.html"]`).addClass('section__link--visited'));
+
+    },
+
+    startFirstGuideTalk: function(){
+        const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
+
+        if(viewState.displayGuide){
+
+            window.setTimeout(() => {
+                $('#guide-talk-1').removeClass('gato__help__ballon--hide');
+                $('#guide-talk-1').addClass('gato__help__ballon--show');
+            },3000);
+
+            window.setTimeout(() => {
+                $('#guide-talk-1').removeClass('gato__help__ballon--show');
+                $('#guide-talk-1').addClass('gato__help__ballon--hide');
+
+                $('#guide-talk-2').removeClass('gato__help__ballon--hide');
+                $('#guide-talk-2').addClass('gato__help__ballon--show');
+            },10000);
+            window.setTimeout(() => {
+                $('#guide-talk-2').removeClass('gato__help__ballon--show');
+                $('#guide-talk-2').addClass('gato__help__ballon--hide');
+            },20000);
+
+            viewState.displayGuide = false;
+
+            sessionStorage.removeItem('viewState');
+            sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+        }
     }
 
 };
