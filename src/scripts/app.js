@@ -159,7 +159,7 @@ FIC.Slides = {
 
             $imagesLeft.on('click', function () {
                 var $this = $(this);
-                $('.gato p').hide();
+                $('.gato').removeClass('erro');
                 $this.toggleClass('selected');
                 $imagesRight.toggleClass('selectable')
                 if ($this.hasClass('selected')) {
@@ -173,12 +173,13 @@ FIC.Slides = {
                 var $optionLeft = $wrapper.find('.images-left .slide__figure.selected');
                 var $optionRight = $this.data('image-answer');
                 if ($optionLeft.data('image-answer') === $optionRight) {
+                    $('.answer' + $optionLeft.data('image-answer')).show();
                     $this.addClass('right-answer');
                     $optionLeft.addClass('right-answer');
                     resetOptions();
-                    $('.gato p').hide();
+                    $('.gato').removeClass('erro');
                 } else {
-                    $('.gato p').show();
+                    $('.gato').addClass('erro');
                 }
             });
         }

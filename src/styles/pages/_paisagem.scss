@@ -2,20 +2,6 @@
     background: url('./../img/paisagem/mapa.png') no-repeat center bottom #FFF;
     background-size: contain;
 
-    .gato{
-        p{
-            display: none;
-            position: absolute;
-            background:white;
-            font-weight: bold;
-            font-size: 18px;
-            top: 30 / $canvasWidth * 100%;;
-            right: 20 / $canvasWidth * 100%;;
-            padding: 10px;
-            border-radius: 100%;
-            text-align: center;
-        }
-    }
     .slide__title {
         background-image: url('./../img/paisagem/bg-secao.png');
         background-size: contain;
@@ -60,6 +46,7 @@
             width: 55px;
         }
     }
+
     .slide__figure {
         margin-bottom: 15px;
 
@@ -74,10 +61,12 @@
             outline: 16px solid #FFF;
             outline-offset: -14px;
         }
-        &.right-answer{
+
+        &.right-answer {
             opacity: 1 !important;
             pointer-events: none !important;
-            img{
+
+            img {
                 outline: none;
             }
         }
@@ -100,8 +89,44 @@
         }
     }
 
+    .lines-answers {
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .answer0,
+        .answer1,
+        .answer2{
+            position: absolute;
+            display: none;
+        }
+
+        .answer1 {
+            top: -38 / $canvasHeight * 100%;
+            left: -115 / $canvasHeight * 100%;
+            width: 127%;
+            height: 38%;
+            z-index: 3;
+        }
+
+        .answer2 {
+            top: 300 / $canvasHeight * 100%;
+            left: -115 / $canvasHeight * 100%;
+            width: 127%;
+            height: 38%;
+            z-index: 2;
+        }
+        .answer0 {
+            top: 20 / $canvasHeight * 100%;
+            left: -115 / $canvasHeight * 100%;
+            width: 127%;
+            height: 72%;
+            z-index: 1;
+        }
+    }
+
     .images-right .slide__figure {
-        opacity: 0.5;
         pointer-events: none;
         transition: 0.5s ease-in-out;
 

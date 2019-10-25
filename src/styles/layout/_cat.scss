@@ -10,6 +10,9 @@
         left: auto;
         right: $x / $canvasWidth * 100%;
     }
+    &.erro{
+        background: url('./../img/paisagem/jogo/gato_erro.png') no-repeat 0 0 transparent;
+    }
 }
 
 .gato {
@@ -19,6 +22,7 @@
     position: absolute;
     width: 197 / $canvasWidth * 100%;
 
+    
     .section--home & {
         left: 147 / $canvasWidth * 100%;
         bottom: 70 / $canvasHeight * 100%;
@@ -144,6 +148,7 @@
 
     .section--paisagem > .slide--1 > & {
         @include cat(340, 391, 412, 57, 'paisagem', 1, false);
+
     }
 
     .section--paisagem > .slide--2 > & {
