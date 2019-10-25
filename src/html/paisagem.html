@@ -14,12 +14,12 @@
 
     <div class="page-wrapper">
         <section class="section section--paisagem">
-            <h1 class="logo" title="Fundação Iberê Camargo">Fundação Iberê Camargo</h1>
+            <a href="/" class="logo" title="Fundação Iberê Camargo">Fundação Iberê Camargo</a>
 
             <button type="button" class="slide__control slide__control--prev" title="Voltar para o slide anterior">Voltar para o slide anterior</button>
             <button type="button" class="slide__control slide__control--next" title="Ir para o próximo slide">Ir para o próximo slide</button>
 
-            <div class="slide slide--1">
+            <div class="slide slide--1 hide">
                 <h2 class="slide__title"><span>Paisagem</span></h2>
 
                 <div class="container-fluid slide__container">
@@ -31,7 +31,7 @@
                 <div class="gato"></div>
             </div>
 
-            <div class="slide slide--2 hide">
+            <div class="slide slide--2 ">
                 <h2 class="slide__title"><span>Paisagem</span></h2>
 
                 <div class="container-fluid slide__container">
@@ -41,12 +41,41 @@
                             <p class="slide__text text-right">Você consegue descobrir em que lugar cada uma dessas obras foi feita?</p>
                         </div>
 
-                        <div class="col-5"></div>
-                        <div class="col-5"></div>
+                        <div class="col-4 negative-margin-top images-left">
+                            <figure class="slide__figure text-right" data-image-answer='1'>
+                                <img src="../img/paisagem/jogo/imagem1_contorno.jpg" alt="sem título, 1979">
+                                <figcaption>sem título, 1979</figcaption>
+                            </figure>
+                            <figure class="slide__figure text-right"  data-image-answer='2'>
+                                <img src="../img/paisagem/jogo/imagem2_contorno.jpg" alt="sem título, 1979">
+                                <figcaption>sem título, c. 1943</figcaption>
+                            </figure>
+                            <figure class="slide__figure text-right"  data-image-answer='0'>
+                                <img src="../img/paisagem/jogo/imagem3_contorno.jpg" alt="sem título, 1979">
+                                <figcaption>sem título, 1989</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4 negative-margin-top images-right">
+                            <figure class="slide__figure" data-image-answer='0'>
+                                <img src="../img/paisagem/jogo/imagem3_correta_contorno.jpg" alt="Porto Alegre">
+                                <figcaption class="text-right">Porto Alegre</figcaption>
+                            </figure>
+                            <figure class="slide__figure" data-image-answer='1'>
+                                <img src="../img/paisagem/jogo/imagem1_corretacontorno.jpg" alt="Santa Maria">
+                                <figcaption class="text-right">Santa Maria</figcaption>
+                            </figure>
+                            <figure class="slide__figure" data-image-answer='2'>
+                                <img src="../img/paisagem/jogo/imagem2_correta_contorno.jpg" alt="Rio de Janeiro">
+                                <figcaption class="text-right">Rio de Janeiro</figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gato"></div>
+                <div class="gato">
+                    <p>Ops!<br/>Tente novamente</p>
+                </div>
             </div>
 
             <div class="slide slide--3 hide">

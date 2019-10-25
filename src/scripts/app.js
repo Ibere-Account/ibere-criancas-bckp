@@ -2,7 +2,7 @@
 
 var FIC = FIC || [];
 
-$(document).ready(function ()  {
+$(document).ready(function () {
     for (var i in FIC) {
         if ('function' === typeof FIC[i].init) {
             FIC[i].init();
@@ -13,7 +13,7 @@ $(document).ready(function ()  {
 
 FIC.Home = {
 
-    datasheetHandler: function ()  {
+    datasheetHandler: function () {
         var $datasheet = $('.datasheet');
 
         $(document).on('click', '.datasheet-link', function () {
@@ -147,6 +147,43 @@ FIC.Slides = {
             $this.attr('src', src);
         });
     },
+    landscapesHandler: function () {
+        var $wrapper = $('.section--paisagem');
+        var resetOptions = function () {
+            $wrapper.find('.images-left .slide__figure').removeClass('selected').removeClass('unselected');
+            $wrapper.find('.images-right .slide__figure').removeClass('selectable');
+        }
+        if ($wrapper.length) {
+            var $imagesLeft = $wrapper.find('.images-left .slide__figure');
+            var $imagesRight = $wrapper.find('.images-right .slide__figure');
+
+            $imagesLeft.on('click', function () {
+                var $this = $(this);
+                $('.gato p').hide();
+                $this.toggleClass('selected');
+                $imagesRight.toggleClass('selectable')
+                if ($this.hasClass('selected')) {
+                    $('.slide__figure').not('.selected').addClass('unselected');
+                }
+                else
+                    $('.slide__figure').removeClass('unselected');
+            });
+            $imagesRight.on('click', $imagesRight, function () {
+                var $this = $(this);
+                var $optionLeft = $wrapper.find('.images-left .slide__figure.selected');
+                var $optionRight = $this.data('image-answer');
+                if ($optionLeft.data('image-answer') === $optionRight) {
+                    $this.addClass('right-answer');
+                    $optionLeft.addClass('right-answer');
+                    resetOptions();
+                    $('.gato p').hide();
+                } else {
+                    $('.gato p').show();
+                }
+            });
+        }
+    },
+
 
     init: function () {
         FIC.Slides.$slides = $('.slide');
@@ -161,6 +198,7 @@ FIC.Slides = {
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
+        FIC.Slides.landscapesHandler();
     }
 
 };
