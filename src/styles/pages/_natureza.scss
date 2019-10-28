@@ -18,18 +18,18 @@
     }
   }
   
-  .primeira {
-    &.segunda {
-      &.terceira {
-      }
-    }
-    &.terceira {
-    }
-  }
-  .segunda {
-    &.terceira {
-    }
-  }
-  .terceira {
-  }
+  // .primeira {
+  //   &.segunda {
+  //     &.terceira {
+  //     }
+  //   }
+  //   &.terceira {
+  //   }
+  // }
+  // .segunda {
+  //   &.terceira {
+  //   }
+  // }
+  // .terceira {
+  // }
 }
