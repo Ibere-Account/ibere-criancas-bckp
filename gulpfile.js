@@ -76,7 +76,7 @@ let lintJS = () => {
                 indent: [2, 4, { SwitchCase: 1 }],
                 quotes: [1, 'single'],
                 semi: [2, 'always'],
-                'linebreak-style': [2, 'unix'],
+                'linebreak-style': [2, 'windows'],
                 'max-len': [0]
             },
             env: {
