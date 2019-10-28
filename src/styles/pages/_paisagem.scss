@@ -1,138 +1,146 @@
 .section--paisagem {
-    background: url('./../img/paisagem/mapa.png') no-repeat center bottom #FFF;
+  background: url("./../img/paisagem/mapa.png") no-repeat center bottom #fff;
+  background-size: contain;
+
+  .slide__title {
+    background-image: url("./../img/paisagem/bg-secao.png");
     background-size: contain;
+    font-weight: bold;
+    height: 89 / $canvasHeight * 100%;
+    top: 108 / $canvasHeight * 100%;
+    width: 188 / $canvasWidth * 100%;
 
-    .slide__title {
-        background-image: url('./../img/paisagem/bg-secao.png');
-        background-size: contain;
-        font-weight: bold;
-        height: 89 / $canvasHeight * 100%;
-        top: 108 / $canvasHeight * 100%;
-        width: 188 / $canvasWidth * 100%;
+    @include viewport-font(2.1875vw, 20px, 28px);
+  }
 
-        @include viewport-font(2.1875vw, 20px, 28px);
+  .slide:not(.gallery) {
+    background: url("./../img/paisagem/chao.png") no-repeat center bottom #fff;
+    background-size: contain;
+  }
+
+  .slide--1 {
+    background-color: transparent !important;
+  }
+
+  .slide--4 .slide__figure > figcaption,
+  .slide--6 .slide__figure > figcaption,
+  .slide--7 .slide__figure > figcaption,
+  .slide--8 .slide__figure > figcaption {
+    text-align: right;
+  }
+
+  .swap__actions {
+    margin: 0 20px 0 0;
+  }
+
+  .swap__btn {
+    &--dia {
+      background-image: url("./../img/paisagem/btn-dia.png");
+      height: 48px;
+      width: 47px;
     }
 
-    .slide:not(.gallery) {
-        background: url('./../img/paisagem/chao.png') no-repeat center bottom #FFF;
-        background-size: contain;
+    &--noite {
+      background-image: url("./../img/paisagem/btn-noite.png");
+      height: 60px;
+      width: 55px;
+    }
+  }
+
+  .slide__figure {
+    margin-bottom: 15px;
+
+    & > figcaption {
+      margin-top: -12px;
+      margin-right: 11px;
+      font-weight: bold;
     }
 
-    .slide--1 {
-        background-color: transparent !important;
+    & > img {
+      cursor: pointer;
+      outline: 16px solid #fff;
+      outline-offset: -14px;
     }
 
-    .slide--4 .slide__figure>figcaption,
-    .slide--6 .slide__figure>figcaption,
-    .slide--7 .slide__figure>figcaption,
-    .slide--8 .slide__figure>figcaption {
-        text-align: right;
+    &.right-answer {
+      opacity: 1 !important;
+      pointer-events: none !important;
+
+      img {
+        outline: none;
+      }
     }
+  }
 
-    .swap__actions {
-        margin: 0 20px 0 0;
-    }
-
-    .swap__btn {
-        &--dia {
-            background-image: url('./../img/paisagem/btn-dia.png');
-            height: 48px;
-            width: 47px;
-        }
-
-        &--noite {
-            background-image: url('./../img/paisagem/btn-noite.png');
-            height: 60px;
-            width: 55px;
-        }
-    }
-
+  .images-left {
     .slide__figure {
-        margin-bottom: 15px;
+      transition: 0.2s opacity ease-in-out;
 
-        &>figcaption {
-            margin-top: -12px;
-            margin-right: 11px;
-            font-weight: bold;
-        }
+      &:not(.selected):hover {
+        opacity: 0.8;
+      }
 
-        &>img {
-            cursor: pointer;
-            outline: 16px solid #FFF;
-            outline-offset: -14px;
-        }
-
-        &.right-answer {
-            opacity: 1 !important;
-            pointer-events: none !important;
-
-            img {
-                outline: none;
-            }
-        }
-    }
-
-    .images-left {
-        .slide__figure {
-            transition: 0.5s ease-in-out;
-
-            &.selected {
-                img {
-                    outline: none;
-                }
-            }
-
-            &.unselected {
-                pointer-events: none;
-                opacity: 0.5;
-            }
-        }
-    }
-
-    .lines-answers {
+      &.selected {
         img {
-            position: relative;
-            width: 100%;
-            height: 100%;
+          outline: none;
         }
-        .answer0,
-        .answer1,
-        .answer2{
-            position: absolute;
-            display: none;
-        }
+      }
 
-        .answer1 {
-            top: -38 / $canvasHeight * 100%;
-            left: -115 / $canvasHeight * 100%;
-            width: 127%;
-            height: 38%;
-            z-index: 3;
-        }
-
-        .answer2 {
-            top: 300 / $canvasHeight * 100%;
-            left: -115 / $canvasHeight * 100%;
-            width: 127%;
-            height: 38%;
-            z-index: 2;
-        }
-        .answer0 {
-            top: 20 / $canvasHeight * 100%;
-            left: -115 / $canvasHeight * 100%;
-            width: 127%;
-            height: 72%;
-            z-index: 1;
-        }
-    }
-
-    .images-right .slide__figure {
+      &.unselected {
         pointer-events: none;
-        transition: 0.5s ease-in-out;
-
-        &.selectable {
-            pointer-events: all;
-            opacity: 1;
-        }
+        opacity: 0.5;
+      }
     }
+  }
+
+  .lines-answers {
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .answer0,
+    .answer1,
+    .answer2 {
+      position: absolute;
+      display: none;
+    }
+
+    .answer1 {
+      top: -38 / $canvasHeight * 100%;
+      left: -115 / $canvasHeight * 100%;
+      width: 127%;
+      height: 38%;
+      z-index: 3;
+    }
+
+    .answer2 {
+      top: 300 / $canvasHeight * 100%;
+      left: -115 / $canvasHeight * 100%;
+      width: 127%;
+      height: 38%;
+      z-index: 2;
+    }
+    .answer0 {
+      top: 20 / $canvasHeight * 100%;
+      left: -115 / $canvasHeight * 100%;
+      width: 127%;
+      height: 72%;
+      z-index: 1;
+    }
+  }
+
+  .images-right .slide__figure {
+    pointer-events: none;
+    transition: 0.2s opacity ease-in-out;
+
+    &.selectable {
+      pointer-events: all;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }
