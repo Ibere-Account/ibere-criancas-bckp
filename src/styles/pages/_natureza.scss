@@ -1,21 +1,35 @@
 .section--natureza {
-    background: url('./../img/chao.png') no-repeat center bottom transparent;
+  background: url("./../img/chao.png") no-repeat center bottom transparent;
+  background-size: contain;
+
+  .slide__title {
+    align-items: flex-end;
+    background-image: url("./../img/natureza/bg-secao.png");
     background-size: contain;
+    font-weight: bold;
+    height: 78 / $canvasHeight * 100%;
+    top: 72 / $canvasHeight * 100%;
+    width: 242 / $canvasWidth * 100%;
 
-    .slide__title {
-        align-items: flex-end;
-        background-image: url('./../img/natureza/bg-secao.png');
-        background-size: contain;
-        font-weight: bold;
-        height: 78 / $canvasHeight * 100%;
-        top: 72 / $canvasHeight * 100%;
-        width: 242 / $canvasWidth * 100%;
+    @include viewport-font(2.1875vw, 20px, 28px);
 
-        @include viewport-font(2.1875vw, 20px, 28px);
-
-        & > span {
-            margin-bottom: 10px;
-        }
+    & > span {
+      margin-bottom: 10px;
     }
-
+  }
+  
+  .primeira {
+    &.segunda {
+      &.terceira {
+      }
+    }
+    &.terceira {
+    }
+  }
+  .segunda {
+    &.terceira {
+    }
+  }
+  .terceira {
+  }
 }
