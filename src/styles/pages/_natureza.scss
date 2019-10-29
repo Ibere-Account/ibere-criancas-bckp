@@ -99,7 +99,7 @@
       }
     }
   }
-  
+
   .slide__interaction--swap {
     & > figure:nth-child(1) {
       cursor: pointer;
@@ -113,5 +113,15 @@
   .slide__button {
     cursor: pointer;
     text-align: center;
+  }
+
+  .slide--6 {
+    .slide__figure {
+      img {
+        margin: 40px auto;
+        display: block;
+        margin-top: -90 / $canvasHeight * 100%;
+      }
+    }
   }
 }

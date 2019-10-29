@@ -135,8 +135,8 @@ FIC.Slides = {
 
     outlineHandler: function () {
         var $controls = $(".slide--7 .slide__button");
-        if($controls.length) {
-            $controls.on('touchend click', function() {
+        if ($controls.length) {
+            $controls.on('touchend click', function () {
                 // reset controls
                 $controls.find("img:first-child").removeClass("d-none");
                 $controls.find("img:nth-child(2)").addClass("d-none");
@@ -190,8 +190,13 @@ FIC.Slides = {
                 var numberLight = this.className.match(/\d+/);
                 $image.toggleClass('shadow--' + numberLight);
             });
-
+            FIC.Slides.lensHandler();
         }
+    },
+
+    lensHandler: function () {
+        //lightzoom
+        console.log('uuuuoooou mas ki beleeeeeza!');
     },
 
     init: function () {
