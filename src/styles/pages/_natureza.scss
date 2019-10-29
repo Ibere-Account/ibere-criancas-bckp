@@ -148,16 +148,6 @@
       }
     }
   }
-
-  .slide--8 {
-    .gato {
-      transform: scaleX(-1);
-      right: 80 / $canvasWidth * 100%;
-      position: absolute;
-      left: auto;
-    }
-  }
-
   .slide--9{
     .container-fluid{
      &>.row{
@@ -166,6 +156,9 @@
     }
     .col-10{
       margin-top: 70 / $canvasHeight * 100%;
+    }
+    .gato{
+      background-size: contain;
     }
   }
 }

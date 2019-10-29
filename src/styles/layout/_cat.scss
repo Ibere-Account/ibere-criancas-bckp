@@ -221,4 +221,12 @@
             @include cat(482, 350, 47, 14, "carreteis", 8, false);
         }
     }
+
+    //cat($w, $h, $x, $y, $section, $slide, $isLeft)
+    .section--natureza > .slide--8 &{
+        @include cat(150, 248, 67, -30, "natureza", 8, false)
+    }
+    .section--natureza > .slide--9 &{
+        @include cat(600, 248, 67, 30, "natureza", 9, false)
+    }
 }
