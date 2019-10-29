@@ -18,6 +18,7 @@
     }
   }
 
+<<<<<<< HEAD
   .lights {
     text-align: center;
     .light__item {
@@ -70,6 +71,18 @@
     }
   }
 
+=======
+  .slide__interaction--swap {
+    & > figure:nth-child(1) {
+      cursor: pointer;
+    }
+    & > figure:nth-child(2) img:nth-child(2){
+      position: absolute;
+      right: 180 / $canvasHeight * 100%;
+      top: 250 / $canvasHeight * 100%;
+    }
+  }
+>>>>>>> 9aa8fe97b68961972fe595541a552df6d3e5a2e4
   // .primeira {
   //   &.segunda {
   //     &.terceira {
