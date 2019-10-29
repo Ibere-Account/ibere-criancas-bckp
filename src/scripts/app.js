@@ -125,9 +125,8 @@ FIC.Slides = {
 
     swapHandler: function () {
         var $swap = $(".slide__interaction--swap");
-        if($swap.length) {
-            $swap.find("figure").eq(0).on('touchend click', function() {
-                console.log("yoyoyo");
+        if ($swap.length) {
+            $swap.find("figure").eq(0).on('touchend click', function () {
                 $(this).addClass("d-none");
                 $swap.find("figure").eq(1).removeClass('d-none');
             });
@@ -159,21 +158,19 @@ FIC.Slides = {
         });
     },
 
-    lightsHandler: function(){
+    lightsHandler: function () {
         var $section = $('.section.section--natureza');
 
         if ($section.length) {
+            var $image = $section.find('.lights .slide__figure');
             var $lights = $section.find('a.light__item');
             $lights.on('click', function (e) {
                 e.preventDefault();
                 $(this).toggleClass('active');
-                //light__item--btn1
-                //light__item--btn2
-                //light__item--btn3
+                var numberLight = this.className.match(/\d+/);
+                $image.toggleClass('shadow--' + numberLight);
             });
-            var $image = $section.find('.lights .slide__figure img');
-    
-            // $image.attr('src', portraitTops.length === 0 ? './../img/natureza/Luzes/mesa.png' : './../img/retratos/retrato/' + portraitTops.join('_') + '.jpg');
+
         }
     },
 

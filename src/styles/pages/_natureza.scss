@@ -64,11 +64,42 @@
       }
     }
     .slide__figure {
-      img {
-        max-width: 95%;
+      padding-bottom: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("/../img/natureza/Luzes/sombra.png");
+
+      &.shadow--1 {
+        background-image: url("/../img/natureza/Luzes/sombra1.png");
+
+        &.shadow--2 {
+          background-image: url("/../img/natureza/Luzes/sombra1-2.png");
+
+          &.shadow--3 {
+            background-image: url("/../img/natureza/Luzes/sombra1-2-3.png");
+          }
+        }
+
+        &.shadow--3 {
+          background-image: url("/../img/natureza/Luzes/sombra1-3.png");
+        }
+      }
+
+      &.shadow--2 {
+        background-image: url("/../img/natureza/Luzes/sombra2.png");
+
+        &.shadow--3 {
+          background-image: url("/../img/natureza/Luzes/sombra2-3.png");
+        }
+      }
+
+      &.shadow--3 {
+        background-image: url("/../img/natureza/Luzes/sombra3.png");
       }
     }
   }
+  
   .slide__interaction--swap {
     & > figure:nth-child(1) {
       cursor: pointer;
