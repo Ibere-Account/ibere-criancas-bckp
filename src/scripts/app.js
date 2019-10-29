@@ -134,10 +134,22 @@ FIC.Slides = {
     },
 
     outlineHandler: function () {
-        var $controls = $(".slide__button");
+        var $controls = $(".slide--7 .slide__button");
         if($controls.length) {
             $controls.on('touchend click', function() {
-                
+                // reset controls
+                $controls.find("img:first-child").removeClass("d-none");
+                $controls.find("img:nth-child(2)").addClass("d-none");
+
+                // activate the one clicked
+                $(this).find("img:first-child").addClass("d-none");
+                $(this).find("img:nth-child(2)").removeClass("d-none");
+
+                var idx = $controls.index(this);
+                $(".outline__figure").addClass('d-none');
+                $(".outline__figure").eq(idx).removeClass('d-none');
+
+
             });
         }
     },
@@ -192,6 +204,7 @@ FIC.Slides = {
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
+        FIC.Slides.outlineHandler();
         FIC.Slides.swapHandler();
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
