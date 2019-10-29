@@ -158,6 +158,7 @@ FIC.Slides = {
             var target = $(this).data('modal');
 
             $(target).addClass('show');
+
         }).on('touchend click', '.modal__close', function () {
             $(this).parents('.modal').removeClass('show');
         });
@@ -190,13 +191,7 @@ FIC.Slides = {
                 var numberLight = this.className.match(/\d+/);
                 $image.toggleClass('shadow--' + numberLight);
             });
-            FIC.Slides.lensHandler();
         }
-    },
-
-    lensHandler: function () {
-        //lightzoom
-        console.log('uuuuoooou mas ki beleeeeeza!');
     },
 
     init: function () {

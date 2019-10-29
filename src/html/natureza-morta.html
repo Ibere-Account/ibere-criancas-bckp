@@ -8,6 +8,7 @@
     <title>Iberê para Crianças | Natureza Morta</title>
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/vendors/magnify/magnify.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
             <button type="button" class="slide__control slide__control--next" title="Ir para o próximo slide">Ir para o
                 próximo slide</button>
 
-            <div class="slide slide--1">
+            <div class="slide slide--1 ">
                 <h2 class="slide__title"><span>Natureza-morta</span></h2>
 
                 <div class="container-fluid slide__container">
@@ -163,7 +164,9 @@
                     <div class="row">
                         <div class="col-12">
                             <figure class="slide__figure">
-                                <img src="./../img/natureza/quadro-slide6.jpg" alt="Natureza-morta 2, cerca de 1948" class="lightzoom">
+                                <img src="./../img/natureza/quadro-slide6.jpg" class="zoom"
+                                    data-magnify-src="./../img/natureza/quadro-slide6-zoom.jpg"
+                                    alt="Natureza-morta 2, cerca de 1948">
                                 <figcaption>Natureza-morta 2, cerca de 1948</figcaption>
                             </figure>
                         </div>
@@ -206,7 +209,8 @@
                         <div class="col-3">
                             <figure class="slide__button">
                                 <img src="./../img/natureza/Hachuras/btncontornohachura.png" alt="Contorno e hachuras">
-                                <img src="./../img/natureza/Hachuras/btncontornohachura-atv.png" alt="Contorno e hachuras" class="d-none">
+                                <img src="./../img/natureza/Hachuras/btncontornohachura-atv.png"
+                                    alt="Contorno e hachuras" class="d-none">
                                 <figcaption>contorno e hachuras</figcaption>
                             </figure>
                         </div>
@@ -223,11 +227,165 @@
                 <div class="gato"></div>
             </div>
 
+            <div class="slide slide--8 gallery hide" data-gallery="true">
+                <h2 class="gallery__title">Galeria de obras: <strong>Natureza-morta</strong></h2>
+
+                <div class="container-fluid slide__container">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <figure class="slide__figure" data-modal="#gallery-modal-1">
+                                <img src="./../img/natureza/galeria/quadro1.jpg" alt="Sem título, cerca de 1949">
+                            </figure>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <figure class="slide__figure" data-modal="#gallery-modal-2">
+                                <img src="./../img/natureza/galeria/quadro2.jpg" alt="Sem título, cerca de 1954">
+                            </figure>
+                            <br>
+                            <figure class="slide__figure" data-modal="#gallery-modal-3">
+                                <img src="./../img/natureza/galeria/quadro3.jpg" alt="Sem título, cerca de 1956">
+                            </figure>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <figure class="slide__figure" data-modal="#gallery-modal-4">
+                                <img src="./../img/natureza/galeria/quadro4.jpg"
+                                    alt="Natureza-morta 16, entre 1940 e 1942">
+                            </figure>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <figure class="slide__figure" data-modal="#gallery-modal-5">
+                                <img src="./../img/natureza/galeria/quadro5.jpg" alt="Sem título, cerca de 1954">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gato"></div>
+
+            <div class="modal" role="dialog" id="gallery-modal-1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="modal__close">Fechar</button>
+
+                        <div class="modal-body">
+                            <figure class="slide__figure">
+                                <img src="./../img/natureza/galeria/quadro1.jpg" alt="Sem título, cerca de 1949">
+                                <figcaption>
+                                    <strong>sem título</strong>, cerca de 1949<br>
+                                    óleo sobre tela<br>
+                                    45 x 37cm<br>
+                                    col. Maria Coussirat Camargo<br>
+                                    Fundação Iberê Camargo, Porto Alegre<br>
+                                    Foto: &copy; Fábio Del Re_VivaFoto
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" role="dialog" id="gallery-modal-2">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="modal__close">Fechar</button>
+
+                        <div class="modal-body">
+                            <figure class="slide__figure">
+                                <img src="./../img/natureza/galeria/quadro2.jpg" alt="Sem título, cerca de 1954">
+                                <figcaption>
+                                    <strong>sem título</strong>, cerca de 1954<br>
+                                    grafite e nanquim sobre papel<br>
+                                    24,2 x 35,2cm<br>
+                                    col. Maria Coussirat Camargo<br>
+                                    Fundação Iberê Camargo, Porto Alegre<br>
+                                    Foto: &copy; Fábio Del Re_VivaFoto
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" role="dialog" id="gallery-modal-3">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="modal__close">Fechar</button>
+
+                        <div class="modal-body">
+                            <figure class="slide__figure">
+                                <img src="./../img/natureza/galeria/quadro3.jpg" alt="Sem título, cerca de 1956">
+                                <figcaption>
+                                    <strong>sem título</strong>, cerca de 1956<br>
+                                    nanquim sobre papel<br>
+                                    33 x 44cm<br>
+                                    col. Maria Coussirat Camargo<br>
+                                    Fundação Iberê Camargo, Porto Alegre<br>
+                                    Foto: &copy; Fábio Del Re_VivaFoto
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" role="dialog" id="gallery-modal-4">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="modal__close">Fechar</button>
+
+                        <div class="modal-body">
+                            <figure class="slide__figure">
+                                <img src="./../img/natureza/galeria/quadro4.jpg" alt="Natureza-morta 16, entre 1940 e 1942">
+                                <figcaption>
+                                    <strong>Natureza-morta 16</strong>, entre 1940 e 1942<br>
+                                    xilogravura<br>
+                                    17,7 x 22,2cm<br>
+                                    col. Maria Coussirat Camargo<br>
+                                    Fundação Iberê Camargo, Porto Alegre<br>
+                                    Foto: &copy; Fábio Del Re_VivaFoto
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" role="dialog" id="gallery-modal-5">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">Fechar</button>
+    
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img src="./../img/natureza/galeria/quadro5.jpg" alt="Sem título, cerca de 1954">
+                                    <figcaption>
+                                        <strong>sem título</strong>, cerca de 1954<br>
+                                        lápis Conté sobre papel<br>
+                                        22,5 x 31cm<br>
+                                        col. Maria Coussirat Camargo<br>
+                                        Fundação Iberê Camargo, Porto Alegre<br>
+                                        Foto: &copy; Fábio Del Re_VivaFoto
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </section>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/app.js" defer></script>
+    <script src="scripts/jquery.magnify.js"></script>
+    <script src="scripts/jquery.magnify-mobile.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.zoom').magnify({
+                speed: 200,
+                src: './../img/natureza/quadro-slide6.jpg'
+            });
+        });
+    </script>
 </body>
 
 </html>
