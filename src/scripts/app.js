@@ -2,7 +2,7 @@
 
 var FIC = FIC || [];
 
-$(document).ready(function ()  {
+$(document).ready(function () {
     for (var i in FIC) {
         if ('function' === typeof FIC[i].init) {
             FIC[i].init();
@@ -13,7 +13,7 @@ $(document).ready(function ()  {
 
 FIC.Home = {
 
-    datasheetHandler: function ()  {
+    datasheetHandler: function () {
         var $datasheet = $('.datasheet');
 
         $(document).on('click', '.datasheet-link', function () {
@@ -125,9 +125,8 @@ FIC.Slides = {
 
     swapHandler: function () {
         var $swap = $(".slide__interaction--swap");
-        if($swap.length) {
-            $swap.find("figure").eq(0).on('touchend click', function() {
-                console.log("yoyoyo");
+        if ($swap.length) {
+            $swap.find("figure").eq(0).on('touchend click', function () {
                 $(this).addClass("d-none");
                 $swap.find("figure").eq(1).removeClass('d-none');
             });
@@ -167,6 +166,22 @@ FIC.Slides = {
         });
     },
 
+    lightsHandler: function () {
+        var $section = $('.section.section--natureza');
+
+        if ($section.length) {
+            var $image = $section.find('.lights .slide__figure');
+            var $lights = $section.find('a.light__item');
+            $lights.on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+                var numberLight = this.className.match(/\d+/);
+                $image.toggleClass('shadow--' + numberLight);
+            });
+
+        }
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -181,6 +196,7 @@ FIC.Slides = {
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
+        FIC.Slides.lightsHandler();
     }
 
 };
