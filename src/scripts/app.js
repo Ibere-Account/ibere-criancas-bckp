@@ -2,7 +2,7 @@
 
 var FIC = FIC || [];
 
-$(document).ready(function ()  {
+$(document).ready(function () {
     for (var i in FIC) {
         if ('function' === typeof FIC[i].init) {
             FIC[i].init();
@@ -13,7 +13,7 @@ $(document).ready(function ()  {
 
 FIC.Home = {
 
-    datasheetHandler: function ()  {
+    datasheetHandler: function () {
         var $datasheet = $('.datasheet');
 
         $(document).on('click', '.datasheet-link', function () {
@@ -148,6 +148,24 @@ FIC.Slides = {
         });
     },
 
+    lightsHandler: function(){
+        var $section = $('.section.section--natureza');
+
+        if ($section.length) {
+            var $lights = $section.find('a.light__item');
+            $lights.on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+                //light__item--btn1
+                //light__item--btn2
+                //light__item--btn3
+            });
+            var $image = $section.find('.lights .slide__figure img');
+    
+            // $image.attr('src', portraitTops.length === 0 ? './../img/natureza/Luzes/mesa.png' : './../img/retratos/retrato/' + portraitTops.join('_') + '.jpg');
+        }
+    },
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -161,6 +179,7 @@ FIC.Slides = {
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
+        FIC.Slides.lightsHandler();
     }
 
 };

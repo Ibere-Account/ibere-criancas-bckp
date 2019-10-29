@@ -17,7 +17,59 @@
       margin-bottom: 10px;
     }
   }
-  
+
+  .lights {
+    text-align: center;
+    .light__item {
+      position: absolute;
+      display: block;
+      top: 250 / $canvasHeight * 100%;
+
+      &.light__item--btn1 {
+        left: 0;
+      }
+
+      &.light__item--btn1:not(.active) {
+        margin-top: 8px;
+      }
+
+      &.light__item--btn2 {
+        text-align: center;
+        right: 0;
+        left: 0;
+        top: 0;
+        display: block;
+        img {
+          height: 90 / $canvasHeight * 100%;
+          vertical-align: bottom;
+        }
+      }
+
+      &.light__item--btn3 {
+        right: 30 / $canvasWidth * 100%;
+      }
+
+      &.active {
+        .light__off {
+          display: none;
+        }
+        .light__on {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      .light__on {
+        display: none;
+      }
+    }
+    .slide__figure {
+      img {
+        max-width: 95%;
+      }
+    }
+  }
+
   // .primeira {
   //   &.segunda {
   //     &.terceira {
