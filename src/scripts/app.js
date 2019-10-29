@@ -134,6 +134,14 @@ FIC.Slides = {
         }
     },
 
+    outlineHandler: function () {
+        var $controls = $(".slide__button");
+        if($controls.length) {
+            $controls.on('touchend click', function() {
+                
+            });
+        }
+    },
     modalsHandler: function () {
         $(document).on('touchend click', '.slide__figure[data-modal]', function () {
             var target = $(this).data('modal');

@@ -28,6 +28,10 @@
       top: 250 / $canvasHeight * 100%;
     }
   }
+  .slide__button {
+    cursor: pointer;
+    text-align: center;
+  }
   // .primeira {
   //   &.segunda {
   //     &.terceira {
