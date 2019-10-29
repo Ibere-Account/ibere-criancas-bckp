@@ -17,7 +17,17 @@
       margin-bottom: 10px;
     }
   }
-  
+
+  .slide__interaction--swap {
+    & > figure:nth-child(1) {
+      cursor: pointer;
+    }
+    & > figure:nth-child(2) img:nth-child(2){
+      position: absolute;
+      right: 180 / $canvasHeight * 100%;
+      top: 250 / $canvasHeight * 100%;
+    }
+  }
   // .primeira {
   //   &.segunda {
   //     &.terceira {

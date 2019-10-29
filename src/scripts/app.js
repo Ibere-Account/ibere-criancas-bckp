@@ -123,6 +123,17 @@ FIC.Slides = {
         }
     },
 
+    swapHandler: function () {
+        var $swap = $(".slide__interaction--swap");
+        if($swap.length) {
+            $swap.find("figure").eq(0).on('touchend click', function() {
+                console.log("yoyoyo");
+                $(this).addClass("d-none");
+                $swap.find("figure").eq(1).removeClass('d-none');
+            });
+        }
+    },
+
     modalsHandler: function () {
         $(document).on('touchend click', '.slide__figure[data-modal]', function () {
             var target = $(this).data('modal');
@@ -158,6 +169,7 @@ FIC.Slides = {
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
+        FIC.Slides.swapHandler();
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
