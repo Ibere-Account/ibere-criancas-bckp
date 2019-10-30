@@ -106,7 +106,7 @@
     }
     & > figure:nth-child(2) img:nth-child(2) {
       position: absolute;
-      right: 180 / $canvasHeight * 100%;
+      right: 180 / $canvasWidth * 100%;
       top: 250 / $canvasHeight * 100%;
     }
   }
