@@ -148,30 +148,15 @@ FIC.Slides = {
             $this.attr('src', src);
         });
     },
-    verticalScrollPresent: function () {
-        return (document.documentElement.scrollHeight !== document.documentElement.clientHeight);
-    },
-    init: function () {
 
-        FIC.Slides.canvasHeight = 875;
+    init: function () {
         FIC.Slides.$slides = $('.slide');
-        FIC.Slides.$pageWrapper = $('.page-wrapper')
-        FIC.Slides.$section = FIC.Slides.$pageWrapper.find('>.section');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
+        FIC.Slides.canvasHeight = 875;
 
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
         }
-        var $heightPageWrapper = FIC.Slides.$pageWrapper.height();
-        if ($heightPageWrapper < FIC.Slides.canvasHeight && FIC.Slides.verticalScrollPresent()) {
-            FIC.Slides.$section.css({
-                transform: "scale(" + $heightPageWrapper / FIC.Slides.canvasHeight + ")",
-                'transform-origin': "50% 0%"
-            });
-        }
-
-
-
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
@@ -179,6 +164,4 @@ FIC.Slides = {
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
     }
-
-
 };

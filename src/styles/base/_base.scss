@@ -18,10 +18,8 @@
     max-width: $canvasWidth * 1px;
     overflow: hidden;
     position: relative;
-    // width: 100vw;
     width: 100%;
     position: absolute;
-    // top: -50px;
 
     &.section--gallery {
         background-image: url('./../img/galeria.jpg') !important;
