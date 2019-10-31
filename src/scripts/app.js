@@ -2,7 +2,7 @@
 
 var FIC = FIC || [];
 
-$(document).ready(function ()  {
+$(document).ready(function () {
     for (var i in FIC) {
         if ('function' === typeof FIC[i].init) {
             FIC[i].init();
@@ -13,7 +13,7 @@ $(document).ready(function ()  {
 
 FIC.Home = {
 
-    datasheetHandler: function ()  {
+    datasheetHandler: function () {
         var $datasheet = $('.datasheet');
 
         $(document).on('click', '.datasheet-link', function () {
@@ -49,11 +49,12 @@ FIC.Slides = {
     },
 
     controlSlidesHandler: function () {
+
         $(document).on('click', '.slide__control--prev', function () {
             var prev = FIC.Slides.currentSlide;
 
             if (FIC.Slides.currentSlide === 1) {
-                FIC.Slides.currentSlide = FIC.Slides.totalSlides;
+                window.location.href = '/';
             } else {
                 FIC.Slides.currentSlide -= 1;
             }
@@ -65,7 +66,7 @@ FIC.Slides = {
             var prev = FIC.Slides.currentSlide;
 
             if (FIC.Slides.currentSlide === FIC.Slides.totalSlides) {
-                FIC.Slides.currentSlide = 1;
+                window.location.href = '/';
             } else {
                 FIC.Slides.currentSlide += 1;
             }
@@ -147,14 +148,30 @@ FIC.Slides = {
             $this.attr('src', src);
         });
     },
-
+    verticalScrollPresent: function () {
+        return (document.documentElement.scrollHeight !== document.documentElement.clientHeight);
+    },
     init: function () {
+
+        FIC.Slides.canvasHeight = 875;
         FIC.Slides.$slides = $('.slide');
+        FIC.Slides.$pageWrapper = $('.page-wrapper')
+        FIC.Slides.$section = FIC.Slides.$pageWrapper.find('>.section');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
 
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
         }
+        var $heightPageWrapper = FIC.Slides.$pageWrapper.height();
+        if ($heightPageWrapper < FIC.Slides.canvasHeight && FIC.Slides.verticalScrollPresent()) {
+            FIC.Slides.$section.css({
+                transform: "scale(" + $heightPageWrapper / FIC.Slides.canvasHeight + ")",
+                'transform-origin': "50% 0%"
+            });
+        }
+
+
+
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
@@ -162,5 +179,6 @@ FIC.Slides = {
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
     }
+
 
 };
