@@ -18,6 +18,12 @@
     }
   }
 
+  & > .slide--5 {
+    & > .gato {
+      background-size: contain;
+    }
+  }
+
   .lights {
     text-align: center;
     .light__item {
@@ -120,7 +126,7 @@
       .magnify {
         margin: 0 auto;
         display: block;
-        img{
+        img {
           width: 100%;
         }
         .magnify-lens {
@@ -140,7 +146,7 @@
       }
       figcaption {
         margin-top: -35px;
-        margin-left:  168 / $canvasWidth * 100%;;
+        margin-left: 168 / $canvasWidth * 100%;
         margin-bottom: 10px;
       }
       img {
@@ -151,16 +157,17 @@
       }
     }
   }
-  .slide--9{
-    .container-fluid{
-     &>.row{
-       margin-top: -120 / $canvasHeight * 100%;
-     }
+
+  .slide--9 {
+    .container-fluid {
+      & > .row {
+        margin-top: -120 / $canvasHeight * 100%;
+      }
     }
-    .col-10{
+    .col-10 {
       margin-top: 70 / $canvasHeight * 100%;
     }
-    .gato{
+    .gato {
       background-size: contain;
     }
   }
