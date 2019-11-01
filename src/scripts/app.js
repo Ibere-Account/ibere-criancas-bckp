@@ -125,6 +125,7 @@ FIC.Slides = {
 
     swapHandler: function () {
         var $swap = $(".slide__interaction--swap");
+
         if ($swap.length) {
             $swap.find("figure").eq(0).on('touchend click', function () {
                 $(this).addClass("d-none");
@@ -135,6 +136,7 @@ FIC.Slides = {
 
     outlineHandler: function () {
         var $controls = $(".slide--7 .slide__button");
+
         if ($controls.length) {
             $controls.on('touchend click', function () {
                 // reset controls
@@ -148,17 +150,14 @@ FIC.Slides = {
                 var idx = $controls.index(this);
                 $(".outline__figure").addClass('d-none');
                 $(".outline__figure").eq(idx).removeClass('d-none');
-
-
             });
         }
     },
+
     modalsHandler: function () {
         $(document).on('touchend click', '.slide__figure[data-modal]', function () {
             var target = $(this).data('modal');
-
             $(target).addClass('show');
-
         }).on('touchend click', '.modal__close', function () {
             $(this).parents('.modal').removeClass('show');
         });
