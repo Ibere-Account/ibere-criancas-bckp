@@ -1,178 +1,179 @@
 @mixin cat($w, $h, $x, $y, $section, $slide, $isLeft) {
-  background-image: url("./../img/#{$section}/gato-slide-#{$slide}.png");
-  bottom: $y / $canvasHeight * 100%;
-  height: $h / $canvasHeight * 100%;
-  width: $w / $canvasWidth * 100%;
+    background-image: url("./../img/#{$section}/gato-slide-#{$slide}.png");
+    bottom: $y / $canvasHeight * 100%;
+    height: $h / $canvasHeight * 100%;
+    width: $w / $canvasWidth * 100%;
 
-  @if $isLeft {
-    left: $x / $canvasWidth * 100%;
-  } @else {
-    left: auto;
-    right: $x / $canvasWidth * 100%;
-  }
-  &.erro {
-    background: url("./../img/paisagem/jogo/gato_erro.png") no-repeat 0 0 transparent;
-    background-size: contain;
-  }
+    @if $isLeft {
+        left: $x / $canvasWidth * 100%;
+    } @else {
+        left: auto;
+        right: $x / $canvasWidth * 100%;
+    }
+
+    &.erro {
+        background: url("./../img/paisagem/jogo/gato_erro.png") no-repeat 0 0 transparent;
+        background-size: contain;
+    }
 }
 
 .gato {
-  background: url("./../img/gato.png") no-repeat 0 0 transparent;
-  background-size: 100% auto;
-  height: 182 / $canvasHeight * 100%;
-  position: absolute;
-  width: 197 / $canvasWidth * 100%;
+    background: url("./../img/gato.png") no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    height: 182 / $canvasHeight * 100%;
+    position: absolute;
+    width: 197 / $canvasWidth * 100%;
 
-  .section--home & {
-    left: 147 / $canvasWidth * 100%;
-    bottom: 70 / $canvasHeight * 100%;
-  }
+    .section--home & {
+        left: 147 / $canvasWidth * 100%;
+        bottom: 70 / $canvasHeight * 100%;
+    }
 
-  .slide > & {
-    left: 276 / $canvasWidth * 100%;
-    bottom: 26 / $canvasHeight * 100%;
-  }
+    .slide>& {
+        left: 276 / $canvasWidth * 100%;
+        bottom: 26 / $canvasHeight * 100%;
+    }
 
-  .section--ibere > .slide--3 > & {
-    @include cat(504, 235, 50, 26, "ibere", 3, true);
-  }
+    .section--ibere>.slide--3>& {
+        @include cat(504, 235, 50, 26, "ibere", 3, true);
+    }
 
-  .section--acervo > .slide--1 > & {
-    @include cat(363, 361, 175, 20, "acervo", 1, true);
-  }
+    .section--acervo>.slide--1>& {
+        @include cat(363, 361, 175, 20, "acervo", 1, true);
+    }
 
-  .section--acervo > .slide--2 > & {
-    @include cat(476, 312, 91, 32, "acervo", 2, false);
-  }
+    .section--acervo>.slide--2>& {
+        @include cat(476, 312, 91, 32, "acervo", 2, false);
+    }
 
-  .section--retratos > .slide--1 > & {
-    @include cat(214, 357, 140, 34, "retratos", 1, false);
-  }
+    .section--retratos>.slide--1>& {
+        @include cat(214, 357, 140, 34, "retratos", 1, false);
+    }
 
-  .section--retratos > .slide--2 > & {
-    @include cat(282, 360, 127, 32, "retratos", 2, true);
-  }
+    .section--retratos>.slide--2>& {
+        @include cat(282, 360, 127, 32, "retratos", 2, true);
+    }
 
-  .section--retratos > .slide--3 > & {
-    @include cat(252, 448, 155, 50, "retratos", 3, true);
-  }
+    .section--retratos>.slide--3>& {
+        @include cat(252, 448, 155, 50, "retratos", 3, true);
+    }
 
-  .section--retratos > .slide--4 > & {
-    @include cat(280, 444, 100, 41, "retratos", 4, false);
-  }
+    .section--retratos>.slide--4>& {
+        @include cat(280, 444, 100, 41, "retratos", 4, false);
+    }
 
-  .section--retratos > .slide--5 > &,
-  .section--retratos > .slide--6 > & {
-    @include cat(206, 196, 199, 56, "retratos", 5, true);
-  }
+    .section--retratos>.slide--5>&,
+    .section--retratos>.slide--6>& {
+        @include cat(206, 196, 199, 56, "retratos", 5, true);
+    }
 
-  .section--retratos > .slide--7 > & {
-    @include cat(335, 539, 139, 56, "retratos", 7, true);
-  }
+    .section--retratos>.slide--7>& {
+        @include cat(335, 539, 139, 56, "retratos", 7, true);
+    }
 
-  .section--retratos > .slide--8 > & {
-    @include cat(139, 129, 49, 69, "retratos", 8, false);
-  }
+    .section--retratos>.slide--8>& {
+        @include cat(139, 129, 49, 69, "retratos", 8, false);
+    }
 
-  .section--retratos > .slide--9 > & {
-    @include cat(261, 356, 74, 24, "retratos", 9, true);
-  }
+    .section--retratos>.slide--9>& {
+        @include cat(261, 356, 74, 24, "retratos", 9, true);
+    }
 
-  .section--idiotas > .slide--1 > & {
-    @include cat(277, 331, 220, 52, "idiotas", 1, false);
-  }
+    .section--idiotas>.slide--1>& {
+        @include cat(277, 331, 220, 52, "idiotas", 1, false);
+    }
 
-  .section--idiotas > .slide--2 > & {
-    @include cat(377, 364, 195, 10, "idiotas", 2, true);
-  }
+    .section--idiotas>.slide--2>& {
+        @include cat(377, 364, 195, 10, "idiotas", 2, true);
+    }
 
-  .section--idiotas > .slide--3 > & {
-    @include cat(257, 169, 132, 36, "idiotas", 3, true);
-  }
+    .section--idiotas>.slide--3>& {
+        @include cat(257, 169, 132, 36, "idiotas", 3, true);
+    }
 
-  .section--idiotas > .slide--4 > & {
-    @include cat(534, 225, 362, 5, "idiotas", 4, true);
-  }
+    .section--idiotas>.slide--4>& {
+        @include cat(534, 225, 362, 5, "idiotas", 4, true);
+    }
 
-  .section--idiotas > .slide--5 > & {
-    @include cat(354, 182, 33, 61, "idiotas", 5, false);
-  }
+    .section--idiotas>.slide--5>& {
+        @include cat(354, 182, 33, 61, "idiotas", 5, false);
+    }
 
-  .section--idiotas > .slide--6 > & {
-    @include cat(383, 212, 15, 20, "idiotas", 6, true);
-  }
+    .section--idiotas>.slide--6>& {
+        @include cat(383, 212, 15, 20, "idiotas", 6, true);
+    }
 
-  .section--idiotas > .slide--7 > & {
-    @include cat(390, 206, 15, 20, "idiotas", 7, true);
-  }
+    .section--idiotas>.slide--7>& {
+        @include cat(390, 206, 15, 20, "idiotas", 7, true);
+    }
 
-  .section--idiotas > .slide--8 > & {
-    @include cat(390, 206, 15, 20, "idiotas", 8, true);
-  }
+    .section--idiotas>.slide--8>& {
+        @include cat(390, 206, 15, 20, "idiotas", 8, true);
+    }
 
-  .section--idiotas > .slide--9 > & {
-    @include cat(206, 196, 43, 46, "idiotas", 9, true);
-  }
+    .section--idiotas>.slide--9>& {
+        @include cat(206, 196, 43, 46, "idiotas", 9, true);
+    }
 
-  .section--idiotas > .slide--10 > & {
-    @include cat(139, 129, 49, 69, "idiotas", 10, false);
-  }
+    .section--idiotas>.slide--10>& {
+        @include cat(139, 129, 49, 69, "idiotas", 10, false);
+    }
 
-  .section--idiotas > .slide--11 > & {
-    @include cat(424, 247, 49, 51, "idiotas", 11, false);
-  }
+    .section--idiotas>.slide--11>& {
+        @include cat(424, 247, 49, 51, "idiotas", 11, false);
+    }
 
-  .section--ciclistas > .slide--1 > & {
-    @include cat(426, 261, 102, 17, "ciclistas", 1, true);
-  }
+    .section--ciclistas>.slide--1>& {
+        @include cat(426, 261, 102, 17, "ciclistas", 1, true);
+    }
 
-  .section--ciclistas > .slide--2 > & {
-    @include cat(257, 169, 82, 43, "ciclistas", 2, false);
-  }
+    .section--ciclistas>.slide--2>& {
+        @include cat(257, 169, 82, 43, "ciclistas", 2, false);
+    }
 
-  .section--ciclistas > .slide--4 > & {
-    @include cat(255, 370, 90, 37, "ciclistas", 4, true);
-  }
+    .section--ciclistas>.slide--4>& {
+        @include cat(255, 370, 90, 37, "ciclistas", 4, true);
+    }
 
-  .section--ciclistas > .slide--5 > & {
-    @include cat(206, 196, 171, 51, "ciclistas", 5, false);
-  }
+    .section--ciclistas>.slide--5>& {
+        @include cat(206, 196, 171, 51, "ciclistas", 5, false);
+    }
 
-  .section--ciclistas > .slide--6 > & {
-    @include cat(139, 129, 49, 69, "ciclistas", 6, false);
-  }
+    .section--ciclistas>.slide--6>& {
+        @include cat(139, 129, 49, 69, "ciclistas", 6, false);
+    }
 
-  .section--ciclistas > .slide--7 > & {
-    @include cat(349, 552, 64, 14, "ciclistas", 7, true);
-  }
+    .section--ciclistas>.slide--7>& {
+        @include cat(349, 552, 64, 14, "ciclistas", 7, true);
+    }
 
-  .section--paisagem > .slide--1 > & {
-    @include cat(340, 391, 412, 57, "paisagem", 1, false);
-  }
+    .section--paisagem>.slide--1>& {
+        @include cat(340, 391, 412, 57, "paisagem", 1, false);
+    }
 
-  .section--paisagem > .slide--2 > & {
-    @include cat(265, 315, 64, 49, "paisagem", 2, true);
-  }
+    .section--paisagem>.slide--2>& {
+        @include cat(265, 315, 64, 49, "paisagem", 2, true);
+    }
 
-  .section--paisagem > .slide--3 > & {
-    @include cat(494, 256, 53, 44, "paisagem", 3, false);
-  }
+    .section--paisagem>.slide--3>& {
+        @include cat(494, 256, 53, 44, "paisagem", 3, false);
+    }
 
-  .section--paisagem > .slide--4 > & {
-    @include cat(369, 435, 25, 50, "paisagem", 4, true);
-  }
+    .section--paisagem>.slide--4>& {
+        @include cat(369, 435, 25, 50, "paisagem", 4, true);
+    }
 
-  .section--paisagem > .slide--5 > &,
-  .section--paisagem > .slide--6 > & {
-    @include cat(415, 272, 32, 5, "paisagem", 5, true);
-    background-image: url("./../img/paisagem/gato-slide-5.gif");
-  }
+    .section--paisagem>.slide--5>&,
+    .section--paisagem>.slide--6>& {
+        @include cat(415, 272, 32, 5, "paisagem", 5, true);
+        background-image: url("./../img/paisagem/gato-slide-5.gif");
+    }
 
-  .section--paisagem > .slide--7 > & {
-    @include cat(139, 129, 49, 71, "paisagem", 7, false);
-  }
+    .section--paisagem>.slide--7>& {
+        @include cat(139, 129, 49, 71, "paisagem", 7, false);
+    }
 
-  .section--paisagem > .slide--8 > & {
-    @include cat(635, 239, 43, 50, "paisagem", 8, true);
-  }
+    .section--paisagem>.slide--8>& {
+        @include cat(635, 239, 43, 50, "paisagem", 8, true);
+    }
 }
