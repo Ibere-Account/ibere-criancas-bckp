@@ -55,4 +55,17 @@
         transform: rotate(-8deg);
     }
 
+    .section--natureza & {
+        background-color: $natureza-morta;
+        right: 150 / $canvasWidth * 100%;
+        top: 142 / $canvasHeight * 100%;
+        transform: rotate(8deg);
+    }
+}
+
+.gallery {
+    .slide__figure,
+    img {
+        cursor: pointer;
+    }
 }
