@@ -147,15 +147,17 @@ FIC.Slides = {
             $this.attr('src', src);
         });
     },
+
     landscapesHandler: function () {
-        var $wrapper = $('.section--paisagem');
-        var resetOptions = function () {
-            $wrapper.find('.images-left .slide__figure').removeClass('selected').removeClass('unselected');
-            $wrapper.find('.images-right .slide__figure').removeClass('selectable');
-        }
+        var $wrapper = $('.section--paisagem'),
+            resetOptions = function () {
+                $wrapper.find('.images-left .slide__figure').removeClass('selected').removeClass('unselected');
+                $wrapper.find('.images-right .slide__figure').removeClass('selectable');
+            };
+
         if ($wrapper.length) {
-            var $imagesLeft = $wrapper.find('.images-left .slide__figure');
-            var $imagesRight = $wrapper.find('.images-right .slide__figure');
+            var $imagesLeft = $wrapper.find('.images-left .slide__figure'),
+                $imagesRight = $wrapper.find('.images-right .slide__figure');
 
             $imagesLeft.on('click', function () {
                 var $this = $(this);
@@ -164,14 +166,15 @@ FIC.Slides = {
                 $imagesRight.toggleClass('selectable')
                 if ($this.hasClass('selected')) {
                     $('.slide__figure').not('.selected').addClass('unselected');
-                }
-                else
+                } else {
                     $('.slide__figure').removeClass('unselected');
+                }
             });
             $imagesRight.on('click', $imagesRight, function () {
-                var $this = $(this);
-                var $optionLeft = $wrapper.find('.images-left .slide__figure.selected');
-                var $optionRight = $this.data('image-answer');
+                var $this = $(this),
+                    $optionLeft = $wrapper.find('.images-left .slide__figure.selected'),
+                    $optionRight = $this.data('image-answer');
+
                 if ($optionLeft.data('image-answer') === $optionRight) {
                     $('.answer' + $optionLeft.data('image-answer')).show();
                     $this.addClass('right-answer');
