@@ -3,7 +3,7 @@
     display: flex;
     height: 100vh;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 
     @media (min-width: 1200px) and (max-height: 875px) {
         align-items: flex-start;
@@ -16,8 +16,8 @@
     max-height: $canvasHeight * 1px;
     max-width: $canvasWidth * 1px;
     overflow: hidden;
-    position: relative;
-    width: 100vw;
+    position: absolute;
+    width: 100%;
 
     &.section--gallery {
         background-image: url('./../img/galeria.jpg') !important;
@@ -44,4 +44,8 @@
 
 .text-right {
     text-align: right;
+}
+
+.negative-margin-top{
+    margin-top: -85 / $canvasHeight * 100%;
 }
