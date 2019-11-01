@@ -1,63 +1,71 @@
 .gallery__title {
-  color: $black;
-  display: block;
-  font-weight: normal;
-  line-height: 1;
-  margin-bottom: 0;
-  padding: 5px 20px;
-  position: absolute;
-  transform: rotate(5deg);
+    color: $black;
+    display: block;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 5px 20px;
+    position: absolute;
+    transform: rotate(5deg);
 
-  @include viewport-font(2.1875vw, 20px, 28px);
+    @include viewport-font(2.1875vw, 20px, 28px);
 
-  & > strong {
-    font-weight: bold;
-  }
+    & > strong {
+        font-weight: bold;
+    }
 
-  .section--idiotas & {
-    background-color: $idiotas;
-    right: 120 / $canvasWidth * 100%;
-    top: 175 / $canvasHeight * 100%;
-  }
+    .section--idiotas & {
+        background-color: $idiotas;
+        right: 120 / $canvasWidth * 100%;
+        top: 175 / $canvasHeight * 100%;
+    }
 
-  .section--ciclistas & {
-    background-color: $ciclistas;
-    left: 175 / $canvasWidth * 100%;
-    top: 130 / $canvasHeight * 100%;
-    transform: rotate(-5deg);
-  }
+    .section--ciclistas & {
+        background-color: $ciclistas;
+        left: 175 / $canvasWidth * 100%;
+        top: 130 / $canvasHeight * 100%;
+        transform: rotate(-5deg);
+    }
 
-  .section--retratos & {
-    background-color: $retratos;
-    left: 512 / $canvasWidth * 100%;
-    top: 135 / $canvasHeight * 100%;
-    transform: rotate(-8deg);
-  }
+    .section--retratos & {
+        background-color: $retratos;
+        left: 512 / $canvasWidth * 100%;
+        top: 135 / $canvasHeight * 100%;
+        transform: rotate(-8deg);
+    }
 
-  .section--manequins & {
-    background-color: $manequins;
-    left: 512 / $canvasWidth * 100%;
-    top: 135 / $canvasHeight * 100%;
-    transform: rotate(8deg);
-  }
+    .section--paisagem & {
+        background-color: $paisagem;
+        left: 512 / $canvasWidth * 100%;
+        top: 135 / $canvasHeight * 100%;
+        transform: rotate(-8deg);
+    }
 
-  .section--carreteis & {
-    background-color: $carreteis;
-    left: 284 / $canvasWidth * 100%;
-    top: 142 / $canvasHeight * 100%;
-    transform: rotate(-8deg);
-  }
-  .section--natureza & {
-    background-color: $natureza-morta;
-    right: 150 / $canvasWidth * 100%;
-    top: 142 / $canvasHeight * 100%;
-    transform: rotate(8deg);
-  }
+    .section--manequins & {
+        background-color: $manequins;
+        left: 512 / $canvasWidth * 100%;
+        top: 135 / $canvasHeight * 100%;
+        transform: rotate(8deg);
+    }
+
+    .section--carreteis & {
+        background-color: $carreteis;
+        left: 284 / $canvasWidth * 100%;
+        top: 142 / $canvasHeight * 100%;
+        transform: rotate(-8deg);
+    }
+
+    .section--natureza & {
+        background-color: $natureza-morta;
+        right: 150 / $canvasWidth * 100%;
+        top: 142 / $canvasHeight * 100%;
+        transform: rotate(8deg);
+    }
 }
 
 .gallery {
-  .slide__figure,
-  img {
-    cursor: pointer;
-  }
+    .slide__figure,
+    img {
+        cursor: pointer;
+    }
 }
