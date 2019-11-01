@@ -1,0 +1,44 @@
+.slide__interaction--swap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.swap__actions {
+    list-style: none;
+    padding: 0;
+
+    & > li {
+        margin-top: 20px;
+    }
+}
+
+.swap__btn {
+    background: no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    border: 0;
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+
+    &--original {
+        background-image: url('./../img/btn-fechar.png');
+        height: 43px;
+        width: 44px;
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &.active {
+        background-position: 0 100%;
+    }
+}

@@ -47,3 +47,7 @@
 .text-right {
     text-align: right;
 }
+
+.negative-margin-top{
+    margin-top: -85 / $canvasHeight * 100%;
+}

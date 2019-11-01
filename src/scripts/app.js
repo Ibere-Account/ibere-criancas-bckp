@@ -84,7 +84,7 @@ FIC.Slides = {
             $buttons.on('click', function () {
                 var $this = $(this),
                     swap = $this.data('swap'),
-                    $figure = $this.parents('.swap__actions').prev().find('.swap__figure'),
+                    $figure = $this.parents('.slide__interaction--swap').find('.swap__figure'),
                     figureSrc = $figure.data('src');
 
                 $buttons.removeClass('active');
@@ -124,10 +124,40 @@ FIC.Slides = {
         }
     },
 
+    swapHandler: function () {
+        var $swap = $('.slide__interaction--swap');
+
+        if ($swap.length) {
+            $swap.find('figure').eq(0).on('touchend click', function () {
+                $(this).addClass('d-none');
+                $swap.find('figure').eq(1).removeClass('d-none');
+            });
+        }
+    },
+
+    outlineHandler: function () {
+        var $controls = $('.slide--7 .slide__button');
+
+        if ($controls.length) {
+            $controls.on('touchend click', function () {
+                // reset controls
+                $controls.find('img:first-child').removeClass('d-none');
+                $controls.find('img:nth-child(2)').addClass('d-none');
+
+                // activate the one clicked
+                $(this).find('img:first-child').addClass('d-none');
+                $(this).find('img:nth-child(2)').removeClass('d-none');
+
+                var idx = $controls.index(this);
+                $('.outline__figure').addClass('d-none');
+                $('.outline__figure').eq(idx).removeClass('d-none');
+            });
+        }
+    },
+
     modalsHandler: function () {
         $(document).on('touchend click', '.slide__figure[data-modal]', function () {
             var target = $(this).data('modal');
-
             $(target).addClass('show');
         }).on('touchend click', '.modal__close', function () {
             $(this).parents('.modal').removeClass('show');
@@ -149,6 +179,63 @@ FIC.Slides = {
         });
     },
 
+    lightsHandler: function () {
+        var $section = $('.section.section--natureza');
+
+        if ($section.length) {
+            var $image = $section.find('.lights .slide__figure');
+            var $lights = $section.find('a.light__item');
+            $lights.on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+                var numberLight = this.className.match(/\d+/);
+                $image.toggleClass('shadow--' + numberLight);
+            });
+        }
+    },
+
+    landscapesHandler: function () {
+        var $wrapper = $('.section--paisagem'),
+            resetOptions = function () {
+                $wrapper.find('.images-left .slide__figure').removeClass('selected').removeClass('unselected');
+                $wrapper.find('.images-right .slide__figure').removeClass('selectable');
+            };
+
+        if ($wrapper.length) {
+            var $imagesLeft = $wrapper.find('.images-left .slide__figure'),
+                $imagesRight = $wrapper.find('.images-right .slide__figure');
+
+            $imagesLeft.on('click', function () {
+                var $this = $(this);
+                $('.gato').removeClass('erro');
+                $this.toggleClass('selected');
+                $imagesRight.toggleClass('selectable');
+
+                if ($this.hasClass('selected')) {
+                    $('.slide__figure').not('.selected').addClass('unselected');
+                } else {
+                    $('.slide__figure').removeClass('unselected');
+                }
+            });
+            $imagesRight.on('click', $imagesRight, function () {
+                var $this = $(this),
+                    $optionLeft = $wrapper.find('.images-left .slide__figure.selected'),
+                    $optionRight = $this.data('image-answer');
+
+                if ($optionLeft.data('image-answer') === $optionRight) {
+                    $('.answer' + $optionLeft.data('image-answer')).show();
+                    $this.addClass('right-answer');
+                    $optionLeft.addClass('right-answer');
+                    resetOptions();
+                    $('.gato').removeClass('erro');
+                } else {
+                    $('.gato').addClass('erro');
+                }
+            });
+        }
+    },
+
+
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
@@ -160,8 +247,12 @@ FIC.Slides = {
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
+        FIC.Slides.outlineHandler();
+        FIC.Slides.swapHandler();
         FIC.Slides.modalsHandler();
         FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
+        FIC.Slides.lightsHandler();
+        FIC.Slides.landscapesHandler();
     }
 };
