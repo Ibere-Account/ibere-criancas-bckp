@@ -124,32 +124,32 @@ FIC.Slides = {
     },
 
     swapHandler: function () {
-        var $swap = $(".slide__interaction--swap");
+        var $swap = $('.slide__interaction--swap');
 
         if ($swap.length) {
-            $swap.find("figure").eq(0).on('touchend click', function () {
-                $(this).addClass("d-none");
-                $swap.find("figure").eq(1).removeClass('d-none');
+            $swap.find('figure').eq(0).on('touchend click', function () {
+                $(this).addClass('d-none');
+                $swap.find('figure').eq(1).removeClass('d-none');
             });
         }
     },
 
     outlineHandler: function () {
-        var $controls = $(".slide--7 .slide__button");
+        var $controls = $('.slide--7 .slide__button');
 
         if ($controls.length) {
             $controls.on('touchend click', function () {
                 // reset controls
-                $controls.find("img:first-child").removeClass("d-none");
-                $controls.find("img:nth-child(2)").addClass("d-none");
+                $controls.find('img:first-child').removeClass('d-none');
+                $controls.find('img:nth-child(2)').addClass('d-none');
 
                 // activate the one clicked
-                $(this).find("img:first-child").addClass("d-none");
-                $(this).find("img:nth-child(2)").removeClass("d-none");
+                $(this).find('img:first-child').addClass('d-none');
+                $(this).find('img:nth-child(2)').removeClass('d-none');
 
                 var idx = $controls.index(this);
-                $(".outline__figure").addClass('d-none');
-                $(".outline__figure").eq(idx).removeClass('d-none');
+                $('.outline__figure').addClass('d-none');
+                $('.outline__figure').eq(idx).removeClass('d-none');
             });
         }
     },
@@ -208,7 +208,8 @@ FIC.Slides = {
                 var $this = $(this);
                 $('.gato').removeClass('erro');
                 $this.toggleClass('selected');
-                $imagesRight.toggleClass('selectable')
+                $imagesRight.toggleClass('selectable');
+
                 if ($this.hasClass('selected')) {
                     $('.slide__figure').not('.selected').addClass('unselected');
                 } else {
