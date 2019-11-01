@@ -10,6 +10,11 @@
         left: auto;
         right: $x / $canvasWidth * 100%;
     }
+
+    &.erro {
+        background: url('./../img/paisagem/jogo/gato_erro.png') no-repeat 0 0 transparent;
+        background-size: contain;
+    }
 }
 
 .gato {
@@ -142,6 +147,37 @@
         @include cat(349, 552, 64, 14, 'ciclistas', 7, true);
     }
 
+    .section--paisagem > .slide--1 > & {
+        @include cat(340, 391, 412, 57, 'paisagem', 1, false);
+    }
+
+    .section--paisagem > .slide--2 > & {
+        @include cat(265, 315, 64, 49, 'paisagem', 2, true);
+    }
+
+    .section--paisagem > .slide--3 > & {
+        @include cat(494, 256, 53, 44, 'paisagem', 3, false);
+    }
+
+
+    .section--paisagem > .slide--4 > & {
+        @include cat(369, 435, 25, 50, 'paisagem', 4, true);
+    }
+
+    .section--paisagem > .slide--5 > &,
+    .section--paisagem > .slide--6 > & {
+        @include cat(415, 272, 32, 5, 'paisagem', 5, true);
+        background-image: url('./../img/paisagem/gato-slide-5.gif');
+    }
+
+    .section--paisagem > .slide--7 > & {
+        @include cat(139, 129, 49, 71, 'paisagem', 7, false);
+    }
+
+    .section--paisagem > .slide--8 > & {
+        @include cat(635, 239, 43, 50, 'paisagem', 8, true);
+    }
+
     .section--manequins > .slide--1 > & {
         @include cat(349, 552, 64, -120, 'manequins', 1, true);
     }
@@ -171,7 +207,7 @@
     }
 
     .section--carreteis > .slide--2 > &,
-    .section--carreteis > .slide--3 > &  {
+    .section--carreteis > .slide--3 > & {
         @include cat(452, 230, 60, 45, 'carreteis', 2, true);
     }
 

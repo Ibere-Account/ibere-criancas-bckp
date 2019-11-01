@@ -19,86 +19,46 @@
     .slide--8 .slide__figure > figcaption {
         text-align: right;
     }
-}
 
-.slide__interaction--swap {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.swap__actions {
-    list-style: none;
-    margin: 0 0 0 20px;
-    padding: 0;
-
-    & > li {
-        margin-top: 20px;
-    }
-}
-
-.swap__btn {
-    background: no-repeat 0 0 transparent;
-    background-size: 100% auto;
-    border: 0;
-    display: block;
-    font-size: 0;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
-    text-indent: -9999px;
-
-    &:active,
-    &:focus,
-    &:hover {
-        outline: 0;
+    .swap__actions {
+        margin: 0 0 0 20px;
     }
 
-    &--amarelo {
-        background-image: url('./../img/idiotas/btn-amarelo.png');
-        height: 40px;
-        width: 41px;
-    }
+    .swap__btn {
+        &--amarelo {
+            background-image: url('./../img/idiotas/btn-amarelo.png');
+            height: 40px;
+            width: 41px;
+        }
 
-    &--vermelho {
-        background-image: url('./../img/idiotas/btn-vermelho.png');
-        height: 37px;
-        width: 36px;
-    }
+        &--vermelho {
+            background-image: url('./../img/idiotas/btn-vermelho.png');
+            height: 37px;
+            width: 36px;
+        }
 
-    &--verde {
-        background-image: url('./../img/idiotas/btn-verde.png');
-        height: 36px;
-        width: 35px;
-    }
+        &--verde {
+            background-image: url('./../img/idiotas/btn-verde.png');
+            height: 36px;
+            width: 35px;
+        }
 
-    &--praia {
-        background-image: url('./../img/idiotas/btn-praia.png');
-        height: 40px;
-        width: 40px;
-    }
+        &--praia {
+            background-image: url('./../img/idiotas/btn-praia.png');
+            height: 40px;
+            width: 40px;
+        }
 
-    &--parque {
-        background-image: url('./../img/idiotas/btn-parque.png');
-        height: 38px;
-        width: 30px;
-    }
+        &--parque {
+            background-image: url('./../img/idiotas/btn-parque.png');
+            height: 38px;
+            width: 30px;
+        }
 
-    &--sala {
-        background-image: url('./../img/idiotas/btn-sala.png');
-        height: 38px;
-        width: 38px;
-    }
-
-    &--original {
-        background-image: url('./../img/btn-fechar.png');
-        height: 43px;
-        width: 44px;
-    }
-
-    &:active,
-    &:focus,
-    &:hover,
-    &.active {
-        background-position: 0 100%;
+        &--sala {
+            background-image: url('./../img/idiotas/btn-sala.png');
+            height: 38px;
+            width: 38px;
+        }
     }
 }
