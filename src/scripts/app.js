@@ -49,11 +49,12 @@ FIC.Slides = {
     },
 
     controlSlidesHandler: function () {
+
         $(document).on('click', '.slide__control--prev', function () {
             var prev = FIC.Slides.currentSlide;
 
             if (FIC.Slides.currentSlide === 1) {
-                FIC.Slides.currentSlide = FIC.Slides.totalSlides;
+                window.location.href = '/';
             } else {
                 FIC.Slides.currentSlide -= 1;
             }
@@ -65,7 +66,7 @@ FIC.Slides = {
             var prev = FIC.Slides.currentSlide;
 
             if (FIC.Slides.currentSlide === FIC.Slides.totalSlides) {
-                FIC.Slides.currentSlide = 1;
+                window.location.href = '/';
             } else {
                 FIC.Slides.currentSlide += 1;
             }
@@ -238,6 +239,7 @@ FIC.Slides = {
     init: function () {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
+        FIC.Slides.canvasHeight = 875;
 
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
@@ -253,5 +255,4 @@ FIC.Slides = {
         FIC.Slides.lightsHandler();
         FIC.Slides.landscapesHandler();
     }
-
 };
