@@ -1,0 +1,104 @@
+.section--carreteis {
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
+    background-size: contain;
+
+    .slide__title {
+        background-image: url('./../img/carreteis/bg-secao.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 77 / $canvasHeight * 100%;
+        top: 85 / $canvasHeight * 100%;
+        width: 157 / $canvasWidth * 100%;
+
+        @include viewport-font(2.1875vw, 20px, 22px);
+    }
+
+    .slide--4 .slide__figure > figcaption,
+    .slide--6 .slide__figure > figcaption,
+    .slide--7 .slide__figure > figcaption,
+    .slide--8 .slide__figure > figcaption {
+        text-align: right;
+    }
+}
+
+.slide__interaction--swap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.swap__actions {
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+
+    & > li {
+        margin-top: 20px;
+    }
+}
+
+.swap__btn {
+    background: no-repeat 0 0 transparent;
+    background-size: 100% auto;
+    border: 0;
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+
+    &--amarelo {
+        background-image: url('./../img/idiotas/btn-amarelo.png');
+        height: 40px;
+        width: 41px;
+    }
+
+    &--vermelho {
+        background-image: url('./../img/idiotas/btn-vermelho.png');
+        height: 37px;
+        width: 36px;
+    }
+
+    &--verde {
+        background-image: url('./../img/idiotas/btn-verde.png');
+        height: 36px;
+        width: 35px;
+    }
+
+    &--praia {
+        background-image: url('./../img/idiotas/btn-praia.png');
+        height: 40px;
+        width: 40px;
+    }
+
+    &--parque {
+        background-image: url('./../img/idiotas/btn-parque.png');
+        height: 38px;
+        width: 30px;
+    }
+
+    &--sala {
+        background-image: url('./../img/idiotas/btn-sala.png');
+        height: 38px;
+        width: 38px;
+    }
+
+    &--original {
+        background-image: url('./../img/btn-fechar.png');
+        height: 43px;
+        width: 44px;
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &.active {
+        background-position: 0 100%;
+    }
+}
