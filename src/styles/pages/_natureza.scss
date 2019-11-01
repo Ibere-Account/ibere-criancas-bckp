@@ -1,174 +1,156 @@
 .section--natureza {
-  background: url("./../img/chao.png") no-repeat center bottom transparent;
-  background-size: contain;
-
-  .slide__title {
-    align-items: flex-end;
-    background-image: url("./../img/natureza/bg-secao.png");
+    background: url('./../img/chao.png') no-repeat center bottom transparent;
     background-size: contain;
-    font-weight: bold;
-    height: 78 / $canvasHeight * 100%;
-    top: 72 / $canvasHeight * 100%;
-    width: 242 / $canvasWidth * 100%;
 
-    @include viewport-font(2.1875vw, 20px, 28px);
+    .slide__title {
+        align-items: flex-end;
+        background-image: url('./../img/natureza/bg-secao.png');
+        background-size: contain;
+        font-weight: bold;
+        height: 78 / $canvasHeight * 100%;
+        top: 72 / $canvasHeight * 100%;
+        width: 242 / $canvasWidth * 100%;
 
-    & > span {
-      margin-bottom: 10px;
+        @include viewport-font(2.1875vw, 20px, 28px);
+
+        & > span {
+            margin-bottom: 10px;
+        }
     }
-  }
 
-  & > .slide--5 {
-    & > .gato {
-      background-size: contain;
+    & > .slide--5 {
+        & > .gato { background-size: contain; }
     }
-  }
 
-  .lights {
-    text-align: center;
-    .light__item {
-      position: absolute;
-      display: block;
-      top: 250 / $canvasHeight * 100%;
-
-      &.light__item--btn1 {
-        left: 0;
-      }
-
-      &.light__item--btn1:not(.active) {
-        margin-top: 8px;
-      }
-
-      &.light__item--btn2 {
+    .lights {
         text-align: center;
-        right: 0;
-        left: 0;
-        top: -34 / $canvasHeight * 100%;
-        display: block;
-        img {
-          height: 90 / $canvasHeight * 100%;
-          vertical-align: bottom;
-        }
-      }
 
-      &.light__item--btn3 {
-        right: 30 / $canvasWidth * 100%;
-      }
-
-      &.active {
-        .light__off {
-          display: none;
-        }
-        .light__on {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-
-      .light__on {
-        display: none;
-      }
-    }
-    .slide__figure {
-      padding-bottom: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url("/../img/natureza/Luzes/sombra.png");
-
-      &.shadow--1 {
-        background-image: url("/../img/natureza/Luzes/sombra1.png");
-
-        &.shadow--2 {
-          background-image: url("/../img/natureza/Luzes/sombra1-2.png");
-
-          &.shadow--3 {
-            background-image: url("/../img/natureza/Luzes/sombra1-2-3.png");
-          }
-        }
-
-        &.shadow--3 {
-          background-image: url("/../img/natureza/Luzes/sombra1-3.png");
-        }
-      }
-
-      &.shadow--2 {
-        background-image: url("/../img/natureza/Luzes/sombra2.png");
-
-        &.shadow--3 {
-          background-image: url("/../img/natureza/Luzes/sombra2-3.png");
-        }
-      }
-
-      &.shadow--3 {
-        background-image: url("/../img/natureza/Luzes/sombra3.png");
-      }
-    }
-  }
-
-  .slide__interaction--swap {
-    & > figure:nth-child(1) {
-      cursor: pointer;
-    }
-    & > figure:nth-child(2) img:nth-child(2) {
-      position: absolute;
-      right: 180 / $canvasWidth * 100%;
-      top: 250 / $canvasHeight * 100%;
-    }
-  }
-  .slide__button {
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .slide--6 {
-    .slide__figure {
-      .magnify {
-        margin: 0 auto;
-        display: block;
-        img {
-          width: 100%;
-        }
-        .magnify-lens {
-          box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25),
-            inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-          &:after {
-            content: "";
-            background: black;
-            width: 140px;
-            height: 8px;
-            transform: rotate(45deg);
+        .light__item {
+            display: block;
             position: absolute;
-            bottom: -28px;
-            right: -95px;
-          }
-        }
-      }
-      figcaption {
-        margin-top: -35px;
-        margin-left: 168 / $canvasWidth * 100%;
-        margin-bottom: 10px;
-      }
-      img {
-        margin: 40px auto;
-        display: block;
-        margin-top: -90 / $canvasHeight * 100%;
-        height: 100%;
-      }
-    }
-  }
+            top: 250 / $canvasHeight * 100%;
 
-  .slide--9 {
-    .container-fluid {
-      & > .row {
-        margin-top: -120 / $canvasHeight * 100%;
-      }
+            &.light__item--btn1 { left: 0; }
+
+            &.light__item--btn1:not(.active) { margin-top: 8px; }
+
+            &.light__item--btn2 {
+                display: block;
+                left: 0;
+                right: 0;
+                text-align: center;
+                top: -34 / $canvasHeight * 100%;
+
+                img {
+                    height: 90 / $canvasHeight * 100%;
+                    vertical-align: bottom;
+                }
+            }
+
+            &.light__item--btn3 { right: 30 / $canvasWidth * 100%; }
+
+            &.active {
+                .light__off { display: none; }
+
+                .light__on {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .light__on { display: none; }
+        }
+
+        .slide__figure {
+            background-image: url('/../img/natureza/Luzes/sombra.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-bottom: 100%;
+
+            &.shadow--1 {
+                background-image: url('/../img/natureza/Luzes/sombra1.png');
+
+                &.shadow--2 {
+                    background-image: url('/../img/natureza/Luzes/sombra1-2.png');
+
+                    &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra1-2-3.png'); }
+                }
+
+                &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra1-3.png'); }
+            }
+
+            &.shadow--2 {
+                background-image: url('/../img/natureza/Luzes/sombra2.png');
+
+                &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra2-3.png'); }
+            }
+
+            &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra3.png'); }
+        }
     }
-    .col-10 {
-      margin-top: 70 / $canvasHeight * 100%;
+
+    .slide__interaction--swap {
+        & > figure:nth-child(1) { cursor: pointer; }
+
+        & > figure:nth-child(2) img:nth-child(2) {
+            position: absolute;
+            right: 180 / $canvasWidth * 100%;
+            top: 250 / $canvasHeight * 100%;
+        }
     }
-    .gato {
-      background-size: contain;
+
+    .slide__button {
+        cursor: pointer;
+        text-align: center;
     }
-  }
+
+    .slide--6 {
+        .slide__figure {
+            .magnify {
+                display: block;
+                margin: 0 auto;
+
+                img { width: 100%; }
+
+                .magnify-lens {
+                    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+
+                    &:after {
+                        background: black;
+                        bottom: -28px;
+                        content: '';
+                        height: 8px;
+                        position: absolute;
+                        right: -95px;
+                        transform: rotate(45deg);
+                        width: 140px;
+                    }
+                }
+            }
+
+            figcaption {
+                margin-bottom: 10px;
+                margin-left: 168 / $canvasWidth * 100%;
+                margin-top: -35px;
+            }
+
+            img {
+                display: block;
+                height: 100%;
+                margin: 40px auto;
+                margin-top: -90 / $canvasHeight * 100%;
+            }
+        }
+    }
+
+    .slide--9 {
+        .container-fluid {
+            & > .row { margin-top: -120 / $canvasHeight * 100%; }
+        }
+
+        .col-10 { margin-top: 70 / $canvasHeight * 100%; }
+
+        .gato { background-size: contain; }
+    }
 }
