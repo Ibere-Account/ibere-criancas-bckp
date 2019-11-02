@@ -4,7 +4,7 @@ var FIC = FIC || [];
 
 $(document).ready(function () {
     if(!sessionStorage.getItem('viewState')){
-        const viewState = {
+        var viewState = {
             displayGuide:true,
             visitedLinks:[]
         };
