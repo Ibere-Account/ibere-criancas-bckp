@@ -61,6 +61,7 @@ let transpileJSForDev = () => {
 let transpileJSForProd = () => {
     return src('src/scripts/**/*.js')
         .pipe(babel())
+        .pipe(concat('main.js'))
         .pipe(jsCompressor())
         .pipe(dest('dist/scripts'));
 };
