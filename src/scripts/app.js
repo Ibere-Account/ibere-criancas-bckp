@@ -2,7 +2,7 @@
 
 var FIC = FIC || [];
 
-$(document).ready(function ()  {
+$(document).ready(function () {
     if(!sessionStorage.getItem('viewState')){
         const viewState = {
             displayGuide:true,
@@ -33,50 +33,53 @@ FIC.Home = {
                 });
         });
 
-        $('#help-button').hover(function(){
-            $('#help-text').removeClass('gato__help__ballon--hide');
-            $('#help-text').addClass('gato__help__ballon--show');
-        },
-        function(){
-            $('#help-text').addClass('gato__help__ballon--hide');
-            $('#help-text').removeClass('gato__help__ballon--show');
-        })
+        $('#help-button').hover(
+            function () {
+                $('#help-text').removeClass('gato__help__ballon--hide');
+                $('#help-text').addClass('gato__help__ballon--show');
+            },
+            function () {
+                $('#help-text').addClass('gato__help__ballon--hide');
+                $('#help-text').removeClass('gato__help__ballon--show');
+            }
+        );
     },
 
     init: function () {
         FIC.Home.datasheetHandler();
 
         $('.section__link').on('click', function(){
-            const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
-            const clickedLink = $(this).attr('href').replace('.html', '');
-            const hasAlreadyVisited = viewState.visitedLinks.find( link => link === clickedLink );
+            var viewState = JSON.parse(atob(sessionStorage.getItem('viewState'))),
+                clickedLink = $(this).attr('href').replace('.html', ''),
+                hasAlreadyVisited = viewState.visitedLinks.find( link => link === clickedLink );
 
-            if(!hasAlreadyVisited){
+            if (!hasAlreadyVisited) {
                 viewState.visitedLinks.push(clickedLink);
             }
+
             sessionStorage.removeItem('viewState');
-            sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+            sessionStorage.setItem('viewState', btoa(JSON.stringify(viewState)));
         });
+
         this.setVisitedLinks();
         this.startFirstGuideTalk();
     },
 
-    setVisitedLinks: function(){
-        const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
+    setVisitedLinks: function () {
+        var viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
 
         viewState.visitedLinks.map( link => $(`[href="${link}.html"]`).addClass('section__link--visited'));
 
     },
 
-    startFirstGuideTalk: function(){
-        const viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
+    startFirstGuideTalk: function () {
+        var viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
 
-        if(viewState.displayGuide){
-
+        if (viewState.displayGuide) {
             window.setTimeout(() => {
                 $('#guide-talk-1').removeClass('gato__help__ballon--hide');
                 $('#guide-talk-1').addClass('gato__help__ballon--show');
-            },3000);
+            }, 3000);
 
             window.setTimeout(() => {
                 $('#guide-talk-1').removeClass('gato__help__ballon--show');
@@ -84,19 +87,19 @@ FIC.Home = {
 
                 $('#guide-talk-2').removeClass('gato__help__ballon--hide');
                 $('#guide-talk-2').addClass('gato__help__ballon--show');
-            },10000);
+            }, 10000);
+
             window.setTimeout(() => {
                 $('#guide-talk-2').removeClass('gato__help__ballon--show');
                 $('#guide-talk-2').addClass('gato__help__ballon--hide');
-            },20000);
+            }, 20000);
 
             viewState.displayGuide = false;
 
             sessionStorage.removeItem('viewState');
-            sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+            sessionStorage.setItem('viewState', btoa(JSON.stringify(viewState)));
         }
     }
-
 };
 
 
