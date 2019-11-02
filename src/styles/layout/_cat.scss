@@ -17,12 +17,102 @@
     }
 }
 
+.gato__help__ballon{
+    background-color: white;
+    border: 3px solid black;
+    border-bottom-left-radius: 20px 200px;
+    border-bottom-right-radius: 70px 200px;
+    border-top-left-radius: 70px 200px;
+    border-top-right-radius: 20px 200px;
+    font-weight: bold;
+    padding: 17px;
+    position: absolute;
+    width: 316px;
+
+    &--top {
+        left: 6%;
+        top: 48%;
+        transform: skew(10deg);
+
+        &::after {
+            border-bottom-left-radius: 30px 70px;
+            height: 80px;
+            right: 50%;
+            top: 96%;
+            transform: rotate(-25deg) skew(0deg, 25deg);
+            width: 25px;
+        }
+
+        & > div { transform: skew(-10deg); }
+    }
+
+    &--left{
+        left: 45%;
+        top: 62%;
+        transform: skew(10deg);
+
+        &::after {
+            border-bottom-right-radius: 20px 230px;
+            height: 240px;
+            right: 26em;
+            top: 10%;
+            transform: rotate(75deg) skew(0deg, 10deg);
+            width: 17px;
+        }
+
+        & > div { transform: skew(-10deg); }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: fixed;
+        background: #FFFFFF;
+        border-left: 3px solid black;
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+    }
+
+    &--hide{
+        opacity: 0;
+        transition: visibility 0s 0.8s, opacity 0.8s linear;
+        visibility: hidden;
+    }
+
+    &--show{
+        opacity: 1;
+        transition: opacity 0.8s linear;
+        visibility: visible;
+    }
+}
+
 .gato {
     background: url('./../img/gato.png') no-repeat 0 0 transparent;
     background-size: 100% auto;
     height: 182 / $canvasHeight * 100%;
     position: absolute;
     width: 197 / $canvasWidth * 100%;
+
+    .gato__help {
+        background-color: #9FF;
+        border-radius: 25px;
+        bottom: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+        height: 1.3em;
+        left: 80%;
+        position: absolute;
+        width: 1.3em;
+
+        span {
+            bottom: 0;
+            height: 55px;
+            left: 25%;
+            position: absolute;
+        }
+
+        &:hover { background-color: #1FF; }
+    }
 
     .section--home & {
         left: 147 / $canvasWidth * 100%;
