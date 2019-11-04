@@ -49,3 +49,11 @@
 .negative-margin-top{
     margin-top: -85 / $canvasHeight * 100%;
 }
+
+.slide__back-home {
+    height: 40 / $canvasWidth * 100%;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40 / $canvasWidth * 100%;
+}
