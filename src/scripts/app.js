@@ -227,17 +227,20 @@ FIC.Slides = {
     },
 
     modalsHandler: function () {
-        $(document).on('touchend click', '.slide__figure[data-modal]', function () {
-            var target = $(this).data('modal');
-            $(target).addClass('show');
-        }).on('touchend click', '.modal__close', function () {
-            $(this).parents('.modal').removeClass('show');
-        });
-    },
+        $(document).on('touchend click', '.slide__figure[data-modal]', function (ev) {
+            ev.stopPropagation();
+            ev.preventDefault();
 
-    backPageHandler: function () {
-        $(document).on('click', '.logo', function () {
-            history.back();
+            var $target = $($(this).data('modal'));
+            $target.addClass('show');
+
+            $target.on('click.modal', function (e) {
+                if (this === e.target) {
+                    $target.find('.modal__close').trigger('click');
+                }
+            });
+        }).on('touchend click', '.modal__close', function () {
+            $(this).parents('.modal.show').removeClass('show').off('click.modal');
         });
     },
 
@@ -321,7 +324,6 @@ FIC.Slides = {
         FIC.Slides.outlineHandler();
         FIC.Slides.swapHandler();
         FIC.Slides.modalsHandler();
-        FIC.Slides.backPageHandler();
         FIC.Slides.showAnimation();
         FIC.Slides.lightsHandler();
         FIC.Slides.landscapesHandler();

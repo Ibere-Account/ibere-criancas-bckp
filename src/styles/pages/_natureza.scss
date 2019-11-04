@@ -62,31 +62,31 @@
         }
 
         .slide__figure {
-            background-image: url('/../img/natureza/Luzes/sombra.png');
+            background-image: url('/../img/natureza/luzes/sombra.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
             padding-bottom: 100%;
 
             &.shadow--1 {
-                background-image: url('/../img/natureza/Luzes/sombra1.png');
+                background-image: url('/../img/natureza/luzes/sombra1.png');
 
                 &.shadow--2 {
-                    background-image: url('/../img/natureza/Luzes/sombra1-2.png');
+                    background-image: url('/../img/natureza/luzes/sombra1-2.png');
 
-                    &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra1-2-3.png'); }
+                    &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra1-2-3.png'); }
                 }
 
-                &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra1-3.png'); }
+                &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra1-3.png'); }
             }
 
             &.shadow--2 {
-                background-image: url('/../img/natureza/Luzes/sombra2.png');
+                background-image: url('/../img/natureza/luzes/sombra2.png');
 
-                &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra2-3.png'); }
+                &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra2-3.png'); }
             }
 
-            &.shadow--3 { background-image: url('/../img/natureza/Luzes/sombra3.png'); }
+            &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra3.png'); }
         }
     }
 
