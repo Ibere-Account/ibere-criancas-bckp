@@ -3,13 +3,14 @@
 var FIC = FIC || [];
 
 $(document).ready(function () {
-    if(!sessionStorage.getItem('viewState')){
+    FIC.Slides.preloadImages();
+    if (!sessionStorage.getItem('viewState')) {
         var viewState = {
-            displayGuide:true,
-            visitedLinks:[]
+            displayGuide: true,
+            visitedLinks: []
         };
 
-        sessionStorage.setItem('viewState',btoa(JSON.stringify(viewState)));
+        sessionStorage.setItem('viewState', btoa(JSON.stringify(viewState)));
     }
 
     for (var i in FIC) {
@@ -48,10 +49,10 @@ FIC.Home = {
     init: function () {
         FIC.Home.datasheetHandler();
 
-        $('.section__link').on('click', function(){
+        $('.section__link').on('click', function () {
             var viewState = JSON.parse(atob(sessionStorage.getItem('viewState'))),
                 clickedLink = $(this).attr('href').replace('.html', ''),
-                hasAlreadyVisited = viewState.visitedLinks.find( link => link === clickedLink );
+                hasAlreadyVisited = viewState.visitedLinks.find(link => link === clickedLink);
 
             if (!hasAlreadyVisited) {
                 viewState.visitedLinks.push(clickedLink);
@@ -68,7 +69,7 @@ FIC.Home = {
     setVisitedLinks: function () {
         var viewState = JSON.parse(atob(sessionStorage.getItem('viewState')));
 
-        viewState.visitedLinks.map( link => $(`[href="${link}.html"]`).addClass('section__link--visited'));
+        viewState.visitedLinks.map(link => $(`[href="${link}.html"]`).addClass('section__link--visited'));
 
     },
 
@@ -92,12 +93,15 @@ FIC.Home = {
             window.setTimeout(() => {
                 $('#guide-talk-2').removeClass('gato__help__ballon--show');
                 $('#guide-talk-2').addClass('gato__help__ballon--hide');
+                $('.section__link').addClass('section__link--show');
             }, 20000);
 
             viewState.displayGuide = false;
 
             sessionStorage.removeItem('viewState');
             sessionStorage.setItem('viewState', btoa(JSON.stringify(viewState)));
+        } else {
+            $('.section__link').addClass('section__link--show');
         }
     }
 };
@@ -309,6 +313,16 @@ FIC.Slides = {
         }
     },
 
+    preloadImages: function () {
+        var srcList = $('img').map(function () {
+            return this.src;
+        }).get();
+        var images = [];
+        for (var i = 0; i < srcList.length; i++) {
+            images[i] = new Image();
+            images[i].src = srcList[i];
+        }
+    },
 
     init: function () {
         FIC.Slides.$slides = $('.slide');
