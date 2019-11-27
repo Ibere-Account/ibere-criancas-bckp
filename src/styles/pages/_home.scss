@@ -9,11 +9,14 @@
     border: 0;
     padding: 0;
     position: absolute;
+    opacity: 0;
+    transition: visibility 0s 0.8s, opacity 0.8s linear;
+    visibility: hidden;
 
     @include viewport-font(2.1875vw, 16px, 28px);
 
     &:hover,
-    &--visited{
+    &--visited {
         background-position: 0 bottom;
     }
 
@@ -27,6 +30,12 @@
     &:focus,
     &:hover {
         outline: 0;
+    }
+
+    &.section__link--show {
+        opacity: 1;
+        transition: opacity 0.8s linear;
+        visibility: visible;
     }
 }
 
