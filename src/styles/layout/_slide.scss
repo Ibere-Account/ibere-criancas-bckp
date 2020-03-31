@@ -33,15 +33,15 @@
     border: 0;
     display: block;
     font-size: 0;
-    height: 202 / $canvasHeight * 100%;
+    height: 170 / $canvasHeight * 100%;
     overflow: hidden;
     padding: 0;
-    position: absolute;
     text-indent: -9999px;
     top: 50%;
     transform: translateY(-50%);
     width: 119 / $canvasWidth * 100%;
     z-index: 2;
+    position: fixed;
 
     &--prev {
         background-image: url('./../img/btn-prev.png');
@@ -51,6 +51,7 @@
     &--next {
         background-image: url('./../img/btn-next.png');
         right: 0;
+        background-position: 100%;
     }
 
     &:active,
@@ -69,7 +70,7 @@
     left: 0;
     line-height: 1;
     margin-bottom: 0;
-    position: absolute;
+    position: fixed;
 
     &.slide__title--curiosidades {
         align-items: flex-start !important;
@@ -81,7 +82,7 @@
 
         & > span {
             margin-left: 6%;
-            margin-top: 7%;
+            margin-top: 5%;
         }
     }
 

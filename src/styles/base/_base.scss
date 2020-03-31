@@ -32,7 +32,7 @@
     left: 24 / $canvasWidth * 100%;
     margin-bottom: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     text-indent: -9999px;
     top: 17 / $canvasHeight * 100%;
     width: 300 / $canvasWidth * 100%;
