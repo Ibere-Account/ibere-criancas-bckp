@@ -116,8 +116,10 @@ FIC.Slides = {
         FIC.Slides.$slides.filter(prev + ', ' + current).toggleClass('hide');
 
         if (FIC.Slides.$slides.filter(current).data('gallery')) {
+            FIC.Slides.$pageWrapper.addClass('no-bg');
             FIC.Slides.$slides.parent().addClass('section--gallery');
         } else {
+            FIC.Slides.$pageWrapper.removeClass('no-bg');
             FIC.Slides.$slides.parent().removeClass('section--gallery');
         }
 
@@ -328,6 +330,7 @@ FIC.Slides = {
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.totalSlides = FIC.Slides.$slides.length;
         FIC.Slides.canvasHeight = 875;
+        FIC.Slides.$pageWrapper = $('.page-wrapper');
 
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
