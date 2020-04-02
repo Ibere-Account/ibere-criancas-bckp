@@ -22,6 +22,14 @@
     &.section--gallery {
         background-image: url('./../img/galeria.jpg') !important;
     }
+
+    &.section-scaled {
+        top: 0;
+    }
+
+    &.section-visible {
+        visibility: visible;
+    }
 }
 
 .logo {

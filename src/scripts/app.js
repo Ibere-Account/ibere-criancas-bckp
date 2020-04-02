@@ -254,6 +254,10 @@ FIC.Slides = {
                 src = $this.data('animation');
 
             $this.attr('src', src);
+        }).ready(function () {
+            $(window).resize(function () {
+                FIC.Slides.resize();
+            });
         });
     },
 
@@ -324,14 +328,37 @@ FIC.Slides = {
         }
     },
 
+    verticalScrollPresent: function () {
+        return (document.documentElement.scrollHeight !== document.documentElement.clientHeight);
+    },
+
+    resize: function () {
+        var heightPageWrapper = window.innerHeight,
+            scale = heightPageWrapper / FIC.Slides.canvasHeight;
+
+        if ((heightPageWrapper < FIC.Slides.canvasHeight || FIC.Slides.verticalScrollPresent()) && (scale < 1)) {
+            FIC.Slides.$section.css({
+                transform: 'scale(' + heightPageWrapper / FIC.Slides.canvasHeight + ')',
+                'transform-origin': '50% 0%'
+            });
+            FIC.Slides.$section.addClass('section-scaled').addClass('section-visible');
+        } else {
+            FIC.Slides.$section.removeClass('section-scaled').addClass('section-visible');
+        }
+    },
+
     init: function () {
-        FIC.Slides.$slides = $('.slide');
-        FIC.Slides.totalSlides = FIC.Slides.$slides.length;
         FIC.Slides.canvasHeight = 875;
+        FIC.Slides.$slides = $('.slide');
+        FIC.Slides.$pageWrapper = $('.page-wrapper');
+        FIC.Slides.$section = FIC.Slides.$pageWrapper.find('>.section');
+        FIC.Slides.totalSlides = FIC.Slides.$slides.length;
 
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.controlSlidesHandler();
         }
+
+        FIC.Slides.resize();
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
