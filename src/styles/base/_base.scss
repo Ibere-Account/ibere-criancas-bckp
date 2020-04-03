@@ -4,6 +4,11 @@
     height: 100vh;
     justify-content: center;
     width: 100%;
+    background: url('./../img/chao_v2.jpg') no-repeat center bottom transparent;
+
+    &.no-bg{
+        background: none;
+    }
 
     @media (min-width: 1200px) and (max-height: 875px) {
         align-items: flex-start;
@@ -40,7 +45,7 @@
     left: 24 / $canvasWidth * 100%;
     margin-bottom: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     text-indent: -9999px;
     top: 17 / $canvasHeight * 100%;
     width: 300 / $canvasWidth * 100%;

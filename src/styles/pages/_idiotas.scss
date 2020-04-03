@@ -1,14 +1,11 @@
 .section--idiotas {
-    background: url('./../img/chao.png') no-repeat center bottom transparent;
-    background-size: contain;
-
     .slide__title {
         background-image: url('./../img/idiotas/bg-secao.png');
         background-size: contain;
         font-weight: bold;
         height: 75 / $canvasHeight * 100%;
         top: 96 / $canvasHeight * 100%;
-        width: 118 / $canvasWidth * 100%;
+        width: 90 / $canvasWidth * 100%;
 
         @include viewport-font(2.1875vw, 20px, 28px);
     }

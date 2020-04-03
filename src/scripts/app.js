@@ -116,8 +116,10 @@ FIC.Slides = {
         FIC.Slides.$slides.filter(prev + ', ' + current).toggleClass('hide');
 
         if (FIC.Slides.$slides.filter(current).data('gallery')) {
+            FIC.Slides.$pageWrapper.addClass('no-bg');
             FIC.Slides.$slides.parent().addClass('section--gallery');
         } else {
+            FIC.Slides.$pageWrapper.removeClass('no-bg');
             FIC.Slides.$slides.parent().removeClass('section--gallery');
         }
 

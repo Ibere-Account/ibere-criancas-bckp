@@ -1,25 +1,20 @@
 .section--paisagem {
-    background: url('./../img/paisagem/mapa.png') no-repeat center bottom #fff;
-    background-size: contain;
-
     .slide__title {
         background-image: url('./../img/paisagem/bg-secao.png');
         background-size: contain;
         font-weight: bold;
         height: 89 / $canvasHeight * 100%;
         top: 108 / $canvasHeight * 100%;
-        width: 188 / $canvasWidth * 100%;
+        width: 140 / $canvasWidth * 100%;
 
         @include viewport-font(2.1875vw, 20px, 28px);
     }
 
-    .slide:not(.gallery) {
-        background: url('./../img/paisagem/chao.png') no-repeat center bottom #fff;
-        background-size: contain;
-    }
 
     .slide--1 {
         background-color: transparent !important;
+        background: url('./../img/paisagem/mapa.png') no-repeat center bottom #fff;
+        background-size: contain;
     }
 
     .slide--4 .slide__figure > figcaption,
