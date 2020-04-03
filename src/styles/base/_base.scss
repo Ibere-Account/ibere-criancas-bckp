@@ -49,6 +49,7 @@
     text-indent: -9999px;
     top: 17 / $canvasHeight * 100%;
     width: 300 / $canvasWidth * 100%;
+    z-index: 9999;
 }
 
 .row + .row {
