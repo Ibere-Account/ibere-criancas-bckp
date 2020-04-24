@@ -114,6 +114,7 @@
 
 .slide__figure {
     margin-bottom: 0;
+  
 
     & > img {
         border-radius: 4px;
@@ -123,6 +124,14 @@
 
     & > figcaption {
         margin-top: 5px;
+        width: 100%;
+        position: relative;
+
+       
+    }
+
+    & > .p--right {
+        float: right;
     }
 
     .gallery & {
