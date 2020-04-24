@@ -114,7 +114,7 @@
 
 .slide__figure {
     margin-bottom: 0;
-  
+
 
     & > img {
         border-radius: 4px;
@@ -126,12 +126,12 @@
         margin-top: 5px;
         width: 100%;
         position: relative;
-
-       
     }
 
-    & > .p--right {
-        float: right;
+     span.p--right {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     .gallery & {
