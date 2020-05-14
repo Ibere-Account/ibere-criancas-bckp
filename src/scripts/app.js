@@ -118,7 +118,10 @@ FIC.Slides = {
         if (FIC.Slides.$slides.filter(current).data('gallery')) {
             FIC.Slides.$pageWrapper.addClass('no-bg');
             FIC.Slides.$slides.parent().addClass('section--gallery');
-        } else {
+        } else if (FIC.Slides.$slides.filter(current).data('curiosities')) {
+            FIC.Slides.$pageWrapper.addClass('no-bg page-wrapper--curiosities');
+        }
+        else {
             FIC.Slides.$pageWrapper.removeClass('no-bg');
             FIC.Slides.$slides.parent().removeClass('section--gallery');
         }
