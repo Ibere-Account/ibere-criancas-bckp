@@ -61,6 +61,38 @@
     }
 }
 
+.slide__title--tag{
+    display: flex;
+    justify-content: center;
+    left: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    position: absolute;
+    top: 20%;
+    width: 120 / $canvasWidth * 100%;
+
+    &.slide__title--curiosidades{
+        display: none;
+        width: 160 / $canvasWidth * 100%;
+    }
+}
+.no-bg{
+
+    .slide__title--tag{
+        display: none;
+    }
+}
+.page-wrapper--curiosities {
+
+    .slide__title--tag{
+        display: none;
+
+        &.slide__title--curiosidades{
+            display: block;
+        }
+    }
+}
+
 .slide__title {
     align-items: center;
     background: no-repeat 0 0 transparent;
