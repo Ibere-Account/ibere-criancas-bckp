@@ -1,6 +1,5 @@
 .modal {
     align-items: center;
-    background: rgba($black, .5);
     bottom: 0;
     display: none;
     flex-flow: column nowrap;
@@ -19,7 +18,7 @@
 }
 
 .modal-dialog {
-    max-width: 580 / $canvasWidth * 100%;
+    max-height: 100vh;
     pointer-events: none;
     position: relative;
     width: auto;
@@ -43,6 +42,7 @@
     & > .slide__figure {
         & > img {
             width: 100%;
+            max-height: 80vh;
         }
     }
 
