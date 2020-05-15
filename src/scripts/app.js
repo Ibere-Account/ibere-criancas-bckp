@@ -115,15 +115,13 @@ FIC.Slides = {
     showHideSlides: function (prev, current) {
         FIC.Slides.$slides.filter(prev + ', ' + current).toggleClass('hide');
 
+        FIC.Slides.$pageWrapper.removeClass('no-bg page-wrapper--gallery page-wrapper--curiosities');
+
         if (FIC.Slides.$slides.filter(current).data('gallery')) {
-            FIC.Slides.$pageWrapper.addClass('no-bg');
-            FIC.Slides.$slides.parent().addClass('section--gallery');
+            FIC.Slides.$pageWrapper.addClass('no-bg page-wrapper--gallery');
         } else if (FIC.Slides.$slides.filter(current).data('curiosities')) {
-            FIC.Slides.$pageWrapper.addClass('no-bg page-wrapper--curiosities');
-        }
-        else {
-            FIC.Slides.$pageWrapper.removeClass('no-bg');
-            FIC.Slides.$slides.parent().removeClass('section--gallery');
+            FIC.Slides.$pageWrapper.removeClass('no-bg page-wrapper--gallery');
+            FIC.Slides.$pageWrapper.addClass('page-wrapper--curiosities');
         }
 
     },

@@ -10,6 +10,13 @@
         background: none;
     }
 
+    &.page-wrapper--gallery {
+        background-image: url('./../img/galeria.jpg') !important;
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
     @media (min-width: 1200px) and (max-height: 875px) {
         align-items: flex-start;
     }
@@ -23,10 +30,6 @@
     overflow: hidden;
     position: absolute;
     width: 100%;
-
-    &.section--gallery {
-        background-image: url('./../img/galeria.jpg') !important;
-    }
 
     &.section-scaled {
         top: 0;
