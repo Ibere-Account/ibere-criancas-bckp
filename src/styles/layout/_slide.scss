@@ -60,6 +60,21 @@
         outline: 0;
     }
 }
+.page-wrapper{
+    &.modal-show-bg{
+
+        .gato,
+        .gallery__title,
+        .slide__container .slide__figure {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .slide__control {
+            display: none;
+        }
+    }
+}
 
 .slide__title--tag{
     display: flex;
