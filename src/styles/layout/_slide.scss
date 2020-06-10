@@ -63,13 +63,6 @@
 .page-wrapper{
     &.modal-show-bg{
 
-        .gato,
-        .gallery__title,
-        .slide__container .slide__figure {
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
         .slide__control {
             display: none;
         }
@@ -85,6 +78,7 @@
     position: absolute;
     top: 20%;
     width: 120 / $canvasWidth * 100%;
+    z-index: 9999;
 
     &.slide__title--curiosidades{
         display: none;

@@ -152,15 +152,20 @@
 
 .section__link--paisagem {
     background-image: url('./../img/home/paisagem.png');
-    height: 626 / $canvasHeight * 100%;
-    right: 16 / $canvasWidth * 100% * -1;
+    height: 550 / $canvasHeight * 100%;
+    right: 5 / $canvasWidth * 100% * -1;
     top: 51 / $canvasHeight * 100%;
     width: 256 / $canvasWidth * 100%;
 
     & > .section__link__label {
         background-color: $paisagem;
         left: 18 / 256 * 100% * -1;
-        top: 244 / 626 * 100%;
+        top: 220 / 626 * 100%;
+    }
+
+    &.section__link--visited,
+    &:hover{
+        background-position: 0 96%;
     }
 }
 
@@ -204,7 +209,7 @@
     background-image: url('./../img/home/mesa-1.png');
     height: 330 / $canvasHeight * 100%;
     left: 0;
-    width: 345 / $canvasWidth * 100%;
+    width: 345 / $canvasWidth * 100% + (5);
 }
 
 .mesa-2 {

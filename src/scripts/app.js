@@ -344,22 +344,26 @@ FIC.Slides = {
         return (document.documentElement.scrollHeight !== document.documentElement.clientHeight);
     },
 
-    resize: function () {
+    resize: function (isTablet) {
         var heightPageWrapper = window.innerHeight,
             scale = heightPageWrapper / FIC.Slides.canvasHeight;
 
-        if ((heightPageWrapper < FIC.Slides.canvasHeight || FIC.Slides.verticalScrollPresent()) && (scale < 1)) {
+        if ((heightPageWrapper < 700) || (!isTablet && (heightPageWrapper < FIC.Slides.canvasHeight || FIC.Slides.verticalScrollPresent()) && (scale < 1))) {
             FIC.Slides.$section.css({
                 transform: 'scale(' + heightPageWrapper / FIC.Slides.canvasHeight + ')',
                 'transform-origin': '50% 0%'
             });
-            FIC.Slides.$section.addClass('section-scaled').addClass('section-visible');
+            FIC.Slides.$section.addClass('section-scaled');
         } else {
-            FIC.Slides.$section.removeClass('section-scaled').addClass('section-visible');
+            FIC.Slides.$section.removeClass('section-scaled');
         }
+        FIC.Slides.$section.addClass('section-visible');
     },
 
     init: function () {
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
         FIC.Slides.canvasHeight = 875;
         FIC.Slides.$slides = $('.slide');
         FIC.Slides.$pageWrapper = $('.page-wrapper');
@@ -370,7 +374,7 @@ FIC.Slides = {
             FIC.Slides.controlSlidesHandler();
         }
 
-        FIC.Slides.resize();
+        FIC.Slides.resize(isTablet);
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
