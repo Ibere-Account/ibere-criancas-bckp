@@ -36,9 +36,12 @@
     }
 
     .slide--1 .slide__figure > figcaption {
-        font-size: 75%;
         margin-bottom: 5%;
         text-align: right;
+    }
+
+    .slide--5 div:not(.modal-body) .slide__figure {
+        margin-bottom: 100px;
     }
 
     .slide--5 .slide__figure > figcaption { margin-bottom: 65px; }
