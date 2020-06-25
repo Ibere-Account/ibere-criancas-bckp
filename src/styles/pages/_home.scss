@@ -1,9 +1,10 @@
 .section--home {
     background-size: contain;
 
-    &:after{
-        content: '';
-        background: url('./../img/home/sala.png') no-repeat center center transparent;
+    &:after {
+        content: "";
+        background: url("./../img/home/sala.png") no-repeat center center
+            transparent;
         top: 0;
         right: 0;
         left: 0;
@@ -67,7 +68,7 @@
 }
 
 .section__link--retratos {
-    background-image: url('./../img/home/retratos.png');
+    background-image: url("./../img/home/retratos.png");
     height: 250 / $canvasHeight * 100%;
     left: 655 / $canvasWidth * 100%;
     top: 146 / $canvasHeight * 100%;
@@ -81,7 +82,7 @@
 }
 
 .section__link--idiotas {
-    background-image: url('./../img/home/idiotas.png');
+    background-image: url("./../img/home/idiotas.png");
     height: 265 / $canvasHeight * 100%;
     left: 296 / $canvasWidth * 100%;
     top: 222 / $canvasHeight * 100%;
@@ -95,7 +96,7 @@
 }
 
 .section__link--manequins {
-    background-image: url('./../img/home/manequins.png');
+    background-image: url("./../img/home/manequins.png");
     height: 386 / $canvasHeight * 100%;
     left: 885 / $canvasWidth * 100%;
     top: 265 / $canvasHeight * 100%;
@@ -109,7 +110,7 @@
 }
 
 .section__link--acervo {
-    background-image: url('./../img/home/acervo.png');
+    background-image: url("./../img/home/acervo.png");
     height: 194 / $canvasHeight * 100%;
     left: 47 / $canvasWidth * 100%;
     top: 161 / $canvasHeight * 100%;
@@ -123,7 +124,7 @@
 }
 
 .section__link--ibere {
-    background-image: url('./../img/home/ibere.png');
+    background-image: url("./../img/home/ibere.png");
     height: 547 / $canvasHeight * 100%;
     left: 377 / $canvasWidth * 100%;
     bottom: 25 / $canvasHeight * 100% * -1;
@@ -137,7 +138,7 @@
 }
 
 .section__link--ciclistas {
-    background-image: url('./../img/home/ciclistas.png');
+    background-image: url("./../img/home/ciclistas.png");
     bottom: 17 / $canvasHeight * 100%;
     height: 316 / $canvasHeight * 100%;
     right: 40 / $canvasWidth * 100%;
@@ -151,7 +152,7 @@
 }
 
 .section__link--paisagem {
-    background-image: url('./../img/home/paisagem.png');
+    background-image: url("./../img/home/paisagem.png");
     height: 550 / $canvasHeight * 100%;
     right: 5 / $canvasWidth * 100% * -1;
     top: 51 / $canvasHeight * 100%;
@@ -164,13 +165,13 @@
     }
 
     &.section__link--visited,
-    &:hover{
-        background-position: 0 96%;
+    &:hover {
+        background-position: 0 95.8%;
     }
 }
 
 .section__link--natureza-morta {
-    background-image: url('./../img/home/natureza-morta.png');
+    background-image: url("./../img/home/natureza-morta.png");
     height: 187 / $canvasHeight * 100%;
     right: 404 / $canvasWidth * 100%;
     top: 625 / $canvasHeight * 100%;
@@ -184,7 +185,7 @@
 }
 
 .section__link--carreteis {
-    background-image: url('./../img/home/carreteis.png');
+    background-image: url("./../img/home/carreteis.png");
     bottom: 54 / $canvasHeight * 100%;
     height: 190 / $canvasHeight * 100%;
     left: 390 / $canvasWidth * 100%;
@@ -206,21 +207,22 @@
 }
 
 .mesa-1 {
-    background-image: url('./../img/home/mesa-1.png');
+    background-image: url("./../img/home/mesa-1.png");
     height: 330 / $canvasHeight * 100%;
     left: 0;
     width: 345 / $canvasWidth * 100% + (5);
 }
 
 .mesa-2 {
-    background-image: url('./../img/home/mesa-2.png');
+    background-image: url("./../img/home/mesa-2.png");
     height: 215 / $canvasHeight * 100%;
     left: 345 / $canvasWidth * 100%;
     width: 332 / $canvasWidth * 100%;
 }
 
 .cavalete {
-    background: url('./../img/home/cavalete.png') no-repeat center center transparent;
+    background: url("./../img/home/cavalete.png") no-repeat center center
+        transparent;
     background-size: 100% auto;
     height: 571 / $canvasHeight * 100%;
     left: 269 / $canvasWidth * 100%;
@@ -230,7 +232,7 @@
 }
 
 .datasheet-link {
-    background: url('./../img/home/flecha.png') no-repeat 0 0 $white;
+    background: url("./../img/home/flecha.png") no-repeat 0 0 $white;
     background-position: right 10px center;
     background-size: 19px auto;
     border: 0;
@@ -248,5 +250,4 @@
     &:hover {
         outline: 0;
     }
-
 }

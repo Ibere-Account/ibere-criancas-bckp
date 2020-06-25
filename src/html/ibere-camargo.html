@@ -1,98 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Iberê para Crianças | Iberê Camargo</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iberê para Crianças | Iberê Camargo</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
 
-    <link rel="stylesheet" href="styles/main.css">
-</head>
+    <body>
+        <div class="page-wrapper">
+            <h1 class="logo" title="Fundação Iberê Camargo">
+                Fundação Iberê Camargo
+            </h1>
+            <a href="/" class="slide__back-home" title="Voltar para a Home"
+                ><img src="./../img/casinha.png" alt="Voltar para Home"
+            /></a>
 
-<body>
+            <button
+                type="button"
+                class="slide__control slide__control--prev"
+                title="Voltar para o slide anterior"
+            >
+                Voltar para o slide anterior
+            </button>
+            <button
+                type="button"
+                class="slide__control slide__control--next"
+                title="Ir para o próximo slide"
+            >
+                Ir para o próximo slide
+            </button>
+            <img
+                src="./../img/tags/tag-ibere.png"
+                class="slide__title--tag"
+                alt="Iberê Camargo"
+            />
+            <img
+                src="./../img/tags/tag-curiosidades.png"
+                class="slide__title--tag slide__title--curiosidades"
+                alt="Curiosidades"
+            />
+            <section class="section section--ibere">
+                <div class="slide slide--1 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-5 offset-1">
+                                <p class="slide__text">
+                                    <strong>Iberê Camargo</strong> nasceu em
+                                    <strong>Restinga Seca</strong>, no Rio
+                                    Grande do Sul, em 1914. Seus pais
+                                    trabalhavam na estação de trem da cidade.
+                                    Quando era criança, Iberê também morou em
+                                    outras cidades do interior gaúcho, como
+                                    <strong>Jaguari</strong> e
+                                    <strong>Santa Maria.</strong>
+                                </p>
+                                <p class="slide__text">
+                                    Com 20 anos, Iberê se mudou para
+                                    <strong>Porto Alegre</strong>, para estudar
+                                    desenho no
+                                    <strong>Instituto de Belas-Artes</strong>.
+                                    Em 1942, Iberê se transferiu para o
+                                    <strong>Rio de Janeiro</strong>, para
+                                    continuar seus estudos em arte. Lá, conheceu
+                                    importantes artistas e foi aluno do pintor
+                                    <strong>Alberto Veiga Guignard</strong>.
+                                    Nessa época, Iberê gostava de pintar as ruas
+                                    da cidade.
+                                </p>
+                                <p class="slide__text">
+                                    Em 1947, uma dessas pinturas foi premiada em
+                                    um concurso artístico com uma viagem à
+                                    <strong>Europa</strong>. Iberê viveu na
+                                    Itália e na França por dois anos, onde
+                                    visitou museus e teve aula com grandes
+                                    artistas, como
+                                    <strong>Giorgio de Chirico</strong> e
+                                    <strong>André Lhote</strong>.
+                                </p>
+                            </div>
 
-    <div class="page-wrapper">
-        <h1 class="logo" title="Fundação Iberê Camargo">Fundação Iberê Camargo</h1>
-        <a href="/" class="slide__back-home" title="Voltar para a Home"><img src="./../img/casinha.png" alt="Voltar para Home"></a>
-
-        <button type="button" class="slide__control slide__control--prev" title="Voltar para o slide anterior">Voltar para o slide anterior</button>
-        <button type="button" class="slide__control slide__control--next" title="Ir para o próximo slide">Ir para o próximo slide</button>
-        <img src="./../img/tags/tag-ibere.png" class="slide__title--tag" alt="Iberê Camargo">
-        <img src="./../img/tags/tag-curiosidades.png" class="slide__title--tag slide__title--curiosidades" alt="Curiosidades">
-        <section class="section section--ibere">
-
-            <div class="slide slide--1">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-5 offset-1">
-                            <p class="slide__text"><strong>Iberê Camargo</strong> nasceu em <strong>Restinga Seca</strong>, no Rio Grande do Sul, em 1914. Seus pais trabalhavam na estação de trem da cidade. Quando era criança, Iberê também morou em outras cidades do interior gaúcho, como <strong>Jaguari</strong> e <strong>Santa Maria.</strong></p>
-                            <p class="slide__text">Com 20 anos, Iberê se mudou para <strong>Porto Alegre</strong>, para estudar desenho no <strong>Instituto de Belas-Artes</strong>. Em 1942, Iberê se transferiu para o <strong>Rio de Janeiro</strong>, para continuar seus estudos em arte. Lá, conheceu importantes artistas e foi aluno do pintor <strong>Alberto Veiga Guignard</strong>. Nessa época, Iberê gostava de pintar as ruas da cidade.</p>
-                            <p class="slide__text">Em 1947, uma dessas pinturas foi premiada em um concurso artístico com uma viagem à <strong>Europa</strong>. Iberê viveu na Itália e na França por dois anos, onde visitou museus e teve aula com grandes artistas, como <strong>Giorgio de Chirico</strong> e <strong>André Lhote</strong>.</p>
-                        </div>
-
-                        <div class="col-6">
-                            <figure class="slide__figure">
-                                <img src="./../img/ibere/ibere-1_legenda.jpg" alt="Iberê com 1 ano de idade">
-                            </figure>
+                            <div class="col-6">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/ibere/ibere-1_legenda.jpg"
+                                        alt="Iberê com 1 ano de idade"
+                                    />
+                                </figure>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
+                <div class="slide slide--2 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-5 offset-1">
+                                <p class="slide__text">
+                                    De volta ao <strong>Rio de Janeiro</strong>,
+                                    Iberê ainda pintava as paisagens da cidade.
+                                    Mais tarde, por causa de problemas na
+                                    coluna, precisou trabalhar mais tempo dentro
+                                    do seu ateliê. Foi nessa época, no final dos
+                                    anos 1950, que o carretel apareceu em suas
+                                    obras. Em suas pinturas, esse pequeno objeto
+                                    se transformou em ampulhetas, dados e
+                                    manchas.
+                                </p>
+                                <p class="slide__text">
+                                    Iberê voltou para
+                                    <strong>Porto Alegre</strong> em 1982. Nessa
+                                    época, gostava de observar os ciclistas no
+                                    <strong>Parque da Redenção</strong> e os
+                                    manequins nas vitrines da
+                                    <strong>Rua da Praia</strong> para construir
+                                    os personagens de suas obras. Além de
+                                    produzir muitas pinturas, desenhos e
+                                    gravuras, Iberê escreveu contos, memórias e
+                                    um manual de gravura.
+                                </p>
+                            </div>
 
-            <div class="slide slide--2 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-
-                        <div class="col-5 offset-1">
-                            <p class="slide__text">De volta ao <strong>Rio de Janeiro</strong>, Iberê ainda pintava as paisagens da cidade. Mais tarde, por causa de problemas na coluna, precisou trabalhar mais tempo dentro do seu ateliê. Foi nessa época, no final dos anos 1950, que o carretel apareceu em suas obras. Em suas pinturas, esse pequeno objeto se transformou em ampulhetas, dados e manchas.</p>
-                            <p class="slide__text">Iberê voltou para <strong>Porto Alegre</strong> em 1982. Nessa época, gostava de observar os ciclistas no <strong>Parque da Redenção</strong> e os manequins nas vitrines da <strong>Rua da Praia</strong> para construir os personagens de suas obras. Além de produzir muitas pinturas, desenhos e gravuras, Iberê escreveu contos, memórias e um manual de gravura.</p>
-
-                        </div>
-
-                        <div class="col-6">
-                            <figure class="slide__figure">
-                                <img src="./../img/ibere/ibere-2_legenda.jpg" alt="Iberê aos 56 anos de idade">
-                                
-                            </figure>
+                            <div class="col-6">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/ibere/ibere-2_legenda.jpg"
+                                        alt="Iberê aos 56 anos de idade"
+                                    />
+                                </figure>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--3 hide" data-curiosities="true">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-4 offset-1">
-                            <figure class="slide__figure">
-                                <img src="./../img/ibere/curiosidades-1.jpg" alt="sem título, 1927">
-                                <figcaption>sem título, 1927</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-7">
-                            <figure class="slide__figure">
-                                <img src="./../img/ibere/curiosidades-2.jpg" alt="sem título, 1927">
-                                <figcaption>sem título, 1927</figcaption>
-                            </figure>
+                <div class="slide slide--3 hide" data-curiosities="true">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-4 offset-1">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/ibere/curiosidades-1.jpg"
+                                        alt="sem título, 1927"
+                                    />
+                                    <figcaption>sem título, 1927</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-7">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/ibere/curiosidades-2.jpg"
+                                        alt="sem título, 1927"
+                                    />
+                                    <figcaption>sem título, 1927</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
+            </section>
+        </div>
 
-                <div class="gato"></div>
-            </div>
-
-        </section>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts/main.js" defer></script>
-</body>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/main.js" defer></script>
+    </body>
 </html>

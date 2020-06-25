@@ -1,287 +1,477 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iberê para Crianças | Idiotas</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Iberê para Crianças | Idiotas</title>
 
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <h1 class="logo" title="Fundação Iberê Camargo">
+                Fundação Iberê Camargo
+            </h1>
+            <a href="/" class="slide__back-home" title="Voltar para a Home"
+                ><img src="./../img/casinha.png" alt="Voltar para Home"
+            /></a>
 
-    <div class="page-wrapper">
-        <h1 class="logo" title="Fundação Iberê Camargo">Fundação Iberê Camargo</h1>
-        <a href="/" class="slide__back-home" title="Voltar para a Home"><img src="./../img/casinha.png" alt="Voltar para Home"></a>
-
-        <button type="button" class="slide__control slide__control--prev" title="Voltar para o slide anterior">Voltar para o slide anterior</button>
-        <button type="button" class="slide__control slide__control--next" title="Ir para o próximo slide">Ir para o próximo slide</button>
-        <img src="./../img/tags/tag-idiotas.png" class="slide__title--tag" alt="Idiotas">
-        <img src="./../img/tags/tag-curiosidades.png" class="slide__title--tag slide__title--curiosidades" alt="Curiosidades">
-        <section class="section section--idiotas">
-
-            <div class="slide slide--1">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-8">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/idiota.jpg" alt="A idiota, 1991">
-                                <figcaption>A idiota, 1991</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-4">
-                            <p class="slide__text">Você sabia que na Grécia Antiga as pessoas que só se preocupavam com seus problemas eram chamadas de idiotas?</p>
-                            <p class="slide__text">Por que você acha que Iberê, tanto tempo depois, chamou esta figura de idiota?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--2 header-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-6 offset-6">
-                            <p class="slide__text">Em muitas pinturas Iberê acumula tinta principalmente no rosto das figuras. Por que será?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/idiota.jpg" alt="A idiota, 1991">
-                                <figcaption>A idiota, 1991</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-6">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/idiota-zoom.jpg" alt="A idiota, 1991">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--3 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2 align-self-center offset-1">
-                            <p class="slide__text text-right">Olhe bem para essa pintura. Quais são as cores que mais aparecem?</p>
-                        </div>
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/crepusculo-original.jpg" alt="Crepúsculo da Boca do Monte, 1991">
-                                <figcaption>Crepúsculo da Boca do Monte, 1991</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--4 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2 align-self-center offset-1">
-                            <p class="slide__text text-right">Essas pessoas parecem felizes ou tristes? Animadas ou cansadas? Se essa pintura fosse de outra cor, você pensaria a mesma coisa?</p>
-                        </div>
-                        <div class="col-9">
-                            <div class="slide__interaction slide__interaction--swap">
+            <button
+                type="button"
+                class="slide__control slide__control--prev"
+                title="Voltar para o slide anterior"
+            >
+                Voltar para o slide anterior
+            </button>
+            <button
+                type="button"
+                class="slide__control slide__control--next"
+                title="Ir para o próximo slide"
+            >
+                Ir para o próximo slide
+            </button>
+            <img
+                src="./../img/tags/tag-idiotas.png"
+                class="slide__title--tag"
+                alt="Idiotas"
+            />
+            <img
+                src="./../img/tags/tag-curiosidades.png"
+                class="slide__title--tag slide__title--curiosidades"
+                alt="Curiosidades"
+            />
+            <section class="section section--idiotas">
+                <div class="slide slide--1 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-8">
                                 <figure class="slide__figure">
-                                    <img src="./../img/idiotas/crepusculo-original.jpg" data-src="./../img/idiotas/crepusculo-" alt="Crepúsculo da Boca do Monte, 1991" class="swap__figure">
-                                    <figcaption>Crepúsculo da Boca do Monte, 1991</figcaption>
+                                    <img
+                                        src="./../img/idiotas/idiota.jpg"
+                                        alt="A idiota, 1991"
+                                    />
+                                    <figcaption>A idiota, 1991</figcaption>
                                 </figure>
-                                <ul class="swap__actions">
-                                    <li><button type="button" class="swap__btn swap__btn--amarelo" data-swap="amarelo">Amarelo</button></li>
-                                    <li><button type="button" class="swap__btn swap__btn--vermelho" data-swap="vermelho">Vermelho</button></li>
-                                    <li><button type="button" class="swap__btn swap__btn--verde" data-swap="verde">Verde</button></li>
-                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <p class="slide__text">
+                                    Você sabia que na Grécia Antiga as pessoas
+                                    que só se preocupavam com seus problemas
+                                    eram chamadas de idiotas?
+                                </p>
+                                <p class="slide__text">
+                                    Por que você acha que Iberê, tanto tempo
+                                    depois, chamou esta figura de idiota?
+                                </p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--5 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/crepusculo-original.jpg" alt="Crepúsculo da Boca do Monte, 1991">
-                                <figcaption>Crepúsculo da Boca do Monte, 1991</figcaption>
-                            </figure>
+                <div class="slide slide--2 header-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-6 offset-6">
+                                <p class="slide__text">
+                                    Em muitas pinturas Iberê acumula tinta
+                                    principalmente no rosto das figuras. Por que
+                                    será?
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-3 align-self-center">
-                            <p class="slide__text">Que cor você escolheria para a alegria? E para o medo?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--6 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2 offset-1">
-                            <p class="slide__text text-right">Em seus últimos trabalhos, Iberê pintou pessoas em lugares desertos.</p>
-                            <p class="slide__text text-right">Adivinhe que lugar é esse: ele é aberto ou fechado? Uma cidade ou um campo?</p>
-                        </div>
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/restinga-original.jpg" alt="Crepúsculo da Restinga Seca, 1993">
-                                <figcaption>Crepúsculo da Restinga Seca, 1993</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--7 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2 align-self-center offset-1">
-                            <p class="slide__text text-right">O nome dessa obra dá uma pista de onde essas pessoas estão.</p>
-                        </div>
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/restinga-original.jpg" alt="Crepúsculo da Restinga Seca, 1993">
-                                <figcaption>Crepúsculo da Restinga Seca, 1993</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--8 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2 align-self-center offset-1">
-                            <p class="slide__text text-right">Restinga Seca é uma pequena cidade no interior do Rio Grande do Sul. É a cidade onde Iberê nasceu.</p>
-                        </div>
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/restinga-estacao.jpg" alt="Estação ferroviária de Restinga Seca, RS">
-                                <figcaption>Estação ferroviária de Restinga Seca, RS</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--9 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="slide__text">Vamos ver como essas figuras ficariam em outras paisagens?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-10 offset-2">
-                            <div class="slide__interaction slide__interaction--swap">
+                        <div class="row">
+                            <div class="col-6">
                                 <figure class="slide__figure">
-                                    <img src="./../img/idiotas/restinga-original.jpg" data-src="./../img/idiotas/restinga-" alt="Crepúsculo da Restinga Seca, 1993" class="swap__figure">
-                                    <figcaption>Crepúsculo da Restinga Seca, 1993</figcaption>
+                                    <img
+                                        src="./../img/idiotas/idiota.jpg"
+                                        alt="A idiota, 1991"
+                                    />
+                                    <figcaption>A idiota, 1991</figcaption>
                                 </figure>
-                                <ul class="swap__actions">
-                                    <li><button type="button" class="swap__btn swap__btn--praia" data-swap="praia">Praia</button></li>
-                                    <li><button type="button" class="swap__btn swap__btn--parque" data-swap="parque">Parque</button></li>
-                                    <li><button type="button" class="swap__btn swap__btn--sala" data-swap="sala">Sala</button></li>
-                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/idiota-zoom.jpg"
+                                        alt="A idiota, 1991"
+                                    />
+                                </figure>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--10 gallery hide" data-gallery="true">
-                <h2 class="gallery__title">Galeria de obras: <strong>Idiotas</strong></h2>
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-4">
-                            <figure class="slide__figure" data-modal="#gallery-modal-1">
-                                <img src="./../img/idiotas/galeria/falso-inutil.jpg" alt="Tudo te é falso e inútil II, 1992">
-                            </figure>
+                <div class="slide slide--3 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2 align-self-center offset-1">
+                                <p class="slide__text text-right">
+                                    Olhe bem para essa pintura. Quais são as
+                                    cores que mais aparecem?
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/crepusculo-original.jpg"
+                                        alt="Crepúsculo da Boca do Monte, 1991"
+                                    />
+                                    <figcaption>
+                                        Crepúsculo da Boca do Monte, 1991
+                                    </figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="col-8 align-self-center">
-                            <div class="row">
-                                <div class="col-4">
-                                    <figure class="slide__figure" data-modal="#gallery-modal-2">
-                                        <img src="./../img/idiotas/galeria/idiota-estudo.jpg" alt="Estudo para a pintura A idiota, 1991">
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--4 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2 align-self-center offset-1">
+                                <p class="slide__text text-right">
+                                    Essas pessoas parecem felizes ou tristes?
+                                    Animadas ou cansadas? Se essa pintura fosse
+                                    de outra cor, você pensaria a mesma coisa?
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <div
+                                    class="slide__interaction slide__interaction--swap"
+                                >
+                                    <figure class="slide__figure">
+                                        <img
+                                            src="./../img/idiotas/crepusculo-original.jpg"
+                                            data-src="./../img/idiotas/crepusculo-"
+                                            alt="Crepúsculo da Boca do Monte, 1991"
+                                            class="swap__figure"
+                                        />
+                                        <figcaption>
+                                            Crepúsculo da Boca do Monte, 1991
+                                        </figcaption>
                                     </figure>
-                                </div>
-                                <div class="col-4">
-                                    <figure class="slide__figure" data-modal="#gallery-modal-3">
-                                        <img src="./../img/idiotas/galeria/sem-titulo-1.jpg" alt="Sem título, 1993">
-                                    </figure>
-                                </div>
-                                <div class="col-4">
-                                    <figure class="slide__figure" data-modal="#gallery-modal-4">
-                                        <img src="./../img/idiotas/galeria/sem-titulo-2.jpg" alt="Sem título, 1993">
-                                    </figure>
+                                    <ul class="swap__actions">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--amarelo"
+                                                data-swap="amarelo"
+                                            >
+                                                Amarelo
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--vermelho"
+                                                data-swap="vermelho"
+                                            >
+                                                Vermelho
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--verde"
+                                                data-swap="verde"
+                                            >
+                                                Verde
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--11 hide" data-curiosities="true">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-8">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/atelie.jpg" alt="Iberê sendo filmado em seu ateliê, 1992">
-                                <figcaption>Iberê sendo filmado em seu ateliê, 1992</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-4">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/galeria/falso-inutil.jpg" alt="Tudo te é falso e inútil II, 1992">
-                                <figcaption>Tudo te é falso e inútil II, 1992</figcaption>
-                            </figure>
+                <div class="slide slide--5 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-9">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/crepusculo-original.jpg"
+                                        alt="Crepúsculo da Boca do Monte, 1991"
+                                    />
+                                    <figcaption>
+                                        Crepúsculo da Boca do Monte, 1991
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-3 align-self-center">
+                                <p class="slide__text">
+                                    Que cor você escolheria para a alegria? E
+                                    para o medo?
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
+                <div class="slide slide--6 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2 offset-1">
+                                <p class="slide__text text-right">
+                                    Em seus últimos trabalhos, Iberê pintou
+                                    pessoas em lugares desertos.
+                                </p>
+                                <p class="slide__text text-right">
+                                    Adivinhe que lugar é esse: ele é aberto ou
+                                    fechado? Uma cidade ou um campo?
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/restinga-original.jpg"
+                                        alt="Crepúsculo da Restinga Seca, 1993"
+                                    />
+                                    <figcaption>
+                                        Crepúsculo da Restinga Seca, 1993
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-1">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                    <div class="gato"></div>
+                </div>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/galeria/falso-inutil_popup.jpg" alt="Tudo te é falso e inútil II, 1992">
-                                <!--<figcaption>
+                <div class="slide slide--7 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2 align-self-center offset-1">
+                                <p class="slide__text text-right">
+                                    O nome dessa obra dá uma pista de onde essas
+                                    pessoas estão.
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/restinga-original.jpg"
+                                        alt="Crepúsculo da Restinga Seca, 1993"
+                                    />
+                                    <figcaption>
+                                        Crepúsculo da Restinga Seca, 1993
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--8 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2 align-self-center offset-1">
+                                <p class="slide__text text-right">
+                                    Restinga Seca é uma pequena cidade no
+                                    interior do Rio Grande do Sul. É a cidade
+                                    onde Iberê nasceu.
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/restinga-estacao.jpg"
+                                        alt="Estação ferroviária de Restinga Seca, RS"
+                                    />
+                                    <figcaption>
+                                        Estação ferroviária de Restinga Seca, RS
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--9 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="slide__text">
+                                    Vamos ver como essas figuras ficariam em
+                                    outras paisagens?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-2">
+                                <div
+                                    class="slide__interaction slide__interaction--swap"
+                                >
+                                    <figure class="slide__figure">
+                                        <img
+                                            src="./../img/idiotas/restinga-original.jpg"
+                                            data-src="./../img/idiotas/restinga-"
+                                            alt="Crepúsculo da Restinga Seca, 1993"
+                                            class="swap__figure"
+                                        />
+                                        <figcaption>
+                                            Crepúsculo da Restinga Seca, 1993
+                                        </figcaption>
+                                    </figure>
+                                    <ul class="swap__actions">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--praia"
+                                                data-swap="praia"
+                                            >
+                                                Praia
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--parque"
+                                                data-swap="parque"
+                                            >
+                                                Parque
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                type="button"
+                                                class="swap__btn swap__btn--sala"
+                                                data-swap="sala"
+                                            >
+                                                Sala
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--10 gallery hide" data-gallery="true">
+                    <h2 class="gallery__title">
+                        Galeria de obras: <strong>Idiotas</strong>
+                    </h2>
+
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-4">
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-1"
+                                >
+                                    <img
+                                        src="./../img/idiotas/galeria/falso-inutil.jpg"
+                                        alt="Tudo te é falso e inútil II, 1992"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <figure
+                                            class="slide__figure"
+                                            data-modal="#gallery-modal-2"
+                                        >
+                                            <img
+                                                src="./../img/idiotas/galeria/idiota-estudo.jpg"
+                                                alt="Estudo para a pintura A idiota, 1991"
+                                            />
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure
+                                            class="slide__figure"
+                                            data-modal="#gallery-modal-3"
+                                        >
+                                            <img
+                                                src="./../img/idiotas/galeria/sem-titulo-1.jpg"
+                                                alt="Sem título, 1993"
+                                            />
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure
+                                            class="slide__figure"
+                                            data-modal="#gallery-modal-4"
+                                        >
+                                            <img
+                                                src="./../img/idiotas/galeria/sem-titulo-2.jpg"
+                                                alt="Sem título, 1993"
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--11 hide" data-curiosities="true">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-8">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/atelie.jpg"
+                                        alt="Iberê sendo filmado em seu ateliê, 1992"
+                                    />
+                                    <figcaption>
+                                        Iberê sendo filmado em seu ateliê, 1992
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/galeria/falso-inutil.jpg"
+                                        alt="Tudo te é falso e inútil II, 1992"
+                                    />
+                                    <figcaption>
+                                        Tudo te é falso e inútil II, 1992
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="modal" role="dialog" id="gallery-modal-1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
+
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/galeria/falso-inutil_popup.jpg"
+                                        alt="Tudo te é falso e inútil II, 1992"
+                                    />
+                                    <!--<figcaption>
                                     <strong>Tudo te é falso e inútil II</strong>, 1992<br>
                                     óleo sobre tela<br>
                                     200 x 236 cm<br>
@@ -290,21 +480,26 @@
                                     Foto: &copy; Rômulo Fialdini
                                     <span class="p--right"> Foto: &copy; Rômulo Fialdini</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-2">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-2">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/galeria/idiota-estudo_popup.jpg" alt="Estudo para a pintura A idiota, 1991">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/galeria/idiota-estudo_popup.jpg"
+                                        alt="Estudo para a pintura A idiota, 1991"
+                                    />
+                                    <!--<figcaption>
                                     <strong>Estudo para a pintura A idiota</strong>, 1991<br>
                                     grafite e tinta de esferográfica sobre papel<br>
                                     23,4 x 30,5 cm<br>
@@ -312,21 +507,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-3">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-3">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/galeria/sem-titulo-1_popup.jpg" alt="Sem título, 1993">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/galeria/sem-titulo-1_popup.jpg"
+                                        alt="Sem título, 1993"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, 1993<br>
                                     guache e lápis Stabilotone sobre papel<br>
                                     34,8 x 50,2 cm<br>
@@ -334,21 +534,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-4">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-4">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/idiotas/galeria/sem-titulo-2_popup.jpg" alt="Sem título, 1993">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/idiotas/galeria/sem-titulo-2_popup.jpg"
+                                        alt="Sem título, 1993"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, 1993<br>
                                     guache e lápis Stabilotone sobre papel<br>
                                     50,2 x 69,9 cm<br>
@@ -356,17 +561,15 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+        </div>
 
-        </section>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts/main.js" defer></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/main.js" defer></script>
+    </body>
 </html>
