@@ -1,7 +1,7 @@
 .section--ibere {
     .slide__title {
         align-items: flex-end;
-        background-image: url('./../img/ibere/bg-secao.png');
+        background-image: url("./../img/ibere/bg-secao.png");
         background-size: contain;
         font-weight: bold;
         height: 118 / $canvasHeight * 100%;
@@ -18,6 +18,11 @@
             & > span {
                 margin-bottom: 0;
             }
+        }
+    }
+    .slide--3 {
+        & .row {
+            margin-top: -130px !important;
         }
     }
 }

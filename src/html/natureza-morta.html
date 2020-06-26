@@ -1,282 +1,490 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Iberê para Crianças | Natureza Morta</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iberê para Crianças | Natureza Morta</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
 
-    <link rel="stylesheet" href="styles/main.css">
-</head>
+    <body>
+        <div class="page-wrapper">
+            <h1 class="logo" title="Fundação Iberê Camargo">
+                Fundação Iberê Camargo
+            </h1>
+            <a href="/" class="slide__back-home" title="Voltar para a Home"
+                ><img src="./../img/casinha.png" alt="Voltar para Home"
+            /></a>
 
-<body>
-
-    <div class="page-wrapper">
-        <h1 class="logo" title="Fundação Iberê Camargo">Fundação Iberê Camargo</h1>
-        <a href="/" class="slide__back-home" title="Voltar para a Home"><img src="./../img/casinha.png" alt="Voltar para Home"></a>
-
-        <button type="button" class="slide__control slide__control--prev" title="Voltar para o slide anterior">Voltar para o slide anterior</button>
-        <button type="button" class="slide__control slide__control--next" title="Ir para o próximo slide">Ir para o próximo slide</button>
-        <img src="./../img/tags/tag-naturezamorta.png" class="slide__title--tag slide__title--tag-natureza-morta" alt="Natureza-morta">
-        <img src="./../img/tags/tag-curiosidades.png" class="slide__title--tag slide__title--curiosidades" alt="Curiosidades">
-        <section class="section section--natureza">
-
-            <div class="slide slide--1 ">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-9">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/quadro-slide1.jpg" alt="Natureza-morta 10, 1954">
-                                <figcaption>Natureza-morta 10, 1954</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <p class="slide__text">Chama-se de natureza-morta um desenho ou uma pintura de frutas ou objetos arrumados em cima de uma mesa.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--2 floor-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-3 align-self-center">
-                            <p class="slide__text text-right">Alguns desses objetos duram mais tempo do que outros.</p>
-                            <p class="slide__text text-right">O que vai se estragar primeiro na gravura ao lado, a fruta ou a jarra?</p>
-                        </div>
-                        <div class="col-9">
-                            <div class="slide__interaction slide__interaction--swap">
+            <button
+                type="button"
+                class="slide__control slide__control--prev"
+                title="Voltar para o slide anterior"
+            >
+                Voltar para o slide anterior
+            </button>
+            <button
+                type="button"
+                class="slide__control slide__control--next"
+                title="Ir para o próximo slide"
+            >
+                Ir para o próximo slide
+            </button>
+            <img
+                src="./../img/tags/tag-naturezamorta.png"
+                class="slide__title--tag slide__title--tag-natureza-morta"
+                alt="Natureza-morta"
+            />
+            <img
+                src="./../img/tags/tag-curiosidades.png"
+                class="slide__title--tag slide__title--curiosidades"
+                alt="Curiosidades"
+            />
+            <section class="section section--natureza">
+                <div class="slide slide--1 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-9">
                                 <figure class="slide__figure">
-                                    <img src="./../img/natureza/quadro-slide2-original.jpg" data-src="./../img/natureza/quadro-slide2" alt="Natureza-morta 1, 1943" class="swap__figure">
-                                    <figcaption>Natureza-morta 1, 1943</figcaption>
+                                    <img
+                                        src="./../img/natureza/quadro-slide1.jpg"
+                                        alt="Natureza-morta 10, 1954"
+                                    />
+                                    <figcaption>
+                                        Natureza-morta 10, 1954
+                                    </figcaption>
                                 </figure>
-                                <figure class="slide__figure d-none">
-                                    <img src="./../img/natureza/quadro-slide2.jpg" data-src="./../img/natureza/quadro-slide2" alt="Natureza-morta 1, 1943" class="swap__figure">
-                                    <img src="./../img/natureza/animacao.gif" alt="">
-                                    <figcaption>Natureza-morta 1, 1943</figcaption>
+                            </div>
+                            <div class="col-3">
+                                <p class="slide__text">
+                                    Chama-se de natureza-morta um desenho ou uma
+                                    pintura de frutas ou objetos arrumados em
+                                    cima de uma mesa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--2 floor-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-3 align-self-center">
+                                <p class="slide__text text-right">
+                                    Alguns desses objetos duram mais tempo do
+                                    que outros.
+                                </p>
+                                <p class="slide__text text-right">
+                                    O que vai se estragar primeiro na gravura ao
+                                    lado, a fruta ou a jarra?
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <div
+                                    class="slide__interaction slide__interaction--swap"
+                                >
+                                    <figure class="slide__figure">
+                                        <img
+                                            src="./../img/natureza/quadro-slide2-original.jpg"
+                                            data-src="./../img/natureza/quadro-slide2"
+                                            alt="Natureza-morta 1, 1943"
+                                            class="swap__figure"
+                                        />
+                                        <figcaption>
+                                            Natureza-morta 1, 1943
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="slide__figure d-none">
+                                        <img
+                                            src="./../img/natureza/quadro-slide2.jpg"
+                                            data-src="./../img/natureza/quadro-slide2"
+                                            alt="Natureza-morta 1, 1943"
+                                            class="swap__figure"
+                                        />
+                                        <img
+                                            src="./../img/natureza/animacao.gif"
+                                            alt=""
+                                        />
+                                        <figcaption>
+                                            Natureza-morta 1, 1943
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--3 floor-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="slide__text text-right">
+                                    Há muito tempo os artistas utilizam objetos
+                                    do dia a dia como modelos para obras de
+                                    arte.
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/quadro-slide3.jpg"
+                                        alt="Natureza-morta, 1956"
+                                    />
+                                    <figcaption>
+                                        Natureza-morta, 1956
+                                    </figcaption>
                                 </figure>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--3 floor-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-2">
-                            <p class="slide__text text-right">Há muito tempo os artistas utilizam objetos do dia a dia como modelos para obras de arte.</p>
-                        </div>
-                        <div class="col-8">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/quadro-slide3.jpg" alt="Natureza-morta, 1956">
-                                <figcaption>Natureza-morta, 1956</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--4 floor-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-3 offset-1 align-self-center">
-                            <p class="slide__text text-right">Nessa gravura, a luz e a sombra foram representadas por areas claras e escuras.</p>
-                            <p class="slide__text text-right">De onde vem a luz que ilumina a mesa?</p>
-                            <p class="slide__text text-right">Será de uma janela ou uma lâmpada?</p>
-                        </div>
-                        <div class="col-6">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/quadro-slide4.jpg" alt="Natureza-morta 9, 1953">
-                                <figcaption>Natureza-morta 9, 1953</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--5 floor-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-3 align-self-center">
-                            <p class="slide__text text-right">Tente montar em sua casa objetos em cima de uma mesa.</p>
-                            <p class="slide__text text-right">Feche as janelas e, com uma lanterna ou luminária, observe como as sombras das coisas se modificam ao mudar a luz de lugar.</p>
-                        </div>
-                        <div class="col-9">
-                            <div class="lights">
-                                <a href="#" class="light__item light__item--btn1">
-                                    <img class="light__off" src="./../img/natureza/Luzes/btn1.png" alt="">
-                                    <img class="light__on" src="./../img/natureza/Luzes/btn1-atv.png" alt="">
-                                </a>
-                                <a href="#" class="light__item light__item--btn2">
-                                    <img class="light__off" src="./../img/natureza/Luzes/btn2.png" alt="">
-                                    <img class="light__on" src="./../img/natureza/Luzes/btn2-atv.png" alt="">
-                                </a>
-                                <a href="#" class="light__item light__item--btn3">
-                                    <img class="light__off" src="./../img/natureza/Luzes/btn3.png" alt="">
-                                    <img class="light__on" src="./../img/natureza/Luzes/btn3-atv.png" alt="">
-                                </a>
-
-                                <figure class="slide__figure"></figure>
+                <div class="slide slide--4 floor-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-3 offset-1 align-self-center">
+                                <p class="slide__text text-right">
+                                    Nessa gravura, a luz e a sombra foram
+                                    representadas por areas claras e escuras.
+                                </p>
+                                <p class="slide__text text-right">
+                                    De onde vem a luz que ilumina a mesa?
+                                </p>
+                                <p class="slide__text text-right">
+                                    Será de uma janela ou uma lâmpada?
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/quadro-slide4.jpg"
+                                        alt="Natureza-morta 9, 1953"
+                                    />
+                                    <figcaption>
+                                        Natureza-morta 9, 1953
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
+                <div class="slide slide--5 floor-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-3 align-self-center">
+                                <p class="slide__text text-right">
+                                    Tente montar em sua casa objetos em cima de
+                                    uma mesa.
+                                </p>
+                                <p class="slide__text text-right">
+                                    Feche as janelas e, com uma lanterna ou
+                                    luminária, observe como as sombras das
+                                    coisas se modificam ao mudar a luz de lugar.
+                                </p>
+                            </div>
+                            <div class="col-9">
+                                <div class="lights">
+                                    <a
+                                        href="#"
+                                        class="light__item light__item--btn1"
+                                    >
+                                        <img
+                                            class="light__off"
+                                            src="./../img/natureza/Luzes/btn1.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="light__on"
+                                            src="./../img/natureza/Luzes/btn1-atv.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="light__item light__item--btn2"
+                                    >
+                                        <img
+                                            class="light__off"
+                                            src="./../img/natureza/Luzes/btn2.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="light__on"
+                                            src="./../img/natureza/Luzes/btn2-atv.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="light__item light__item--btn3"
+                                    >
+                                        <img
+                                            class="light__off"
+                                            src="./../img/natureza/Luzes/btn3.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="light__on"
+                                            src="./../img/natureza/Luzes/btn3-atv.png"
+                                            alt=""
+                                        />
+                                    </a>
 
-            <div class="slide slide--6 hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="offset-1 col-11">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/quadro-slide6.jpg" class="zoom" data-magnify-src="./../img/natureza/quadro-slide6-zoom.jpg" alt="Natureza-morta 2, cerca de 1948">
-                                <figcaption>Natureza-morta 2, cerca de 1948</figcaption>
-                            </figure>
+                                    <figure class="slide__figure"></figure>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="slide__text"> Nessa Gravura, Iberê desenhou linhas em várias direções para fazer as formas e as sombras das coisas. Esses rabiscos usados para preencher o desenho são chamados de hachuras.</p>
-                        </div>
-                    </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--7 floor-base hide">
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="offset-3 col-9 mb-3">
-                            <figure class="slide__figure outline__figure">
-                                <img src="./../img/natureza/Hachuras/contorno.png" alt="Contorno">
-                            </figure>
-                            <figure class="slide__figure outline__figure d-none">
-                                <img src="./../img/natureza/Hachuras/contorno-hachuras.jpg" alt="Contorno">
-                            </figure>
-                            <figure class="slide__figure outline__figure d-none">
-                                <img src="./../img/natureza/Hachuras/hachuras.png" alt="Contorno">
-                            </figure>
+                <div class="slide slide--6 hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="offset-1 col-11">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/quadro-slide6.jpg"
+                                        class="zoom"
+                                        data-magnify-src="./../img/natureza/quadro-slide6-zoom.jpg"
+                                        alt="Natureza-morta 2, cerca de 1948"
+                                    />
+                                    <figcaption>
+                                        Natureza-morta 2, cerca de 1948
+                                    </figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="offset-3 col-3">
-                            <figure class="slide__button">
-                                <img src="./../img/natureza/Hachuras/btncontorno.png" alt="Contorno" class="d-none">
-                                <img src="./../img/natureza/Hachuras/btncontorno-atv.png" alt="Contorno">
-                                <figcaption>contorno</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure class="slide__button">
-                                <img src="./../img/natureza/Hachuras/btncontornohachura.png" alt="Contorno e hachuras">
-                                <img src="./../img/natureza/Hachuras/btncontornohachura-atv.png" alt="Contorno e hachuras" class="d-none">
-                                <figcaption>contorno e hachuras</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure class="slide__button">
-                                <img src="./../img/natureza/Hachuras/btnhachuras.png" alt="Hachuras">
-                                <img src="./../img/natureza/Hachuras/btnhachuras-atv.png" alt="Hachuras" class="d-none">
-                                <figcaption>hachuras</figcaption>
-                            </figure>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="slide__text">
+                                    Nessa Gravura, Iberê desenhou linhas em
+                                    várias direções para fazer as formas e as
+                                    sombras das coisas. Esses rabiscos usados
+                                    para preencher o desenho são chamados de
+                                    hachuras.
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
-
-            <div class="slide slide--8 gallery hide" data-gallery="true">
-                <h2 class="gallery__title">Galeria de obras: <strong>Natureza-morta</strong></h2>
-
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-3 align-self-center">
-                            <figure class="slide__figure" data-modal="#gallery-modal-1">
-                                <img src="./../img/natureza/Galeria/quadro1.jpg" alt="Sem título, cerca de 1949">
-                            </figure>
-                        </div>
-                        <div class="col-3 align-self-center">
-                            <figure class="slide__figure" data-modal="#gallery-modal-2">
-                                <img src="./../img/natureza/Galeria/quadro2.jpg" alt="Sem título, cerca de 1954">
-                            </figure>
-                            <br>
-                            <figure class="slide__figure" data-modal="#gallery-modal-3">
-                                <img src="./../img/natureza/Galeria/quadro3.jpg" alt="Sem título, cerca de 1956">
-                            </figure>
-                        </div>
-                        <div class="col-3 align-self-center">
-                            <figure class="slide__figure" data-modal="#gallery-modal-4">
-                                <img src="./../img/natureza/Galeria/quadro4.jpg" alt="Natureza-morta 16, entre 1940 e 1942">
-                            </figure>
-                        </div>
-                        <div class="col-3 align-self-center">
-                            <figure class="slide__figure" data-modal="#gallery-modal-5">
-                                <img src="./../img/natureza/Galeria/quadro5.jpg" alt="Sem título, cerca de 1954">
-                            </figure>
+                <div class="slide slide--7 floor-base hide">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="offset-3 col-9 mb-3">
+                                <figure class="slide__figure outline__figure">
+                                    <img
+                                        src="./../img/natureza/Hachuras/contorno.png"
+                                        alt="Contorno"
+                                    />
+                                </figure>
+                                <figure
+                                    class="slide__figure outline__figure d-none"
+                                >
+                                    <img
+                                        src="./../img/natureza/Hachuras/contorno-hachuras.jpg"
+                                        alt="Contorno"
+                                    />
+                                </figure>
+                                <figure
+                                    class="slide__figure outline__figure d-none"
+                                >
+                                    <img
+                                        src="./../img/natureza/Hachuras/hachuras.png"
+                                        alt="Contorno"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="offset-3 col-3">
+                                <figure class="slide__button">
+                                    <img
+                                        src="./../img/natureza/Hachuras/btncontorno.png"
+                                        alt="Contorno"
+                                        class="d-none"
+                                    />
+                                    <img
+                                        src="./../img/natureza/Hachuras/btncontorno-atv.png"
+                                        alt="Contorno"
+                                    />
+                                    <figcaption>contorno</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-3">
+                                <figure class="slide__button">
+                                    <img
+                                        src="./../img/natureza/Hachuras/btncontornohachura.png"
+                                        alt="Contorno e hachuras"
+                                    />
+                                    <img
+                                        src="./../img/natureza/Hachuras/btncontornohachura-atv.png"
+                                        alt="Contorno e hachuras"
+                                        class="d-none"
+                                    />
+                                    <figcaption>contorno e hachuras</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-3">
+                                <figure class="slide__button">
+                                    <img
+                                        src="./../img/natureza/Hachuras/btnhachuras.png"
+                                        alt="Hachuras"
+                                    />
+                                    <img
+                                        src="./../img/natureza/Hachuras/btnhachuras-atv.png"
+                                        alt="Hachuras"
+                                        class="d-none"
+                                    />
+                                    <figcaption>hachuras</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
+                <div class="slide slide--8 gallery hide" data-gallery="true">
+                    <h2 class="gallery__title">
+                        Galeria de obras: <strong>Natureza-morta</strong>
+                    </h2>
 
-            <div class="slide slide--9 hide" data-curiosities="true">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-3 align-self-center">
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-1"
+                                >
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro1.jpg"
+                                        alt="Sem título, cerca de 1949"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="col-3 align-self-center">
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-2"
+                                >
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro2.jpg"
+                                        alt="Sem título, cerca de 1954"
+                                    />
+                                </figure>
+                                <br />
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-3"
+                                >
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro3.jpg"
+                                        alt="Sem título, cerca de 1956"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="col-3 align-self-center">
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-4"
+                                >
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro4.jpg"
+                                        alt="Natureza-morta 16, entre 1940 e 1942"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="col-3 align-self-center">
+                                <figure
+                                    class="slide__figure"
+                                    data-modal="#gallery-modal-5"
+                                >
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro5.jpg"
+                                        alt="Sem título, cerca de 1954"
+                                    />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="container-fluid slide__container">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="offset-4 col-8">
+                    <div class="gato"></div>
+                </div>
+
+                <div class="slide slide--9 hide" data-curiosities="true">
+                    <div class="container-fluid slide__container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="offset-4 col-8">
+                                    <figure class="slide__figure text-right">
+                                        <img
+                                            src="./../img/natureza/curiosidade2.jpg"
+                                            alt="Mesa com espelho, 1953"
+                                        />
+                                        <figcaption>
+                                            Mesa com espelho, 1953
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-10">
+                                    <figure class="slide__figure">
+                                        <img
+                                            src="./../img/natureza/curiosidade1.jpg"
+                                            alt="Natureza-morta, 1956"
+                                        />
+                                        <figcaption>
+                                            Natureza-morta, 1956
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-6">
                                 <figure class="slide__figure text-right">
-                                    <img src="./../img/natureza/curiosidade2.jpg" alt="Mesa com espelho, 1953">
-                                    <figcaption>Mesa com espelho, 1953</figcaption>
+                                    <img
+                                        src="./../img/natureza/curiosidade3.jpg"
+                                        alt="Iberê em seu ateliê no Rio de Janeiro, em 1954"
+                                    />
+                                    <figcaption>
+                                        Iberê em seu ateliê no Rio de Janeiro,
+                                        em 1954
+                                    </figcaption>
                                 </figure>
                             </div>
-                            <div class="col-10">
-                                <figure class="slide__figure">
-                                    <img src="./../img/natureza/curiosidade1.jpg" alt="Natureza-morta, 1956">
-                                    <figcaption>Natureza-morta, 1956</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <figure class="slide__figure text-right">
-                                <img src="./../img/natureza/curiosidade3.jpg" alt="Iberê em seu ateliê no Rio de Janeiro, em 1954">
-                                <figcaption>Iberê em seu ateliê no Rio de Janeiro, em 1954</figcaption>
-                            </figure>
                         </div>
                     </div>
+
+                    <div class="gato"></div>
                 </div>
 
-                <div class="gato"></div>
-            </div>
+                <div class="modal" role="dialog" id="gallery-modal-1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-            <div class="modal" role="dialog" id="gallery-modal-1">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
-
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/Galeria/quadro1_popup.jpg" alt="Sem título, cerca de 1949">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro1_popup.jpg"
+                                        alt="Sem título, cerca de 1949"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, cerca de 1949<br>
                                     óleo sobre tela<br>
                                     45 x 37cm<br>
@@ -284,21 +492,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-2">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-2">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/Galeria/quadro2_popup.jpg" alt="Sem título, cerca de 1954">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro2_popup.jpg"
+                                        alt="Sem título, cerca de 1954"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, cerca de 1954<br>
                                     grafite e nanquim sobre papel<br>
                                     24,2 x 35,2cm<br>
@@ -306,21 +519,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-3">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-3">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/Galeria/quadro3_popup.jpg" alt="Sem título, cerca de 1956">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro3_popup.jpg"
+                                        alt="Sem título, cerca de 1956"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, cerca de 1956<br>
                                     nanquim sobre papel<br>
                                     33 x 44cm<br>
@@ -328,21 +546,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-4">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-4">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/Galeria/quadro4_popup.jpg" alt="Natureza-morta 16, entre 1940 e 1942">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro4_popup.jpg"
+                                        alt="Natureza-morta 16, entre 1940 e 1942"
+                                    />
+                                    <!--<figcaption>
                                     <strong>Natureza-morta 16</strong>, entre 1940 e 1942<br>
                                     xilogravura<br>
                                     17,7 x 22,2cm<br>
@@ -350,21 +573,26 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal" role="dialog" id="gallery-modal-5">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="modal__close">Fechar</button>
+                <div class="modal" role="dialog" id="gallery-modal-5">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="modal__close">
+                                Fechar
+                            </button>
 
-                        <div class="modal-body">
-                            <figure class="slide__figure">
-                                <img src="./../img/natureza/Galeria/quadro5_popup.jpg" alt="Sem título, cerca de 1954">
-                                <!--<figcaption>
+                            <div class="modal-body">
+                                <figure class="slide__figure">
+                                    <img
+                                        src="./../img/natureza/Galeria/quadro5_popup.jpg"
+                                        alt="Sem título, cerca de 1954"
+                                    />
+                                    <!--<figcaption>
                                     <strong>sem título</strong>, cerca de 1954<br>
                                     lápis Conté sobre papel<br>
                                     22,5 x 31cm<br>
@@ -372,27 +600,24 @@
                                     Fundação Iberê Camargo, Porto Alegre<br>
                                     <span class="p--right">Foto: &copy; Fábio Del Re_VivaFoto</span>
                                 </figcaption>-->
-                            </figure>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+        </div>
 
-        </section>
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/main.js" defer></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts/main.js" defer></script>
-
-    <script>
-        $(document).ready(function () {
-            $('.zoom').magnify({
-                speed: 200,
-                src: './../img/natureza/quadro-slide6.jpg'
+        <script>
+            $(document).ready(function () {
+                $(".zoom").magnify({
+                    speed: 200,
+                    src: "./../img/natureza/quadro-slide6.jpg",
+                });
             });
-        });
-    </script>
-
-</body>
-
+        </script>
+    </body>
 </html>

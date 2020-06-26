@@ -30,13 +30,11 @@
     }
 
     &--original {
-        background-image: url('./../img/btn-fechar.png');
+        background-image: url("./../img/btn-fechar.png");
         height: 43px;
         width: 44px;
     }
 
-    &:active,
-    &:focus,
     &:hover,
     &.active {
         background-position: 0 100%;

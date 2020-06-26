@@ -1,6 +1,6 @@
 .slide {
     height: 100%;
-    font-size: 16px;
+    font-size: 18px;
 
     &.hide {
         display: none;
@@ -44,12 +44,12 @@
     position: fixed;
 
     &--prev {
-        background-image: url('./../img/btn-prev.png');
+        background-image: url("./../img/btn-prev.png");
         left: 0;
     }
 
     &--next {
-        background-image: url('./../img/btn-next.png');
+        background-image: url("./../img/btn-next.png");
         right: 0;
         background-position: 100%;
     }
@@ -60,9 +60,8 @@
         outline: 0;
     }
 }
-.page-wrapper{
-    &.modal-show-bg{
-
+.page-wrapper {
+    &.modal-show-bg {
         .slide__control {
             display: none;
         }
@@ -80,23 +79,21 @@
     width: 120 / $canvasWidth * 100%;
     z-index: 9999;
 
-    &.slide__title--curiosidades{
+    &.slide__title--curiosidades {
         display: none;
         width: 160 / $canvasWidth * 100%;
     }
 }
-.no-bg{
-
-    .slide__title--tag{
+.no-bg {
+    .slide__title--tag {
         display: none;
     }
 }
 .page-wrapper--curiosities {
-
-    .slide__title--tag{
+    .slide__title--tag {
         display: none;
 
-        &.slide__title--curiosidades{
+        &.slide__title--curiosidades {
             display: block;
         }
     }
@@ -115,7 +112,7 @@
 
     &.slide__title--curiosidades {
         align-items: flex-start !important;
-        background-image: url('./../img/idiotas/bg-curiosidades.png') !important;
+        background-image: url("./../img/idiotas/bg-curiosidades.png") !important;
         height: 74 / $canvasHeight * 100% !important;
         justify-content: flex-start !important;
         top: 94 / $canvasHeight * 100% !important;
@@ -156,7 +153,6 @@
 .slide__figure {
     margin-bottom: 0;
 
-
     & > img {
         border-radius: 4px;
         height: auto;
@@ -169,14 +165,14 @@
         position: relative;
     }
 
-     span.p--right {
+    span.p--right {
         position: absolute;
         right: 0;
         top: 0;
     }
 
     .gallery & {
-        box-shadow: 0 0 10px 2px rgba($black, .2);
+        box-shadow: 0 0 10px 2px rgba($black, 0.2);
     }
 }
 
@@ -188,5 +184,7 @@
         margin-top: 20px;
     }
 
-    & > .break { display: block; }
+    & > .break {
+        display: block;
+    }
 }
