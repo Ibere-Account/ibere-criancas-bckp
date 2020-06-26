@@ -1,7 +1,7 @@
 .section--acervo {
     .slide__title {
         align-items: flex-end;
-        background-image: url('./../img/acervo/bg-secao.png');
+        background-image: url("./../img/acervo/bg-secao.png");
         background-size: contain;
         font-weight: bold;
         height: 124 / $canvasHeight * 100%;
@@ -14,5 +14,10 @@
             margin-bottom: 15px;
         }
     }
-
+    .slide--2 {
+        margin-top: -20px;
+        figcaption {
+            font-size: 16px;
+        }
+    }
 }

@@ -143,35 +143,42 @@ FIC.Slides = {
         }
     },
 
+    gotoPrevSlide: function () {
+        var prev = FIC.Slides.currentSlide;
+
+        if (FIC.Slides.currentSlide === 1) {
+            window.location.href = "/";
+        } else {
+            FIC.Slides.currentSlide -= 1;
+        }
+
+        FIC.Slides.showHideSlides(
+            ".slide--" + prev,
+            ".slide--" + FIC.Slides.currentSlide
+        );
+    },
+
+    gotoNextSlide: function () {
+        var prev = FIC.Slides.currentSlide;
+
+        if (FIC.Slides.currentSlide === FIC.Slides.totalSlides) {
+            window.location.href = "/";
+        } else {
+            FIC.Slides.currentSlide += 1;
+        }
+
+        FIC.Slides.showHideSlides(
+            ".slide--" + prev,
+            ".slide--" + FIC.Slides.currentSlide
+        );
+    },
     controlSlidesHandler: function () {
         $(document).on("click", ".slide__control--prev", function () {
-            var prev = FIC.Slides.currentSlide;
-
-            if (FIC.Slides.currentSlide === 1) {
-                window.location.href = "/";
-            } else {
-                FIC.Slides.currentSlide -= 1;
-            }
-
-            FIC.Slides.showHideSlides(
-                ".slide--" + prev,
-                ".slide--" + FIC.Slides.currentSlide
-            );
+            FIC.Slides.gotoPrevSlide();
         });
 
         $(document).on("click", ".slide__control--next", function () {
-            var prev = FIC.Slides.currentSlide;
-
-            if (FIC.Slides.currentSlide === FIC.Slides.totalSlides) {
-                window.location.href = "/";
-            } else {
-                FIC.Slides.currentSlide += 1;
-            }
-
-            FIC.Slides.showHideSlides(
-                ".slide--" + prev,
-                ".slide--" + FIC.Slides.currentSlide
-            );
+            FIC.Slides.gotoNextSlide();
         });
     },
 
@@ -249,7 +256,7 @@ FIC.Slides = {
                 .find("figure")
                 .eq(0)
                 .on("touchend click", function () {
-                    $(this).addClass("d-none");
+                    //$(this).addClass("d-none");
                     $swap.find("figure").eq(1).removeClass("d-none");
                 });
         }
@@ -448,6 +455,54 @@ FIC.Slides = {
         );
     },
 
+    keyboardSetup: function () {
+        var x0 = null;
+        var lock = function (e) {
+            x0 = unify(e).clientX;
+        };
+        var unify = function (e) {
+            return e.changedTouches ? e.changedTouches[0] : e;
+        };
+
+        function move(e) {
+            e.preventDefault();
+            if (x0 || x0 === 0) {
+                var dx = unify(e).clientX - x0,
+                    s = Math.sign(dx);
+                if (Math.abs(dx) > 10) {
+                    if (s < 0) FIC.Slides.gotoNextSlide();
+                    if (s > 0) FIC.Slides.gotoPrevSlide();
+                    x0 = null;
+                }
+            }
+        }
+
+        FIC.Slides.$pageWrapper[0].addEventListener("mousedown", lock, false);
+        FIC.Slides.$pageWrapper[0].addEventListener("touchstart", lock, false);
+
+        FIC.Slides.$pageWrapper[0].addEventListener(
+            "touchmove",
+            (e) => {
+                e.preventDefault();
+            },
+            false
+        );
+
+        FIC.Slides.$pageWrapper[0].addEventListener("mouseup", move, false);
+        FIC.Slides.$pageWrapper[0].addEventListener("touchend", move, false);
+
+        $(document).on("keydown", function (e) {
+            try {
+                if (e.key == "ArrowRight") {
+                    FIC.Slides.gotoNextSlide();
+                }
+                if (e.key == "ArrowLeft") {
+                    FIC.Slides.gotoPrevSlide();
+                }
+            } catch (e) {}
+        });
+    },
+
     init: function () {
         var userAgent = navigator.userAgent.toLowerCase(),
             isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
@@ -463,6 +518,7 @@ FIC.Slides = {
         if (FIC.Slides.totalSlides > 0) {
             FIC.Slides.initPagination();
             FIC.Slides.controlSlidesHandler();
+            FIC.Slides.keyboardSetup();
         }
 
         FIC.Slides.resize(isTablet);
