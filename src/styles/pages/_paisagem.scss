@@ -1,6 +1,6 @@
 .section--paisagem {
     .slide__title {
-        background-image: url('./../img/paisagem/bg-secao.png');
+        background-image: url("./../img/paisagem/bg-secao.png");
         background-size: contain;
         font-weight: bold;
         height: 89 / $canvasHeight * 100%;
@@ -10,14 +10,17 @@
         @include viewport-font(2.1875vw, 20px, 28px);
     }
 
-
     .slide--1 {
         background-color: transparent !important;
-        background: url('./../img/paisagem/mapa.png') no-repeat center bottom #fff;
-        background-size: contain;
-       
+        background: url("./../img/paisagem/mapa.png") no-repeat center bottom
+            #fff;
+        background-size: cover;
+        width: auto;
+        height: 94%;
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            height: 100%;
+        }
     }
-
 
     .slide--4 .slide__figure > figcaption,
     .slide--6 .slide__figure > figcaption,
@@ -32,13 +35,13 @@
 
     .swap__btn {
         &--dia {
-            background-image: url('./../img/paisagem/btn-dia.png');
+            background-image: url("./../img/paisagem/btn-dia.png");
             height: 48px;
             width: 47px;
         }
 
         &--noite {
-            background-image: url('./../img/paisagem/btn-noite.png');
+            background-image: url("./../img/paisagem/btn-noite.png");
             height: 60px;
             width: 55px;
         }
@@ -69,10 +72,10 @@
 
     .images-left {
         .slide__figure {
-            transition: .2s opacity ease-in-out;
+            transition: 0.2s opacity ease-in-out;
 
             &:not(.selected):hover {
-                opacity: .8;
+                opacity: 0.8;
             }
 
             &.selected {
@@ -82,7 +85,7 @@
             }
 
             &.unselected {
-                opacity: .5;
+                opacity: 0.5;
                 pointer-events: none;
             }
         }
@@ -129,14 +132,14 @@
 
     .images-right .slide__figure {
         pointer-events: none;
-        transition: .2s opacity ease-in-out;
+        transition: 0.2s opacity ease-in-out;
 
         &.selectable {
             opacity: 1;
             pointer-events: all;
 
             &:hover {
-                opacity: .8;
+                opacity: 0.8;
             }
         }
     }
