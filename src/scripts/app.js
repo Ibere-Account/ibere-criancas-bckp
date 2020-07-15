@@ -2,6 +2,11 @@
 
 var FIC = FIC || [];
 
+function isTablet() {
+    const ua = navigator.userAgent;
+    return /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua);
+}
+
 $(document).ready(function () {
     FIC.Slides.preloadImages();
     if (!sessionStorage.getItem("viewState")) {
@@ -324,7 +329,9 @@ FIC.Slides = {
             })
             .ready(function () {
                 $(window).resize(function () {
-                    FIC.Slides.resize();
+                    setTimeout(function () {
+                        FIC.Slides.resize();
+                    }, 0);
                 });
             });
     },
@@ -412,16 +419,16 @@ FIC.Slides = {
         );
     },
 
-    resize: function (isTablet) {
+    resize: function () {
         var heightPageWrapper = window.innerHeight,
             scale = heightPageWrapper / FIC.Slides.canvasHeight;
 
         if (
-            heightPageWrapper < 700 ||
-            (!isTablet &&
+            // heightPageWrapper < 700 ||
+            !isTablet() /*
                 (heightPageWrapper < FIC.Slides.canvasHeight ||
-                    FIC.Slides.verticalScrollPresent()) &&
-                scale < 1)
+                    FIC.Slides.verticalScrollPresent()) && */ &&
+            scale < 1
         ) {
             FIC.Slides.$section.css({
                 transform:
@@ -432,6 +439,10 @@ FIC.Slides = {
             });
             FIC.Slides.$section.addClass("section-scaled");
         } else {
+            FIC.Slides.$section.css({
+                transform: "scale(1)",
+                "transform-origin": "50% 0%",
+            });
             FIC.Slides.$section.removeClass("section-scaled");
         }
         FIC.Slides.$section.addClass("section-visible");
@@ -504,11 +515,6 @@ FIC.Slides = {
     },
 
     init: function () {
-        var userAgent = navigator.userAgent.toLowerCase(),
-            isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
-                userAgent
-            );
-
         FIC.Slides.canvasHeight = 875;
         FIC.Slides.$slides = $(".slide");
         FIC.Slides.$pageWrapper = $(".page-wrapper");
@@ -521,7 +527,9 @@ FIC.Slides = {
             FIC.Slides.keyboardSetup();
         }
 
-        FIC.Slides.resize(isTablet);
+        setTimeout(function () {
+            FIC.Slides.resize();
+        }, 0);
 
         FIC.Slides.swapInteractionHandler();
         FIC.Slides.portraitTopsHandler();
