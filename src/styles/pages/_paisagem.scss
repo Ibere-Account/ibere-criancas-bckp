@@ -58,13 +58,20 @@
         & > img {
             cursor: pointer;
             outline-offset: -14px;
+            &:nth-child(2) {
+                display: none;
+            }
         }
 
         &.right-answer {
             opacity: 1 !important;
             pointer-events: none !important;
 
-            img {
+            & > img {
+                display: none;
+                &:nth-child(2) {
+                    display: block;
+                }
                 outline: none;
             }
         }

@@ -29,7 +29,7 @@ FIC.Home = {
     datasheetHandler: function () {
         var $datasheet = $(".datasheet");
 
-        $(document).on("click", ".datasheet-link", function () {
+        $(document).on("touchend click", ".datasheet-link", function () {
             $datasheet.addClass("open").one("touchend click", function () {
                 $(this).removeClass("open");
             });
@@ -50,7 +50,7 @@ FIC.Home = {
     init: function () {
         FIC.Home.datasheetHandler();
 
-        $(".section__link").on("click", function () {
+        $(".section__link").on("touchend click", function () {
             var viewState = JSON.parse(
                     atob(sessionStorage.getItem("viewState"))
                 ),
@@ -178,11 +178,11 @@ FIC.Slides = {
         );
     },
     controlSlidesHandler: function () {
-        $(document).on("click", ".slide__control--prev", function () {
+        $(document).on("touchend click", ".slide__control--prev", function () {
             FIC.Slides.gotoPrevSlide();
         });
 
-        $(document).on("click", ".slide__control--next", function () {
+        $(document).on("touchend click", ".slide__control--next", function () {
             FIC.Slides.gotoNextSlide();
         });
     },
@@ -193,7 +193,7 @@ FIC.Slides = {
         if ($wrapper.length) {
             var $buttons = $wrapper.find(".swap__btn");
 
-            $buttons.on("click", function () {
+            $buttons.on("touchend click", function () {
                 var $this = $(this),
                     newFigure = "",
                     swap = $this.data("swap"),
@@ -245,7 +245,7 @@ FIC.Slides = {
             var $buttons = $wrapper.find(".portrait-tops__btn"),
                 $figure = $wrapper.find(".portrait-figure");
 
-            $buttons.on("click", function () {
+            $buttons.on("touchend click", function () {
                 $(this).toggleClass("active");
 
                 FIC.Slides.setPortraitTops($buttons, $figure);
@@ -261,7 +261,7 @@ FIC.Slides = {
                 .find("figure")
                 .eq(0)
                 .on("touchend click", function () {
-                    //$(this).addClass("d-none");
+                    $(this).addClass("d-none");
                     $swap.find("figure").eq(1).removeClass("d-none");
                 });
         }
@@ -367,7 +367,7 @@ FIC.Slides = {
             var $imagesLeft = $wrapper.find(".images-left .slide__figure"),
                 $imagesRight = $wrapper.find(".images-right .slide__figure");
 
-            $imagesLeft.on("click", function () {
+            $imagesLeft.on("touchend click", function () {
                 var $this = $(this);
                 $(".gato").removeClass("erro");
                 $this.toggleClass("selected");
@@ -379,7 +379,7 @@ FIC.Slides = {
                     $(".slide__figure").removeClass("unselected");
                 }
             });
-            $imagesRight.on("click", $imagesRight, function () {
+            $imagesRight.on("touchend click", $imagesRight, function () {
                 var $this = $(this),
                     $optionLeft = $wrapper.find(
                         ".images-left .slide__figure.selected"
@@ -476,8 +476,8 @@ FIC.Slides = {
         };
 
         function move(e) {
-            e.preventDefault();
             if (x0 || x0 === 0) {
+                //e.preventDefault();
                 var dx = unify(e).clientX - x0,
                     s = Math.sign(dx);
                 if (Math.abs(dx) > 10) {
