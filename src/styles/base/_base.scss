@@ -79,8 +79,10 @@
 
 .slide__back-home {
     height: 40 / $canvasWidth * 100%;
+    min-height: 40px;
     position: absolute;
     right: 5px;
     top: 5px;
     width: 40 / $canvasWidth * 100%;
+    z-index: 9999;
 }
