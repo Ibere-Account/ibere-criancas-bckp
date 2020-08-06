@@ -193,6 +193,17 @@ FIC.Slides = {
         if ($wrapper.length) {
             var $buttons = $wrapper.find(".swap__btn");
 
+            $wrapper.each(function (k, wrapper) {
+                var srcIm = $(wrapper).find(".swap__figure").data("src");
+                var buttons = $(wrapper).find(".swap__btn");
+
+                buttons.each(function (i, $el) {
+                    var swap = $($el).data("swap");
+                    var im = new Image();
+                    im.src = srcIm + swap + ".jpg";
+                });
+            });
+
             $buttons.on("touchend click", function () {
                 var $this = $(this),
                     newFigure = "",
@@ -469,18 +480,20 @@ FIC.Slides = {
     keyboardSetup: function () {
         var x0 = null;
         var lock = function (e) {
-            x0 = unify(e).clientX;
+            x0 = $(e.target).hasClass("slide__control")
+                ? false
+                : unify(e).clientX;
         };
         var unify = function (e) {
             return e.changedTouches ? e.changedTouches[0] : e;
         };
 
         function move(e) {
+            e.preventDefault();
             if (x0 || x0 === 0) {
-                //e.preventDefault();
                 var dx = unify(e).clientX - x0,
                     s = Math.sign(dx);
-                if (Math.abs(dx) > 10) {
+                if (Math.abs(dx) > 80) {
                     if (s < 0) FIC.Slides.gotoNextSlide();
                     if (s > 0) FIC.Slides.gotoPrevSlide();
                     x0 = null;
