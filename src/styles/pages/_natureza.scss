@@ -1,10 +1,10 @@
-.slide__title--tag-natureza-morta{
+.slide__title--tag-natureza-morta {
     width: 160 / $canvasWidth * 100%;
 }
 .section--natureza {
     .slide__title {
         align-items: flex-end;
-        background-image: url('./../img/natureza/bg-secao.png');
+        background-image: url("./../img/natureza/bg-secao.png");
         background-size: contain;
         font-weight: bold;
         height: 78 / $canvasHeight * 100%;
@@ -19,20 +19,30 @@
     }
 
     & > .slide--5 {
-        & > .gato { background-size: contain; }
+        & > .gato {
+            background-size: contain;
+        }
+    }
+    .quadro {
+        margin-bottom: -6rem !important;
     }
 
     .lights {
         text-align: center;
 
         .light__item {
+            z-index: 99;
             display: block;
             position: absolute;
             top: 250 / $canvasHeight * 100%;
 
-            &.light__item--btn1 { left: 0; }
+            &.light__item--btn1 {
+                left: 0;
+            }
 
-            &.light__item--btn1:not(.active) { margin-top: 8px; }
+            &.light__item--btn1:not(.active) {
+                margin-top: 8px;
+            }
 
             &.light__item--btn2 {
                 display: block;
@@ -47,10 +57,14 @@
                 }
             }
 
-            &.light__item--btn3 { right: 30 / $canvasWidth * 100%; }
+            &.light__item--btn3 {
+                right: 2 / $canvasWidth * 100%;
+            }
 
             &.active {
-                .light__off { display: none; }
+                .light__off {
+                    display: none;
+                }
 
                 .light__on {
                     display: block;
@@ -58,40 +72,61 @@
                 }
             }
 
-            .light__on { display: none; }
+            .light__on {
+                display: none;
+            }
         }
 
         .slide__figure {
-            background-image: url('/../img/natureza/luzes/sombra.png');
-            background-position: center center;
+            background-image: url("/../img/natureza/luzes/mesa-natureza-morta.png");
+            background-position: bottom center;
             background-repeat: no-repeat;
             background-size: contain;
             padding-bottom: 100%;
 
-            &.shadow--1 {
-                background-image: url('/../img/natureza/luzes/sombra1.png');
-
-                &.shadow--2 {
-                    background-image: url('/../img/natureza/luzes/sombra1-2.png');
-
-                    &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra1-2-3.png'); }
+            .shadow {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("/../img/natureza/luzes/sombra-lampada-esquerda.png");
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: none;
+                &:nth-child(2) {
+                    background-image: url("/../img/natureza/luzes/sombra-lampada-acima.png");
                 }
+                &:nth-child(3) {
+                    background-image: url("/../img/natureza/luzes/sombra-lampada-direita.png");
+                }
+            }
 
-                &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra1-3.png'); }
+            &.shadow--1 {
+                .shadow:nth-child(1) {
+                    display: block;
+                }
             }
 
             &.shadow--2 {
-                background-image: url('/../img/natureza/luzes/sombra2.png');
-
-                &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra2-3.png'); }
+                .shadow:nth-child(2) {
+                    display: block;
+                }
             }
 
-            &.shadow--3 { background-image: url('/../img/natureza/luzes/sombra3.png'); }
+            &.shadow--3 {
+                .shadow:nth-child(3) {
+                    display: block;
+                }
+            }
         }
     }
 
     .slide__interaction--swap {
-        & > figure:nth-child(1) { cursor: pointer; }
+        & > figure:nth-child(1) {
+            cursor: pointer;
+        }
 
         & > figure:nth-child(2) img:nth-child(2) {
             position: absolute;
@@ -111,15 +146,19 @@
                 display: block;
                 margin: 0 auto;
 
-                img { width: 100%; }
+                img {
+                    width: 100%;
+                }
 
                 .magnify-lens {
-                    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85),
+                        0 0 7px 7px rgba(0, 0, 0, 0.25),
+                        inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
 
                     &:after {
                         background: black;
                         bottom: -28px;
-                        content: '';
+                        content: "";
                         height: 8px;
                         position: absolute;
                         right: -95px;
@@ -146,13 +185,17 @@
 
     .slide--9 {
         .container-fluid {
-            & > .row { margin-top: -120 / $canvasHeight * 100%; }
+            & > .row {
+                margin-top: -120 / $canvasHeight * 100%;
+            }
         }
 
-        .col-10 { margin-top: 70 / $canvasHeight * 100%; }
+        .col-10 {
+            margin-top: 70 / $canvasHeight * 100%;
+        }
 
-        .gato { background-size: contain; }
+        .gato {
+            background-size: contain;
+        }
     }
-
-
 }
