@@ -11,11 +11,12 @@ const jsCompressor = require("gulp-uglify");
 const jsLinter = require("gulp-eslint");
 const sass = require("gulp-sass");
 const sourceMaps = require("gulp-sourcemaps");
-
+const replace = require("gulp-replace");
 const reload = browserSync.reload;
 
 let compressHTML = () => {
     return src(["src/html/*.html", "src/html/**/*.html"])
+        .pipe(replace("./../img/", "img/"))
         .pipe(htmlCompressor({ collapseWhitespace: true }))
         .pipe(dest("dist"));
 };
@@ -41,6 +42,7 @@ let compileCSSForDev = () => {
 
 let compileCSSForProd = () => {
     return src("src/styles/main.scss")
+        .pipe(replace("./../img/", "img/"))
         .pipe(
             sass({
                 outputStyle: "compressed",
@@ -65,6 +67,7 @@ let transpileJSForDev = () => {
 
 let transpileJSForProd = () => {
     return src("src/scripts/**/*.js")
+        .pipe(replace("./../img/", "img/"))
         .pipe(babel())
         .pipe(concat("main.js"))
         .pipe(jsCompressor())
