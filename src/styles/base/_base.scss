@@ -26,8 +26,9 @@
         }
     }
 
-    @media (min-width: 1200px) and (max-height: 875px) {
-        align-items: flex-start;
+    @media (min-width: 1200px) {
+        align-items: center;
+        justify-content: center;
     }
 }
 
