@@ -1,7 +1,7 @@
 .section--manequins {
     .slide__title {
         align-items: flex-end;
-        background-image: url('./../img/manequins/slide_manequins.png');
+        background-image: url("./../img/manequins/slide_manequins.png");
         background-size: contain;
         font-weight: bold;
         height: 88 / $canvasHeight * 100%;
@@ -10,17 +10,21 @@
 
         @include viewport-font(2.1875vw, 20px, 25px);
 
-        & > span { margin-bottom: 32px; }
+        & > span {
+            margin-bottom: 32px;
+        }
     }
 
     .magnify {
         & > .magnify-lens {
-            box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.85),
+                0 0 7px 7px rgba(0, 0, 0, 0.25),
+                inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
 
             &:after {
                 background: black;
                 bottom: -28px;
-                content: '';
+                content: "";
                 height: 8px;
                 position: absolute;
                 right: -95px;
@@ -40,9 +44,27 @@
         text-align: right;
     }
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        .slide--4 {
+            .row {
+                margin-bottom: 60px !important;
+            }
+            .col-8 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-2 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    }
+
     .slide--5 div:not(.modal-body) .slide__figure {
         margin-bottom: 100px;
     }
 
-    .slide--5 .slide__figure > figcaption { margin-bottom: 65px; }
+    .slide--5 .slide__figure > figcaption {
+        margin-bottom: 65px;
+    }
 }

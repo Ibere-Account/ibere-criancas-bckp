@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     height: 100vh;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
     background: url("./../img/chao_v2.jpg") no-repeat center bottom transparent;
 
@@ -39,6 +39,9 @@
     overflow: hidden;
     position: absolute;
     width: 100%;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        max-height: calc(100vh - 55px);
+    }
 
     &.section-scaled {
         top: 0;

@@ -149,6 +149,10 @@ FIC.Slides = {
     },
 
     gotoPrevSlide: function () {
+        setTimeout(function () {
+            $(".modal.show").removeClass("show");
+        }, 150);
+
         var prev = FIC.Slides.currentSlide;
 
         if (FIC.Slides.currentSlide === 1) {
@@ -164,6 +168,10 @@ FIC.Slides = {
     },
 
     gotoNextSlide: function () {
+        setTimeout(function () {
+            $(".modal.show").removeClass("show");
+        }, 150);
+
         var prev = FIC.Slides.currentSlide;
 
         if (FIC.Slides.currentSlide === FIC.Slides.totalSlides) {
@@ -353,7 +361,7 @@ FIC.Slides = {
         if ($section.length) {
             var $image = $section.find(".lights .slide__figure");
             var $lights = $section.find("a.light__item");
-            $lights.on("click", function (e) {
+            $lights.on("click touchend", function (e) {
                 e.preventDefault();
                 $(this).toggleClass("active");
                 var numberLight = this.className.match(/\d+/);
@@ -480,16 +488,28 @@ FIC.Slides = {
     keyboardSetup: function () {
         var x0 = null;
         var lock = function (e) {
-            x0 = $(e.target).hasClass("slide__control")
-                ? false
-                : unify(e).clientX;
+            console.log(e.target);
+            x0 =
+                $(e.target).hasClass("slide__control") ||
+                $(e.target).hasClass("zoom") ||
+                isHomeLink(e)
+                    ? false
+                    : unify(e).clientX;
         };
+
         var unify = function (e) {
             return e.changedTouches ? e.changedTouches[0] : e;
         };
 
+        function isHomeLink(e) {
+            return (
+                $(e.target).hasClass("slide__back-home") ||
+                $(e.target).parent().hasClass("slide__back-home")
+            );
+        }
+
         function move(e) {
-            e.preventDefault();
+            isHomeLink(e) || e.preventDefault();
             if (x0 || x0 === 0) {
                 var dx = unify(e).clientX - x0,
                     s = Math.sign(dx);
