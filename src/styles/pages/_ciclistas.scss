@@ -13,6 +13,18 @@
     .slide--5 .row + .row {
         margin-top: 50 / $canvasHeight * 100%;
     }
+    .slide--4 {
+        .mobile-only {
+            display: none;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        .slide--4 {
+            .mobile-only {
+                display: block;
+            }
+        }
+    }
     .text-nowrap {
         white-space: nowrap;
     }

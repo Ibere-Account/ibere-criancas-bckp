@@ -4,6 +4,11 @@
     height: $h / $canvasHeight * 100%;
     width: $w / $canvasWidth * 100%;
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: $h / $canvasHeight * 104%;
+        bottom: $y / $canvasHeight * 20%;
+    }
+
     @if $isLeft {
         left: $x / $canvasWidth * 100%;
     } @else {
@@ -99,7 +104,7 @@
     width: 197 / $canvasWidth * 100%;
 
     .gato__help {
-        background-color: #a1ffff;
+        background-color: rgba(66, 226, 226, 0.69);
         border-radius: 25px;
         bottom: 0;
         font-size: 2.5em;
@@ -117,7 +122,7 @@
         }
 
         &:hover {
-            background-color: #a1ffff;
+            background-color: rgba(66, 226, 226, 0.69);
         }
     }
 
@@ -145,6 +150,7 @@
 
     .section--acervo > .slide--2 > & {
         @include cat(476, 312, 91, 32, "acervo", 2, false);
+        transform: scale(0.8);
     }
 
     .section--retratos > .slide--1 > & {
@@ -309,9 +315,17 @@
     .section--natureza > .slide--7 > & {
         @include cat(306, 357, 40, 30, "natureza", 7, true);
     }
+    .section--natureza > .slide--8 > & {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+            margin-bottom: -7% !important;
+        }
+    }
 
     .section--manequins > .slide--1 > & {
         @include cat(349, 552, 64, -120, "manequins", 1, true);
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+            margin-bottom: -7% !important;
+        }
     }
 
     .section--manequins > .slide--2 > & {

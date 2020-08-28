@@ -20,4 +20,12 @@
             font-size: 16px;
         }
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        .slide--1 {
+            margin-top: -5rem;
+        }
+        .slide--2 {
+            margin-top: 0;
+        }
+    }
 }

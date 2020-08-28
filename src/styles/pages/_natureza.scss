@@ -22,6 +22,28 @@
         & > .gato {
             background-size: contain;
         }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+            .text-column {
+                margin-top: -180px;
+            }
+        }
+    }
+    .slide--6 {
+        .mobile-only {
+            display: none;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        .slide--6 {
+            .mobile-only {
+                display: block;
+            }
+        }
+        .slide--7 {
+            .mt-5 {
+                margin-top: 0 !important;
+            }
+        }
     }
     .quadro {
         margin-bottom: -6rem !important;
@@ -78,7 +100,7 @@
         }
 
         .slide__figure {
-            background-image: url("/../img/natureza/luzes/mesa-natureza-morta.png");
+            background-image: url("./../img/natureza/luzes/mesa-natureza-morta.png");
             background-position: bottom center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -90,16 +112,16 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url("/../img/natureza/luzes/sombra-lampada-esquerda.png");
+                background-image: url("./../img/natureza/luzes/sombra-lampada-esquerda.png");
                 background-position: bottom center;
                 background-repeat: no-repeat;
                 background-size: contain;
                 display: none;
                 &:nth-child(2) {
-                    background-image: url("/../img/natureza/luzes/sombra-lampada-acima.png");
+                    background-image: url("./../img/natureza/luzes/sombra-lampada-acima.png");
                 }
                 &:nth-child(3) {
-                    background-image: url("/../img/natureza/luzes/sombra-lampada-direita.png");
+                    background-image: url("./../img/natureza/luzes/sombra-lampada-direita.png");
                 }
             }
 

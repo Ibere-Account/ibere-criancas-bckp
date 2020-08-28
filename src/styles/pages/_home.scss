@@ -1,3 +1,11 @@
+.page-wrapper--home {
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        justify-content: end !important;
+        max-height: 150px;
+    }
+}
 .section--home {
     background-size: contain;
 
@@ -5,6 +13,7 @@
         content: "";
         background: url("./../img/home/sala.png") no-repeat center center
             transparent;
+
         top: 0;
         right: 0;
         left: 0;
@@ -103,6 +112,10 @@
     top: 265 / $canvasHeight * 100%;
     width: 118 / $canvasWidth * 100%;
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 386 / $canvasHeight * 104%;
+    }
+
     & > .section__link__label {
         background-color: $manequins;
         left: 16 / 118 * 100% * -1;
@@ -116,6 +129,10 @@
     left: 47 / $canvasWidth * 100%;
     top: 161 / $canvasHeight * 100%;
     width: 154 / $canvasWidth * 100%;
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 194 / $canvasHeight * 104%;
+    }
 
     & > .section__link__label {
         background-color: $acervo;
@@ -131,6 +148,10 @@
     bottom: 25 / $canvasHeight * 100% * -1;
     width: 371 / $canvasWidth * 100%;
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 547 / $canvasHeight * 104%;
+    }
+
     & > .section__link__label {
         background-color: $ibere;
         left: 277 / 371 * 100%;
@@ -145,6 +166,10 @@
     right: 40 / $canvasWidth * 100%;
     width: 321 / $canvasWidth * 100%;
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 316 / $canvasHeight * 104%;
+    }
+
     & > .section__link__label {
         background-color: $ciclistas;
         bottom: 147 / 360 * 100%;
@@ -158,6 +183,10 @@
     right: 5 / $canvasWidth * 100% * -1;
     top: 51 / $canvasHeight * 100%;
     width: 256 / $canvasWidth * 100%;
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 550 / $canvasHeight * 104%;
+    }
 
     & > .section__link__label {
         background-color: $paisagem;
@@ -177,6 +206,10 @@
     right: 404 / $canvasWidth * 100%;
     top: 625 / $canvasHeight * 100%;
     width: 160 / $canvasWidth * 100%;
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+        height: 187 / $canvasHeight * 104%;
+    }
 
     & > .section__link__label {
         background-color: $natureza-morta;
@@ -233,22 +266,42 @@
 }
 
 .datasheet-link {
-    background: url("./../img/home/flecha.png") no-repeat 0 0 $white;
-    background-position: right 10px center;
-    background-size: 19px auto;
-    border: 0;
-    position: absolute;
-    bottom: 10 / $canvasHeight * 100%;
-    left: 15 / $canvasWidth * 100%;
-    font-size: 16px;
+    background-color: rgba(66, 226, 226, 0.69);
+    border-radius: 25px;
+    font-size: 2.5em;
     font-weight: bold;
-    color: $primary;
-    padding: 5px 36px 5px 10px;
-    line-height: 1;
+    height: 1.3em;
+    line-height: 1.3em;
+    text-align: center;
+    position: absolute;
+    bottom: 64 / $canvasHeight * 100%;
+    left: 65 / $canvasWidth * 100%;
+    width: 1.3em;
+    color: #691e20;
+    border: none;
+    padding: 0;
 
-    &:active,
-    &:focus,
     &:hover {
-        outline: 0;
+        background-color: rgba(66, 226, 226, 0.69);
     }
 }
+// .datasheet-link {
+//     background: url("./../img/home/flecha.png") no-repeat 0 0 $white;
+//     background-position: right 10px center;
+//     background-size: 19px auto;
+//     border: 0;
+//     position: absolute;
+//     bottom: 10 / $canvasHeight * 100%;
+//     left: 15 / $canvasWidth * 100%;
+//     font-size: 16px;
+//     font-weight: bold;
+//     color: $primary;
+//     padding: 5px 36px 5px 10px;
+//     line-height: 1;
+
+//     &:active,
+//     &:focus,
+//     &:hover {
+//         outline: 0;
+//     }
+// }
