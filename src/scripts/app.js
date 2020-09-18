@@ -317,6 +317,10 @@ FIC.Slides = {
 
                 FIC.Slides.$pageWrapper.addClass("modal-show-bg");
 
+                if($(this).hasClass('show-different-cat')){
+                    FIC.Slides.$pageWrapper.addClass("show-different-cat");
+                }
+
                 FIC.Slides.$pageWrapper.on("click.modal", function (e) {
                     if (this === e.target) {
                         $target.find(".modal__close").trigger("click");
@@ -331,10 +335,11 @@ FIC.Slides = {
             })
             .on("touchend click", ".modal__close", function () {
                 $(this)
-                    .parents(".modal.show")
-                    .removeClass("show")
-                    .off("click.modal");
+                .parents(".modal.show")
+                .removeClass("show")
+                .off("click.modal");
                 FIC.Slides.$pageWrapper.removeClass("modal-show-bg");
+                FIC.Slides.$pageWrapper.removeClass("show-different-cat");
             });
     },
 

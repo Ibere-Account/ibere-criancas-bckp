@@ -100,7 +100,7 @@
         }
 
         .slide__figure {
-            background-image: url("./../img/natureza/luzes/mesa-natureza-morta.png");
+            background-image: url("./../img/natureza/Luzes/mesa-natureza-morta.png");
             background-position: bottom center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -112,16 +112,16 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url("./../img/natureza/luzes/sombra-lampada-esquerda.png");
+                background-image: url("./../img/natureza/Luzes/sombra-lampada-esquerda.png");
                 background-position: bottom center;
                 background-repeat: no-repeat;
                 background-size: contain;
                 display: none;
                 &:nth-child(2) {
-                    background-image: url("./../img/natureza/luzes/sombra-lampada-acima.png");
+                    background-image: url("./../img/natureza/Luzes/sombra-lampada-acima.png");
                 }
                 &:nth-child(3) {
-                    background-image: url("./../img/natureza/luzes/sombra-lampada-direita.png");
+                    background-image: url("./../img/natureza/Luzes/sombra-lampada-direita.png");
                 }
             }
 
