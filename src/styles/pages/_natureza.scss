@@ -22,6 +22,7 @@
         & > .gato {
             background-size: contain;
         }
+
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
             .text-column {
                 margin-top: -180px;
@@ -218,6 +219,18 @@
 
         .gato {
             background-size: contain;
+        }
+    }
+}
+
+
+.section--natureza{
+    &:not(.section-scaled){
+        .quadro {
+            margin-bottom: -170px !important;
+        }
+        .text-column{
+            margin-top: -20%;
         }
     }
 }
