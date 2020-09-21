@@ -52,8 +52,8 @@ FIC.Home = {
 
         $(".section__link").on("touchend click", function () {
             var viewState = JSON.parse(
-                    atob(sessionStorage.getItem("viewState"))
-                ),
+                atob(sessionStorage.getItem("viewState"))
+            ),
                 clickedLink = $(this).attr("href").replace(".html", ""),
                 hasAlreadyVisited = viewState.visitedLinks.find(
                     (link) => link === clickedLink
@@ -317,7 +317,7 @@ FIC.Slides = {
 
                 FIC.Slides.$pageWrapper.addClass("modal-show-bg");
 
-                if($(this).hasClass('show-different-cat')){
+                if ($(this).hasClass('show-different-cat')) {
                     FIC.Slides.$pageWrapper.addClass("show-different-cat");
                 }
 
@@ -335,9 +335,9 @@ FIC.Slides = {
             })
             .on("touchend click", ".modal__close", function () {
                 $(this)
-                .parents(".modal.show")
-                .removeClass("show")
-                .off("click.modal");
+                    .parents(".modal.show")
+                    .removeClass("show")
+                    .off("click.modal");
                 FIC.Slides.$pageWrapper.removeClass("modal-show-bg");
                 FIC.Slides.$pageWrapper.removeClass("show-different-cat");
             });
@@ -444,28 +444,21 @@ FIC.Slides = {
     },
 
     resize: function () {
-        var heightPageWrapper = window.innerHeight,
-            scale = heightPageWrapper / FIC.Slides.canvasHeight;
+        var heightPageWrapper = window.innerHeight;
 
-        if (
-            // heightPageWrapper < 700 ||
-            !isTablet() /*
-                (heightPageWrapper < FIC.Slides.canvasHeight ||
-                    FIC.Slides.verticalScrollPresent()) && */ &&
-            scale < 1
-        ) {
+        if (!isTablet() && FIC.Slides.canvasHeight > FIC.Slides.$pageWrapper.height()) {
             FIC.Slides.$section.css({
                 transform:
                     "scale(" +
                     heightPageWrapper / FIC.Slides.canvasHeight +
                     ")",
-                "transform-origin": "50% 0%",
+                "transform-origin": "50% bottom",
             });
             FIC.Slides.$section.addClass("section-scaled");
         } else {
             FIC.Slides.$section.css({
                 transform: "scale(1)",
-                "transform-origin": "50% 0%",
+                "transform-origin": "50% bottom",
             });
             FIC.Slides.$section.removeClass("section-scaled");
         }
@@ -479,8 +472,8 @@ FIC.Slides = {
             );
             FIC.Slides.currentSlide =
                 pageNumber !== NaN &&
-                pageNumber > 0 &&
-                pageNumber <= FIC.Slides.totalSlides
+                    pageNumber > 0 &&
+                    pageNumber <= FIC.Slides.totalSlides
                     ? pageNumber
                     : 1;
         }
@@ -496,8 +489,8 @@ FIC.Slides = {
             console.log(e.target);
             x0 =
                 $(e.target).hasClass("slide__control") ||
-                $(e.target).hasClass("zoom") ||
-                isHomeLink(e)
+                    $(e.target).hasClass("zoom") ||
+                    isHomeLink(e)
                     ? false
                     : unify(e).clientX;
         };
@@ -548,7 +541,7 @@ FIC.Slides = {
                 if (e.key == "ArrowLeft") {
                     FIC.Slides.gotoPrevSlide();
                 }
-            } catch (e) {}
+            } catch (e) { }
         });
     },
 
