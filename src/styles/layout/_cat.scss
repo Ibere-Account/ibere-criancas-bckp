@@ -204,6 +204,7 @@
 
     .section--idiotas > .slide--5 > & {
         @include cat(354, 182, 33, 61, "idiotas", 5, false);
+        background-image: url("./../img/idiotas/gato-slide-5.gif");
     }
 
     .section--idiotas > .slide--6 > & {

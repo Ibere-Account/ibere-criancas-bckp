@@ -234,3 +234,11 @@
         }
     }
 }
+
+.is-ipad .section{
+    &:not(.section-scaled){
+        .text-column{
+          margin-top: -40%;
+        }
+    }
+}
