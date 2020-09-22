@@ -7,6 +7,11 @@ function isTablet() {
     return /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua);
 }
 
+function isIpad(){
+    var ua = navigator.userAgent;
+    return /ipad/i.test(ua);
+}
+
 $(document).ready(function () {
     FIC.Slides.preloadImages();
     if (!sessionStorage.getItem("viewState")) {
@@ -461,6 +466,10 @@ FIC.Slides = {
                 "transform-origin": "50% bottom",
             });
             FIC.Slides.$section.removeClass("section-scaled");
+
+            if (isTablet() && isIpad()) {
+                FIC.Slides.$pageWrapper.addClass('is-ipad');
+            }
         }
         FIC.Slides.$section.addClass("section-visible");
     },

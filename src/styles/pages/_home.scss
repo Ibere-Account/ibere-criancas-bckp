@@ -19,6 +19,18 @@
     background-size: contain;
 }
 
+.is-ipad {
+    .background-homepage{
+        background: url(./../img/home/sala-tablet.png) no-repeat center bottom transparent;
+        background-position: middle;
+        background-size: 100%;
+    }
+
+    .mesa-1{
+        margin-bottom: -2px;
+    }
+}
+
 .section--home {
     background-size: contain;
     bottom: 0;
@@ -237,7 +249,6 @@
     background-size: 100% auto;
     bottom: 0;
     position: absolute;
-    margin-bottom: -5px;
 }
 
 .mesa-1 {
@@ -245,6 +256,7 @@
     height: 330 / $canvasHeight * 100%;
     left: 0;
     width: 345 / $canvasWidth * 100% + (5);
+    margin-bottom: -3px;
 }
 
 .mesa-2 {
@@ -285,23 +297,3 @@
         background-color: rgba(66, 226, 226, 0.69);
     }
 }
-// .datasheet-link {
-//     background: url("./../img/home/flecha.png") no-repeat 0 0 $white;
-//     background-position: right 10px center;
-//     background-size: 19px auto;
-//     border: 0;
-//     position: absolute;
-//     bottom: 10 / $canvasHeight * 100%;
-//     left: 15 / $canvasWidth * 100%;
-//     font-size: 16px;
-//     font-weight: bold;
-//     color: $primary;
-//     padding: 5px 36px 5px 10px;
-//     line-height: 1;
-
-//     &:active,
-//     &:focus,
-//     &:hover {
-//         outline: 0;
-//     }
-// }
