@@ -90,7 +90,11 @@
 .show-different-cat .section--retratos > .slide--8 > .gato{
     background-image: url("./../img/retratos/gato-esse-sou-eu.png");
     background-position: bottom;
-    height: 100%;
+    height: 60%;
     width: 165px;
-    z-index: 9999999999;
+    z-index: 9999;
+}
+
+.is-ipad.show-different-cat .section--retratos > .slide--8 > .gato{
+    width: 135px;
 }
