@@ -37,7 +37,8 @@
     height: 100vw / 256 * 175;
     max-height: $canvasHeight * 1px;
     max-width: $canvasWidth * 1px;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow: visible;
     position: absolute;
     width: 100%;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {

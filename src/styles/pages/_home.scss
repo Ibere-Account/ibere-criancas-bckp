@@ -25,6 +25,10 @@
         background-position: middle;
         background-size: 100%;
     }
+    .mesa-1,
+    .mesa-2 {
+        bottom:-1%
+    }
 }
 
 .section--home {
@@ -241,8 +245,10 @@
 
 .mesa-1,
 .mesa-2 {
-    background: no-repeat center center transparent;
-    background-size: 100% auto;
+    // background: no-repeat center center transparent;
+    // background-size: 100% auto;
+    background: no-repeat center bottom transparent;
+    background-size:100% 100%;
     bottom: 0;
     position: absolute;
 }
@@ -250,9 +256,11 @@
 .mesa-1 {
     background-image: url("./../img/home/mesa-1.png");
     height: 330 / $canvasHeight * 100%;
-    left: 0;
+    // left: 0;
     width: 345 / $canvasWidth * 100% + (5);
-    margin-bottom: -3px;
+    // margin-bottom: -3px;
+    left: -5%;
+    margin-bottom: 0;
 }
 
 .mesa-2 {
@@ -265,12 +273,13 @@
 .cavalete {
     background: url("./../img/home/cavalete.png") no-repeat center center
         transparent;
-    background-size: 100% auto;
+    // background-size: 100% auto;
     height: 571 / $canvasHeight * 100%;
     left: 269 / $canvasWidth * 100%;
     position: absolute;
     top: 75 / $canvasHeight * 100%;
     width: 244 / $canvasWidth * 100%;
+    background-size:100% 100%;
 }
 
 .datasheet-link {
